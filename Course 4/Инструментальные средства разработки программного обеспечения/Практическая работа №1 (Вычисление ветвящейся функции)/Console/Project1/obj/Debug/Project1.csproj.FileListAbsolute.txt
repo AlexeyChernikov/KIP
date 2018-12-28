@@ -1,0 +1,21 @@
+\\Mac\Home\Desktop\ИСРПО НОВЫЕ ПРАКТИКИ\Project1\Project1\bin\Debug\Project1.exe.config
+\\Mac\Home\Desktop\ИСРПО НОВЫЕ ПРАКТИКИ\Project1\Project1\bin\Debug\Project1.exe
+\\Mac\Home\Desktop\ИСРПО НОВЫЕ ПРАКТИКИ\Project1\Project1\bin\Debug\Project1.pdb
+\\Mac\Home\Desktop\ИСРПО НОВЫЕ ПРАКТИКИ\Project1\Project1\obj\Debug\Project1.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\ИСРПО НОВЫЕ ПРАКТИКИ\Project1\Project1\obj\Debug\Project1.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\ИСРПО НОВЫЕ ПРАКТИКИ\Project1\Project1\obj\Debug\Project1.exe
+\\Mac\Home\Desktop\ИСРПО НОВЫЕ ПРАКТИКИ\Project1\Project1\obj\Debug\Project1.pdb
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project1\Console\Project1\bin\Debug\Project1.exe.config
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project1\Console\Project1\bin\Debug\Project1.exe
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project1\Console\Project1\bin\Debug\Project1.pdb
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project1\Console\Project1\obj\Debug\Project1.csproj.CoreCompileInputs.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project1\Console\Project1\obj\Debug\Project1.exe
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project1\Console\Project1\obj\Debug\Project1.pdb
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project1\Console\Project1\obj\Debug\Project1.csprojResolveAssemblyReference.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Project1\Console\Project1\bin\Debug\Project1.exe.config
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Project1\Console\Project1\bin\Debug\Project1.exe
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Project1\Console\Project1\bin\Debug\Project1.pdb
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Project1\Console\Project1\obj\Debug\Project1.csprojResolveAssemblyReference.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Project1\Console\Project1\obj\Debug\Project1.csproj.CoreCompileInputs.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Project1\Console\Project1\obj\Debug\Project1.exe
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Project1\Console\Project1\obj\Debug\Project1.pdb

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Сайтостроение</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet">
+	<style>
+        body {
+            background-size: cover;
+            background-image: url('images/bg.jpg');
+        }
+		hr {
+			border: none; /* Убираем границу для браузера Firefox */
+			color: #8f8f8f; /* Цвет линии для остальных браузеров */
+			background-color: #8f8f8f; /* Цвет линии для браузера Firefox и Opera */
+			height: 1px; /* Толщина линии */
+		}
+    </style>
+  </head>
+  
+  <body>
+  
+	<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+	
+	<!-- Верхнее меню -->
+	
+	<div class="wrapper container">
+		<nav class="navbar navbar-default">
+			<ul class="nav navbar-nav">
+				<li><a href="index21.php">Регистрация</a></li>  
+				<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Сайт<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="story.html">Сюжет игры</a></li>
+                        <li><a href="development.html">Разработка игры</a></li>
+                        <li><a href="gamemusic.html">Музыка</a></li>
+                        <li><a href="systemrequirement.html">Системные требования</a></li>
+                    </ul>
+				</li>
+				<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">PHP<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="php1.html">PHP 1</a></li>
+                        <li><a href="php2.html">PHP 2</a></li>
+                    </ul>
+				</li>
+				<li><a href="js.html">JS</a></li>
+				<li><a href="canvas.html">CANVAS</a></li>
+				<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Игры<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+						<li><a href="Race.html">Игра "Race!" на JS</a></li>
+                        <li><a href="Game.php">Игра "Города" на PHP</a></li>
+                    </ul>
+				</li> 
+			</ul>
+		</nav>
+		
+		<!-- Граница -->
+		
+		<div class="heading">
+			<center><h1></h1></center>
+		</div>
+		
+		<!-- Основная часть -->
+		
+		<div class="row">
+		
+		<!-- Правое меню -->
+		
+			<aside class="col-md-7">
+				<ul class="list-group submenu">
+					<li class="list-group-item"><a href="index21.php">Регистрация</a></li>
+					<li class="dropdown list-group-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Сайт<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="index.html">Главная</a></li>
+							<li><a href="story.html">Сюжет игры</a></li>
+							<li><a href="development.html">Разработка игры</a></li>
+							<li><a href="gamemusic.html">Музыка</a></li>
+							<li><a href="systemrequirement.html">Системные требования</a></li>
+						</ul>
+					</li>
+					<li class="dropdown list-group-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle">PHP<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="php1.html">PHP 1</a></li>
+							<li><a href="php2.html">PHP 2</a></li>
+						</ul>
+					</li>
+					<li class="list-group-item"><a href="js.html">JS</a></li>
+					<li class="list-group-item"><a href="canvas.html">CANVAS</a></li>
+					<li class="dropdown list-group-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Игры<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="Race.html">Игра "Race!" на JS</a></li>
+							<li><a href="Game.php">Игра "Города" на PHP</a></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+			
+			<!--Текст -->
+			
+			<section class="col-md-17">	
+                <div style="border: 0.1px solid Silver; background: #f3f3f3;">
+					<font size="6"><center>Задания по PHP 1</center></font>
+					<p align="justify"><font color="#8f8f8f" size="4">
+					<font size="5">Часть 1:</font><hr>
+                    Задание 1 :Вывести текст
+                    <br>
+                    <a href="1-1.php" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Задание 1</a>
+                    <span>
+                        <?php echo $result;?>
+                    </span>
+                    <Hr>Задание 2: Операции над числами
+                    <br>
+                    <a href="1-2.php" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Задание 2</a>
+                    <br>
+                    <span>
+                        <?php echo $result1;?>
+                    </span>
+
+                    <Hr> Задание 3: Конкатенация строк
+                    <br>
+                    <a href="1-3.php" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Задание 3</a>
+                    <br>
+                    <span>
+                        <?php echo $result2;?>
+                    </span>
+                    <Hr> Задание 4:
+                    <br>
+                    <a href="1-4.php" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Задание 4</a>
+                    <br>
+                    <span>
+                        <?php echo $result3;?>
+                    </span>
+                    <Hr> Задание 5:
+                    <br>
+                    <a href="1-5.php" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Задание 5</a>
+                    <br>
+                    <span>
+                        <?php echo $result4;?>
+                    </span>
+                    <Hr> Задание 6:
+                    <br>
+                    <a href="1-6.php" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Задание 6</a>
+                    <br>
+                    <span>
+                        <?php echo $result5;?>
+                    </span>
+                    <Hr> Задание 7:
+                    <br>
+                    <a href="1-7.php" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Задание 7</a>
+                    <br>
+                    <span>
+                        <?php echo $result6;?>
+                    </span>
+                    <hr><font size="5">Часть 2:</font><hr>
+                    Задание 2.1:
+                    <br>
+                    <form action="2-1.php" method="POST">
+                        <table>
+                            <tr>
+                                <td class="t"><label>Число</label></td>
+                                <td class="Righttable"><input type="text" name="Chislo" /></td>
+                            </tr>
+                        </table>
+                        <input type="submit" class="btn btn-primary btn-lg" name="send" value="Задание 1" class="b">
+                    </form>
+                    <span>
+                        <?php echo $result20;?>
+                    </span>
+                    <Hr>
+                    Задание 2.2:
+                    <br>
+                    <form action="2-2.php" method="POST">
+                        <table>
+                            <tr>
+                                <td class="t"><label>Искомое число </label></td>
+                                <td class="Righttable"><input type="text" name="string" /></td>
+                            </tr>
+                            <tr>
+                                <td class="t"><label>Число для нахождения</label></td>
+                                <td class="Righttable"><input type="text" name="isk" /></td>
+                            </tr>
+                        </table>
+                        <input class="btn btn-primary btn-lg" type="submit" name="send" value="Задание 2" class="b">
+                    </form>
+                    <span>
+                        <?php echo $result21;?>
+                    </span>
+                    <Hr>
+                    Задание 2.3:
+                    <br>
+                    <a href="2-3.php" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Задание 3</a><br>
+                    <span>
+                        <?php echo $result23;?>
+                    </span>
+                    <Hr>
+                    Задание 2.4:
+                    <br>
+                    <a href="2-4.php" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Задание 4</a>
+                    <span>
+                        <?php echo $result24;?>
+                    </span>
+                    <Hr>
+                    Задание 2.5:
+                    <br>
+                    <a href="2-5.php" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Задание 5</a>
+                    <span>
+                        <?php echo $result25;?>
+                    </span>
+                    <hr>
+                    Задание 2.6:
+                    <br>
+                    <form action="2-6.php" method="POST">
+                        <table>
+                            <tr>
+                                <td class="t"><label>ФИО полностью</label></td>
+                                <td class="Righttable"><input type="text" name="FIO" /></td>
+                            </tr>
+                        </table>
+                        <input type="submit" class="btn btn-primary btn-lg" name="send" value="Задание 6" class="b">
+                    </form>
+                    <span>
+                        <?php echo $result26;?>
+                    </span>
+                    <hr>
+                    Задание 2.7:
+                    <br>
+                    <form action="2-7.php" method="POST">
+                        <table>
+                            <tr>
+                                <td class="t"><label>Градусы</label></td>
+                                <td class="Righttable"><input type="text" name="Grad" /></td>
+                            </tr>
+                        </table>
+                        <input type="submit" class="btn btn-primary btn-lg" name="send" value="Задание 7" class="b">
+                    </form>
+                    <span>
+                        <?php echo $result27;?>
+                    </span>
+                    <Hr>
+                    Задание 2.8:
+                    <br>
+                    <form action="2-8.php" method="POST">
+                        <table>
+                            <tr>
+                                <td class="t"><label>Время в минутах</label></td>
+                                <td class="Righttable"><input type="text" name="Time" /></td>
+                            </tr>
+                        </table>
+                        <input type="submit" class="btn btn-primary btn-lg" name="send" value="Задание 8" class="b">
+                    </form>
+                    <span>
+                        <?php echo $result28;?>
+                    </span>
+                    <Hr>
+                    Задание 2.9:
+                    <br>
+                    <form action="2-9.php" method="POST">
+                        <table>
+                            <tr>
+                                <td class="t"><label>Введите год</label></td>
+                                <td class="Righttable"><input type="text" name="God" /></td>
+                            </tr>
+                        </table>
+                        <input type="submit" class="btn btn-primary btn-lg" name="send" value="Задание 9" class="b">
+                    </form>
+                    <span>
+                        <?php echo $result29;?>
+                    </span>
+                    <Hr>
+                    Задание 2.10:
+                    <br>
+                    <form action="2-10.php" method="POST">
+                        <table>
+                            <tr>
+                                <td class="t"><label>Введите значение</label></td>
+                                <td class="Righttable"><input type="text" name="Znach" /></td>
+                            </tr>
+                        </table>
+                        <input type="submit" class="btn btn-primary btn-lg" name="send" value="Задание 10" class="b">
+                    </form>
+                    <span>
+                        <?php echo $result210;?>
+                    </span>
+                    <Hr>
+                    Задание 2.11:
+                    <br>
+                    <form action="2-11.php" method="POST">
+                        <table>
+                            <tr>
+                                <td class="t"><label>Введите год не меньше 1924</label></td>
+                                <td class="Righttable"><input type="text" name="Godkit" /></td>
+                            </tr>
+                        </table>
+                        <input type="submit" class="btn btn-primary btn-lg" name="send" value="Задание 11" class="b">
+                    </form>
+                    <span>
+                        <?php echo $result211;?>
+                    </span>
+                    <Hr>
+                    Задание 2.12:
+                    <br>
+                    <form action="2-12.php" method="POST">
+                        <table>
+                            <tr>
+                                <td class="t"><label>Введите значение</label></td>
+                                <td class="Righttable"><input type="text" name="N" /></td>
+                            </tr>
+                        </table>
+                        <input type="submit" class="btn btn-primary btn-lg" name="send" value="Задание 12" class="b">
+                    </form>
+                    <span>
+                        <?php echo $result212;?>
+                    </span>
+					</p>
+				</div>
+			</section>
+		</div>
+	</div>
+	
+	<!-- Подвал -->
+	
+	<footer>
+		<div class="container" style="">
+			<div class="row">
+				<div>
+					<br><br><br>
+					<center><a href="https://vk.com/tamseler99"><h3>Черников Алексей 2018</h3></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	<script src="js/jquery.min.js"></script>
+	
+  </body>
+</html>

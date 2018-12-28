@@ -1,0 +1,49 @@
+﻿<Window x:Class="WpfApplication2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication2"
+        mc:Ignorable="d"
+        Title="Калькулятор" Height="548" Width="392" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="497"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="469"/>
+        </Grid.RowDefinitions>
+
+        <!-- Numbers Buttons -->
+        <Button x:Name="btn7" Click="numberButtonClick" Grid.Column="0" Margin="10,168,402,223" FontSize="26">7</Button>
+        <Button x:Name="btn8" Click="numberButtonClick" Margin="101,168,312,223" FontSize="26">8</Button>
+        <Button x:Name="btn9" Click="numberButtonClick" Margin="191,168,221,223" FontSize="26">9</Button>
+
+        <Button x:Name="btn4" Click="numberButtonClick" Grid.Column="0" Margin="10,252,402,139" FontSize="26">4</Button>
+        <Button x:Name="btn5" Click="numberButtonClick" Margin="101,252,312,139" FontSize="26">5</Button>
+        <Button x:Name="btn6" Click="numberButtonClick" Margin="191,252,221,139" FontSize="26">6</Button>
+
+        <Button x:Name="btn1" Click="numberButtonClick" Grid.Column="0" Margin="10,336,402,55" FontSize="26">1</Button>
+        <Button x:Name="btn2" Click="numberButtonClick" Margin="101,336,312,55" FontSize="26">2</Button>
+        <Button x:Name="btn3" Click="numberButtonClick" Margin="191,336,221,55" FontSize="26">3</Button>
+        <Button x:Name="btn0" Click="numberButtonClick" Margin="101,420,312,-30" FontSize="26">0</Button>
+
+        <!-- Maths Buttons -->
+        <Button x:Name="btnPlus" Click="operationButtonClick" Margin="282,168,131,223" FontSize="26">+</Button>
+        <Button x:Name="btnMinus" Click="operationButtonClick" Margin="282,252,131,139" FontSize="26">-</Button>
+        <Button x:Name="btnTimes" Click="operationButtonClick" Margin="282,336,131,55" FontSize="26">*</Button>
+        <Button x:Name="btnDivide" Click="operationButtonClick" Margin="282,420,131,-29" FontSize="26">/</Button>
+        <Button x:Name="btnEquals" Click="equalButtonClick" Margin="191,420,221,-30" FontSize="26">=</Button>
+
+        <!-- Clear Buttons -->
+        <Button x:Name="btnClearEntry" Click="clearEntryButtonClick" Grid.Column="0" Margin="10,84,402,307" FontSize="26">CE</Button>
+        <Button x:Name="btnClear" Click="clearButtonClick" Margin="101,84,312,307" FontSize="26">C</Button>
+        <Button x:Name="btnBackspace" Click="backspaceButtonClick" Margin="191,84,131,307" Content="BackSpace" FontSize="26"/>
+
+        <Button x:Name="btnPositiveNegative" Click="positiveNegativeButtonClick" Grid.Column="0" Margin="10,420,402,-30" FontSize="26">+-</Button>
+
+        <!-- Display -->
+        <TextBox x:Name="txtDisplay" IsReadOnly="True" TextAlignment="Right" FontSize="30" BorderThickness="0" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="0" Margin="10,0,131,391" Height="69"/>
+    </Grid>
+</Window>

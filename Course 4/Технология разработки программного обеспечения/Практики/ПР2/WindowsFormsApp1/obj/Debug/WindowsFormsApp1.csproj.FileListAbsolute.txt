@@ -1,0 +1,43 @@
+D:\Учеба\4 курс\Технология разработки программного обеспечения\Практика\workwithdb\WindowsFormsApp1\bin\Debug\database.mdb
+D:\Учеба\4 курс\Технология разработки программного обеспечения\Практика\workwithdb\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\Учеба\4 курс\Технология разработки программного обеспечения\Практика\workwithdb\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\Учеба\4 курс\Технология разработки программного обеспечения\Практика\workwithdb\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\Учеба\4 курс\Технология разработки программного обеспечения\Практика\workwithdb\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+D:\Учеба\4 курс\Технология разработки программного обеспечения\Практика\workwithdb\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\Учеба\4 курс\Технология разработки программного обеспечения\Практика\workwithdb\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\Учеба\4 курс\Технология разработки программного обеспечения\Практика\workwithdb\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\Учеба\4 курс\Технология разработки программного обеспечения\Практика\workwithdb\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\Учеба\4 курс\Технология разработки программного обеспечения\Практика\workwithdb\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\Учеба\4 курс\Технология разработки программного обеспечения\Практика\workwithdb\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+\\Mac\Disk_II\Projects\KIP\Course IV\ТРПО\examples\DatabaseExample\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\database.mdb
+\\Mac\Disk_II\Projects\KIP\Course IV\ТРПО\examples\DatabaseExample\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+\\Mac\Disk_II\Projects\KIP\Course IV\ТРПО\examples\DatabaseExample\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+\\Mac\Disk_II\Projects\KIP\Course IV\ТРПО\examples\DatabaseExample\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+\\Mac\Disk_II\Projects\KIP\Course IV\ТРПО\examples\DatabaseExample\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+\\Mac\Disk_II\Projects\KIP\Course IV\ТРПО\examples\DatabaseExample\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+\\Mac\Disk_II\Projects\KIP\Course IV\ТРПО\examples\DatabaseExample\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+\\Mac\Disk_II\Projects\KIP\Course IV\ТРПО\examples\DatabaseExample\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+\\Mac\Disk_II\Projects\KIP\Course IV\ТРПО\examples\DatabaseExample\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+\\Mac\Disk_II\Projects\KIP\Course IV\ТРПО\examples\DatabaseExample\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+\\Mac\Disk_II\Projects\KIP\Course IV\ТРПО\examples\DatabaseExample\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+\\Mac\Disk_II\Projects\KIP\Course IV\ТРПО\Practs\8\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\database.mdb
+\\Mac\Disk_II\Projects\KIP\Course IV\ТРПО\Practs\8\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+\\Mac\Disk_II\Projects\KIP\Course IV\ТРПО\Practs\8\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+\\Mac\Disk_II\Projects\KIP\Course IV\ТРПО\Practs\8\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+\\Mac\Disk_II\Projects\KIP\Course IV\ТРПО\Practs\8\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+\\Mac\Disk_II\Projects\KIP\Course IV\ТРПО\Practs\8\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+\\Mac\Disk_II\Projects\KIP\Course IV\ТРПО\Practs\8\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+\\Mac\Disk_II\Projects\KIP\Course IV\ТРПО\Practs\8\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+\\Mac\Disk_II\Projects\KIP\Course IV\ТРПО\Practs\8\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+\\Mac\Disk_II\Projects\KIP\Course IV\ТРПО\Practs\8\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+\\Mac\Disk_II\Projects\KIP\Course IV\ТРПО\Practs\8\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\alex0\OneDrive\Рабочий стол\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\database.mdb
+C:\Users\alex0\OneDrive\Рабочий стол\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\alex0\OneDrive\Рабочий стол\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\alex0\OneDrive\Рабочий стол\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\alex0\OneDrive\Рабочий стол\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\alex0\OneDrive\Рабочий стол\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\alex0\OneDrive\Рабочий стол\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
+C:\Users\alex0\OneDrive\Рабочий стол\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\alex0\OneDrive\Рабочий стол\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\alex0\OneDrive\Рабочий стол\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

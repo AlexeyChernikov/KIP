@@ -1,0 +1,22 @@
+C:\Users\Skylin\source\repos\Delegate2\Delegate2\obj\Debug\netcoreapp2.0\Delegate2.csprojAssemblyReference.cache
+C:\Users\Skylin\source\repos\Delegate2\Delegate2\obj\Debug\netcoreapp2.0\Delegate2.csproj.CoreCompileInputs.cache
+C:\Users\Skylin\source\repos\Delegate2\Delegate2\obj\Debug\netcoreapp2.0\Delegate2.AssemblyInfoInputs.cache
+C:\Users\Skylin\source\repos\Delegate2\Delegate2\obj\Debug\netcoreapp2.0\Delegate2.AssemblyInfo.cs
+C:\Users\Skylin\source\repos\Delegate2\Delegate2\bin\Debug\netcoreapp2.0\Delegate2.deps.json
+C:\Users\Skylin\source\repos\Delegate2\Delegate2\bin\Debug\netcoreapp2.0\Delegate2.runtimeconfig.json
+C:\Users\Skylin\source\repos\Delegate2\Delegate2\bin\Debug\netcoreapp2.0\Delegate2.runtimeconfig.dev.json
+C:\Users\Skylin\source\repos\Delegate2\Delegate2\bin\Debug\netcoreapp2.0\Delegate2.dll
+C:\Users\Skylin\source\repos\Delegate2\Delegate2\bin\Debug\netcoreapp2.0\Delegate2.pdb
+C:\Users\Skylin\source\repos\Delegate2\Delegate2\obj\Debug\netcoreapp2.0\Delegate2.dll
+C:\Users\Skylin\source\repos\Delegate2\Delegate2\obj\Debug\netcoreapp2.0\Delegate2.pdb
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project10\Delegate2\Delegate2\bin\Debug\netcoreapp2.0\Delegate2.deps.json
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project10\Delegate2\Delegate2\bin\Debug\netcoreapp2.0\Delegate2.runtimeconfig.json
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project10\Delegate2\Delegate2\bin\Debug\netcoreapp2.0\Delegate2.runtimeconfig.dev.json
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project10\Delegate2\Delegate2\bin\Debug\netcoreapp2.0\Delegate2.dll
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project10\Delegate2\Delegate2\bin\Debug\netcoreapp2.0\Delegate2.pdb
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project10\Delegate2\Delegate2\obj\Debug\netcoreapp2.0\Delegate2.csprojResolveAssemblyReference.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project10\Delegate2\Delegate2\obj\Debug\netcoreapp2.0\Delegate2.csproj.CoreCompileInputs.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project10\Delegate2\Delegate2\obj\Debug\netcoreapp2.0\Delegate2.AssemblyInfoInputs.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project10\Delegate2\Delegate2\obj\Debug\netcoreapp2.0\Delegate2.AssemblyInfo.cs
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project10\Delegate2\Delegate2\obj\Debug\netcoreapp2.0\Delegate2.dll
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project10\Delegate2\Delegate2\obj\Debug\netcoreapp2.0\Delegate2.pdb

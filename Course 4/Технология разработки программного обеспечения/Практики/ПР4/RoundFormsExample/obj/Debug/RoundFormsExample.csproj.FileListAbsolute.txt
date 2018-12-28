@@ -1,0 +1,19 @@
+W:\Projects\KIP\Course IV\ТРПО\examples\RoundFormsExample\RoundFormsExample\RoundFormsExample\bin\Debug\RoundFormsExample.exe.config
+W:\Projects\KIP\Course IV\ТРПО\examples\RoundFormsExample\RoundFormsExample\RoundFormsExample\bin\Debug\RoundFormsExample.exe
+W:\Projects\KIP\Course IV\ТРПО\examples\RoundFormsExample\RoundFormsExample\RoundFormsExample\bin\Debug\RoundFormsExample.pdb
+W:\Projects\KIP\Course IV\ТРПО\examples\RoundFormsExample\RoundFormsExample\RoundFormsExample\obj\Debug\RoundFormsExample.csprojAssemblyReference.cache
+W:\Projects\KIP\Course IV\ТРПО\examples\RoundFormsExample\RoundFormsExample\RoundFormsExample\obj\Debug\RoundFormsExample.Form1.resources
+W:\Projects\KIP\Course IV\ТРПО\examples\RoundFormsExample\RoundFormsExample\RoundFormsExample\obj\Debug\RoundFormsExample.Properties.Resources.resources
+W:\Projects\KIP\Course IV\ТРПО\examples\RoundFormsExample\RoundFormsExample\RoundFormsExample\obj\Debug\RoundFormsExample.csproj.GenerateResource.cache
+W:\Projects\KIP\Course IV\ТРПО\examples\RoundFormsExample\RoundFormsExample\RoundFormsExample\obj\Debug\RoundFormsExample.csproj.CoreCompileInputs.cache
+W:\Projects\KIP\Course IV\ТРПО\examples\RoundFormsExample\RoundFormsExample\RoundFormsExample\obj\Debug\RoundFormsExample.exe
+W:\Projects\KIP\Course IV\ТРПО\examples\RoundFormsExample\RoundFormsExample\RoundFormsExample\obj\Debug\RoundFormsExample.pdb
+C:\Users\kbstudentint\Desktop\ПР4\RoundFormsExample\bin\Debug\RoundFormsExample.exe.config
+C:\Users\kbstudentint\Desktop\ПР4\RoundFormsExample\obj\Debug\RoundFormsExample.exe
+C:\Users\kbstudentint\Desktop\ПР4\RoundFormsExample\obj\Debug\RoundFormsExample.pdb
+C:\Users\kbstudentint\Desktop\ПР4\RoundFormsExample\bin\Debug\RoundFormsExample.exe
+C:\Users\kbstudentint\Desktop\ПР4\RoundFormsExample\bin\Debug\RoundFormsExample.pdb
+C:\Users\kbstudentint\Desktop\ПР4\RoundFormsExample\obj\Debug\RoundFormsExample.csprojResolveAssemblyReference.cache
+C:\Users\kbstudentint\Desktop\ПР4\RoundFormsExample\obj\Debug\RoundFormsExample.Form1.resources
+C:\Users\kbstudentint\Desktop\ПР4\RoundFormsExample\obj\Debug\RoundFormsExample.Properties.Resources.resources
+C:\Users\kbstudentint\Desktop\ПР4\RoundFormsExample\obj\Debug\RoundFormsExample.csproj.GenerateResource.Cache

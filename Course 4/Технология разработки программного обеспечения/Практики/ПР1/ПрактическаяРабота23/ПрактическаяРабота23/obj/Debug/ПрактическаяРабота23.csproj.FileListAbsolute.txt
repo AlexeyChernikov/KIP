@@ -1,0 +1,31 @@
+c:\users\kbstudentint\documents\visual studio 2013\Projects\ПрактическаяРабота23\ПрактическаяРабота23\bin\Debug\ПрактическаяРабота23.exe.config
+C:\Users\kbstudentint\documents\visual studio 2013\Projects\ПрактическаяРабота23\ПрактическаяРабота23\bin\Debug\ПрактическаяРабота23.exe
+C:\Users\kbstudentint\documents\visual studio 2013\Projects\ПрактическаяРабота23\ПрактическаяРабота23\bin\Debug\ПрактическаяРабота23.pdb
+C:\Users\kbstudentint\documents\visual studio 2013\Projects\ПрактическаяРабота23\ПрактическаяРабота23\obj\Debug\ПрактическаяРабота23.csprojResolveAssemblyReference.cache
+C:\Users\kbstudentint\documents\visual studio 2013\Projects\ПрактическаяРабота23\ПрактическаяРабота23\obj\Debug\ПрактическаяРабота23.Form1.resources
+C:\Users\kbstudentint\documents\visual studio 2013\Projects\ПрактическаяРабота23\ПрактическаяРабота23\obj\Debug\ПрактическаяРабота23.Properties.Resources.resources
+C:\Users\kbstudentint\documents\visual studio 2013\Projects\ПрактическаяРабота23\ПрактическаяРабота23\obj\Debug\ПрактическаяРабота23.csproj.GenerateResource.Cache
+C:\Users\kbstudentint\documents\visual studio 2013\Projects\ПрактическаяРабота23\ПрактическаяРабота23\obj\Debug\ПрактическаяРабота23.exe
+C:\Users\kbstudentint\documents\visual studio 2013\Projects\ПрактическаяРабота23\ПрактическаяРабота23\obj\Debug\ПрактическаяРабота23.pdb
+C:\Users\kbstudentint\Desktop\ПрактическаяРабота23\ПрактическаяРабота23\bin\Debug\ПрактическаяРабота23.exe.config
+C:\Users\kbstudentint\Desktop\ПрактическаяРабота23\ПрактическаяРабота23\obj\Debug\ПрактическаяРабота23.exe
+C:\Users\kbstudentint\Desktop\ПрактическаяРабота23\ПрактическаяРабота23\obj\Debug\ПрактическаяРабота23.pdb
+C:\Users\kbstudentint\Desktop\ПрактическаяРабота23\ПрактическаяРабота23\bin\Debug\ПрактическаяРабота23.exe
+C:\Users\kbstudentint\Desktop\ПрактическаяРабота23\ПрактическаяРабота23\bin\Debug\ПрактическаяРабота23.pdb
+C:\Users\kbstudentint\Desktop\ПрактическаяРабота23\ПрактическаяРабота23\obj\Debug\ПрактическаяРабота23.csprojResolveAssemblyReference.cache
+C:\Users\kbstudentint\Desktop\ПрактическаяРабота23\ПрактическаяРабота23\obj\Debug\ПрактическаяРабота23.Form1.resources
+C:\Users\kbstudentint\Desktop\ПрактическаяРабота23\ПрактическаяРабота23\obj\Debug\ПрактическаяРабота23.Properties.Resources.resources
+C:\Users\kbstudentint\Desktop\ПрактическаяРабота23\ПрактическаяРабота23\obj\Debug\ПрактическаяРабота23.csproj.GenerateResource.Cache
+C:\Users\kbstudentint\Desktop\ПР1\ПрактическаяРабота23\ПрактическаяРабота23\bin\Debug\ПрактическаяРабота23.exe.config
+C:\Users\kbstudentint\Desktop\ПР1\ПрактическаяРабота23\ПрактическаяРабота23\obj\Debug\ПрактическаяРабота23.exe
+C:\Users\kbstudentint\Desktop\ПР1\ПрактическаяРабота23\ПрактическаяРабота23\obj\Debug\ПрактическаяРабота23.pdb
+C:\Users\alex0\OneDrive\Рабочий стол\Практики\ПР1\ПрактическаяРабота23\ПрактическаяРабота23\bin\Debug\ПрактическаяРабота23.exe.config
+C:\Users\alex0\OneDrive\Рабочий стол\Практики\ПР1\ПрактическаяРабота23\ПрактическаяРабота23\bin\Debug\ПрактическаяРабота23.exe
+C:\Users\alex0\OneDrive\Рабочий стол\Практики\ПР1\ПрактическаяРабота23\ПрактическаяРабота23\bin\Debug\ПрактическаяРабота23.pdb
+C:\Users\alex0\OneDrive\Рабочий стол\Практики\ПР1\ПрактическаяРабота23\ПрактическаяРабота23\obj\Debug\ПрактическаяРабота23.csprojResolveAssemblyReference.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Практики\ПР1\ПрактическаяРабота23\ПрактическаяРабота23\obj\Debug\ПрактическаяРабота23.Form1.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Практики\ПР1\ПрактическаяРабота23\ПрактическаяРабота23\obj\Debug\ПрактическаяРабота23.Properties.Resources.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Практики\ПР1\ПрактическаяРабота23\ПрактическаяРабота23\obj\Debug\ПрактическаяРабота23.csproj.GenerateResource.Cache
+C:\Users\alex0\OneDrive\Рабочий стол\Практики\ПР1\ПрактическаяРабота23\ПрактическаяРабота23\obj\Debug\ПрактическаяРабота23.csproj.CoreCompileInputs.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Практики\ПР1\ПрактическаяРабота23\ПрактическаяРабота23\obj\Debug\ПрактическаяРабота23.exe
+C:\Users\alex0\OneDrive\Рабочий стол\Практики\ПР1\ПрактическаяРабота23\ПрактическаяРабота23\obj\Debug\ПрактическаяРабота23.pdb

@@ -1,0 +1,21 @@
+C:\Users\Skylin\source\repos\Delegate5\Delegate5\bin\Debug\netcoreapp2.0\Delegate5.deps.json
+C:\Users\Skylin\source\repos\Delegate5\Delegate5\bin\Debug\netcoreapp2.0\Delegate5.runtimeconfig.json
+C:\Users\Skylin\source\repos\Delegate5\Delegate5\bin\Debug\netcoreapp2.0\Delegate5.runtimeconfig.dev.json
+C:\Users\Skylin\source\repos\Delegate5\Delegate5\bin\Debug\netcoreapp2.0\Delegate5.dll
+C:\Users\Skylin\source\repos\Delegate5\Delegate5\bin\Debug\netcoreapp2.0\Delegate5.pdb
+C:\Users\Skylin\source\repos\Delegate5\Delegate5\obj\Debug\netcoreapp2.0\Delegate5.csproj.CoreCompileInputs.cache
+C:\Users\Skylin\source\repos\Delegate5\Delegate5\obj\Debug\netcoreapp2.0\Delegate5.AssemblyInfoInputs.cache
+C:\Users\Skylin\source\repos\Delegate5\Delegate5\obj\Debug\netcoreapp2.0\Delegate5.AssemblyInfo.cs
+C:\Users\Skylin\source\repos\Delegate5\Delegate5\obj\Debug\netcoreapp2.0\Delegate5.dll
+C:\Users\Skylin\source\repos\Delegate5\Delegate5\obj\Debug\netcoreapp2.0\Delegate5.pdb
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project10\Delegate5\Delegate5\bin\Debug\netcoreapp2.0\Delegate5.deps.json
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project10\Delegate5\Delegate5\bin\Debug\netcoreapp2.0\Delegate5.runtimeconfig.json
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project10\Delegate5\Delegate5\bin\Debug\netcoreapp2.0\Delegate5.runtimeconfig.dev.json
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project10\Delegate5\Delegate5\bin\Debug\netcoreapp2.0\Delegate5.dll
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project10\Delegate5\Delegate5\bin\Debug\netcoreapp2.0\Delegate5.pdb
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project10\Delegate5\Delegate5\obj\Debug\netcoreapp2.0\Delegate5.csprojResolveAssemblyReference.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project10\Delegate5\Delegate5\obj\Debug\netcoreapp2.0\Delegate5.csproj.CoreCompileInputs.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project10\Delegate5\Delegate5\obj\Debug\netcoreapp2.0\Delegate5.AssemblyInfoInputs.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project10\Delegate5\Delegate5\obj\Debug\netcoreapp2.0\Delegate5.AssemblyInfo.cs
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project10\Delegate5\Delegate5\obj\Debug\netcoreapp2.0\Delegate5.dll
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Инструментальные средства разработки программного обеспечения\структуризация\структуризация\Project10\Delegate5\Delegate5\obj\Debug\netcoreapp2.0\Delegate5.pdb

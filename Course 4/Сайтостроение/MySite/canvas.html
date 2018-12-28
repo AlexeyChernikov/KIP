@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Сайтостроение</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet">
+	<style>
+        body {
+            background-size: cover;
+            background-image: url('images/bg.jpg');
+        }
+    </style>
+  </head>
+  
+  <body>
+  
+	<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+	
+	<!-- Верхнее меню -->
+	
+	<div class="wrapper container">
+		<nav class="navbar navbar-default">
+			<ul class="nav navbar-nav">
+				<li><a href="index21.php">Регистрация</a></li>  
+				<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Сайт<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="story.html">Сюжет игры</a></li>
+                        <li><a href="development.html">Разработка игры</a></li>
+                        <li><a href="gamemusic.html">Музыка</a></li>
+                        <li><a href="systemrequirement.html">Системные требования</a></li>
+                    </ul>
+				</li>
+				<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">PHP<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="php1.html">PHP 1</a></li>
+                        <li><a href="php2.html">PHP 2</a></li>
+                    </ul>
+				</li>
+				<li><a href="js.html">JS</a></li>
+				<li><a href="canvas.html">CANVAS</a></li>
+				<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Игры<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+						<li><a href="Race.html">Игра "Race!" на JS</a></li>
+                        <li><a href="Game.php">Игра "Города" на PHP</a></li>
+                    </ul>
+				</li> 
+			</ul>
+		</nav>
+		
+		<!-- Граница -->
+		
+		<div class="heading">
+			<center><h1></h1></center>
+		</div>
+		
+		<!-- Основная часть -->
+		
+		<div class="row">
+		
+		<!-- Правое меню -->
+		
+			<aside class="col-md-7">
+				<ul class="list-group submenu">
+					<li class="list-group-item"><a href="index21.php">Регистрация</a></li>
+					<li class="dropdown list-group-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Сайт<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="index.html">Главная</a></li>
+							<li><a href="story.html">Сюжет игры</a></li>
+							<li><a href="development.html">Разработка игры</a></li>
+							<li><a href="gamemusic.html">Музыка</a></li>
+							<li><a href="systemrequirement.html">Системные требования</a></li>
+						</ul>
+					</li>
+					<li class="dropdown list-group-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle">PHP<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="php1.html">PHP 1</a></li>
+							<li><a href="php2.html">PHP 2</a></li>
+						</ul>
+					</li>
+					<li class="list-group-item"><a href="js.html">JS</a></li>
+					<li class="list-group-item"><a href="canvas.html">CANVAS</a></li>
+					<li class="dropdown list-group-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Игры<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="Race.html">Игра "Race!" на JS</a></li>
+							<li><a href="Game.php">Игра "Города" на PHP</a></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+			
+			<!--Текст -->
+			
+			<section class="col-md-17">	
+                <div style="border: 0.1px solid Silver; background: #f3f3f3;">
+					<p align="justify"><font color="#8f8f8f" size="8">
+					<canvas  id='test' height='320' width='480'>Текст показывается, если элемент не поддерживается</canvas>
+					<script type="text/javascript">
+						var canvas = document.getElementById("test");
+						var ctx = canvas.getContext('2d');
+						ctx.fillRect(0, 0, canvas.width, canvas.height);
+						ctx.clearRect(50, 50, 300, 200); // вырезаем прямоугольник
+					</script>
+					<br>
+					<canvas id='test1'  width='480'>Текст показывается, если элемент не поддерживается</canvas>
+					<script type="text/javascript">
+						var canvas = document.getElementById("test1");
+						var ctx = canvas.getContext('2d');
+						ctx.strokeRect(5, 5, 138, 138);
+						for (i = 0; i <= 3; i++) {
+							ctx.fillRect(5 + i * 15, 5 + i * 15, 138 - i * 30, 138 - i * 30);
+							ctx.clearRect(15 + i * 15, 15 + i * 15, 118 - i * 30, 118 - i * 30);
+						}
+					ctx.fillRect(65, 65, 18, 18);
+					</script>
+				
+					<canvas id='test2' height='320' width='480'>Текст показывается, если элемент не поддерживается</canvas>
+					<script type="text/javascript">
+						var canvas = document.getElementById("test2");
+						var ctx = canvas.getContext('2d');
+						ctx.beginPath(); // начинаем рисовать
+						ctx.arc(160, 160, 30, 0, 360, false);
+						ctx.fill(); // заливаем окружность
+						ctx.moveTo(160, 0);
+						ctx.lineTo(200, 120);
+						ctx.lineTo(320, 160);
+						ctx.lineTo(200, 200);
+						ctx.lineTo(160, 320);
+						ctx.lineTo(120, 200);
+						ctx.lineTo(0, 160);
+						ctx.lineTo(120, 120);
+						ctx.lineTo(160, 0);
+						ctx.stroke(); // обводим фигуры
+						ctx.closePath(); // закончили рисовать
+					</script>
+				
+					<canvas id='test3' height='160' width='480'>Текст показывается, если элемент не поддерживается</canvas>
+					<script type="text/javascript">
+						var canvas = document.getElementById("test3");
+						var ctx = canvas.getContext('2d');
+						ctx.fill(); // заливаем окружность
+						ctx.lineWidth = 4;  // ширина линии
+						ctx.beginPath();
+						ctx.moveTo(50, 150);
+						ctx.bezierCurveTo(0, 40, 160, 80, 240, 40); // линия по 3-м точкам 
+						ctx.stroke();
+					</script>
+
+					<canvas id='test4' height='320' width='480'>Текст показывается, если элемент не поддерживается</canvas>
+					<script type="text/javascript">
+						var canvas = document.getElementById("test4");
+						var ctx = canvas.getContext('2d');
+						ctx.strokeStyle = 'red'; // меняем цвет рамки
+						ctx.strokeRect(15, 15, 100, 100);
+						ctx.fillStyle = 'yellow'; // меняем цвет прямоугольника
+						ctx.fillRect(20, 20, 90, 90);
+						ctx.strokeStyle = '#00FF00'; // меняем цвет рамки
+						ctx.strokeRect(125, 15, 100, 100);
+						ctx.fillStyle = '#5500FF'; // меняем цвет прямоугольника
+						ctx.fillRect(130, 20, 90, 90);
+						ctx.strokeStyle = 'rgb(0,0,255)'; // меняем цвет рамки
+						ctx.strokeRect(235, 15, 100, 100);
+						ctx.fillStyle = 'rgb(255,0,0)'; // меняем цвет прямоугольника
+						ctx.fillRect(240, 20, 90, 90);
+					</script>
+				
+					<canvas id='home' height='320' width='480'>Текст показывается, если элемент не поддерживается</canvas>
+					<script type="text/javascript">
+						var canvas = document.getElementById("home");
+						var ctx = canvas.getContext("2d"); 
+						ctx.strokeStyle = "black"; 
+						ctx.strokeRect(50, 50, 100, 100); 
+						ctx.strokeRect(60, 70, 40, 80); 
+						ctx.strokeRect(60, 70, 40, 80); 
+						ctx.strokeRect(110, 80, 30, 30); 
+						ctx.moveTo(150,50); 
+						ctx.lineTo(100,0); 
+						ctx.lineTo(50,50);
+						ctx.stroke();
+					</script>
+					</p>
+				</div>
+			</section>
+		</div>
+	</div>
+	
+	<!-- Подвал -->
+	
+	<footer>
+		<div class="container" style="">
+			<div class="row">
+				<div>
+					<br><br><br>
+					<center><a href="https://vk.com/tamseler99"><h3>Черников Алексей 2018</h3></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	<script src="js/jquery.min.js"></script>
+	
+  </body>
+</html>

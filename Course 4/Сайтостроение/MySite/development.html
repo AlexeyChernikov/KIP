@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Сайтостроение</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet">
+	<style>
+        body {
+            background-size: cover;
+            background-image: url('images/bg.jpg');
+        }
+    </style>
+  </head>
+  
+  <body>
+  
+	<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+	
+	<!-- Верхнее меню -->
+	
+	<div class="wrapper container">
+		<nav class="navbar navbar-default">
+			<ul class="nav navbar-nav">
+				<li><a href="index21.php">Регистрация</a></li>  
+				<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Сайт<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="story.html">Сюжет игры</a></li>
+                        <li><a href="development.html">Разработка игры</a></li>
+                        <li><a href="gamemusic.html">Музыка</a></li>
+                        <li><a href="systemrequirement.html">Системные требования</a></li>
+                    </ul>
+				</li>
+				<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">PHP<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="php1.html">PHP 1</a></li>
+                        <li><a href="php2.html">PHP 2</a></li>
+                    </ul>
+				</li>
+				<li><a href="js.html">JS</a></li>
+				<li><a href="canvas.html">CANVAS</a></li>
+				<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Игры<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+						<li><a href="Race.html">Игра "Race!" на JS</a></li>
+                        <li><a href="Game.php">Игра "Города" на PHP</a></li>
+                    </ul>
+				</li> 
+			</ul>
+		</nav>
+		
+		<!-- Граница -->
+		
+		<div class="heading">
+			<center><h1></h1></center>
+		</div>
+		
+		<!-- Основная часть -->
+		
+		<div class="row">
+		
+		<!-- Правое меню -->
+		
+			<aside class="col-md-7">
+				<ul class="list-group submenu">
+					<li class="list-group-item"><a href="index21.php">Регистрация</a></li>
+					<li class="dropdown list-group-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Сайт<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="index.html">Главная</a></li>
+							<li><a href="story.html">Сюжет игры</a></li>
+							<li><a href="development.html">Разработка игры</a></li>
+							<li><a href="gamemusic.html">Музыка</a></li>
+							<li><a href="systemrequirement.html">Системные требования</a></li>
+						</ul>
+					</li>
+					<li class="dropdown list-group-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle">PHP<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="php1.html">PHP 1</a></li>
+							<li><a href="php2.html">PHP 2</a></li>
+						</ul>
+					</li>
+					<li class="list-group-item"><a href="js.html">JS</a></li>
+					<li class="list-group-item"><a href="canvas.html">CANVAS</a></li>
+					<li class="dropdown list-group-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Игры<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="Race.html">Игра "Race!" на JS</a></li>
+							<li><a href="Game.php">Игра "Города" на PHP</a></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+			
+			<!--Текст -->
+			
+			<section class="col-md-17">	
+                <div style="border: 0.1px solid Silver; background: #f3f3f3;">
+					<font size="6"><center>Полый рыцарь: начало</center></font>
+					<p align="justify"><font color="#8f8f8f" size="4">
+					Team Cherry — молодая команда, но история студии началась давно. 
+					Её основатели, аниматор Ари Гибсон (Ari Gibson) и гейм-дизайнер Уильям Пеллен (William Pellen), 
+					познакомились лет 15 назад через общих друзей, но долгое время особо не общались друг с другом.
+					В 2013 году Пеллен, работавший веб-дизайнером, увлёкся разработкой платформеров. 
+					Как-то раз Гибсон, на тот момент работавший в кино, предложил Уильяму поучаствовать в гейм-джеме Ludum Dare.
+					Тема джема звучала как «10 секунд». 
+					Тогда ребята придумали Hungry Knight — маленькую аркаду, в которой игрок бродил по небольшой арене и убивал врагов. 
+					На каждое убийство давалось десять секунд — если игрок не успевал добежать до противника и убить, то персонаж погибал и игра начиналась заново.
+					</p>
+					<center><img src="images/origin.png"><br>
+					<em>Именно в Hungry Knight впервые появился жучок-рыцарь, впоследствии ставший героем Hollow Knight</em>
+					</center>
+					<p align="justify"><font color="#8f8f8f" size="4">
+					Ари и Уильям почувствовали, что из них получается неплохой творческий дуэт. 
+					Они решили работать над более крупным проектом. Поначалу игру они создавали вдвоём, затем ребята нашли ещё двоих коллег — технического программиста Дэйва Кази (Dave Kazi) и композитора Криса Ларкина (Chris Larkin).
+					Вопреки постоянный сравнениям Hollow Knight с Dark Souls, разработчики вдохновлялись вовсе не разработкой FromSoftware. 
+					Главные музы проекта — старые NES-платформеры: Mario, Faxanadu, The Legend of Zelda, Mega Man, Castlevania и, конечно, Metroid. 
+					Причём первоначально игра даже не задумывалась как метроидвания, это пришло позднее.
+					</p>
+					<center><img src="images/team.jpg"><br>
+					<em>Слева-направо: Дэйв Кази, Ари Гибсон, Уильям Пеллен и Крис Ларкин</em>
+					</center>
+					<br>
+					<font size="6"><center>Последние штрихи</center></font>
+					<p align="justify"><font color="#8f8f8f" size="4">
+					Финальные шесть месяцев разработка игры представляла из себя следующее — Гибсон или Пеллен садился на диван, просто играл и выкрикивал коллеге: вот здесь баг, вот здесь нужно доработать. 
+					Теперь Уильям и Ари не сравнивали локации со стартовой, а оценивали их в контексте всей игры.
+					</p>
+					<center><img src="images/lvl.jpg"><br></center>
+					<p align="justify"><font color="#8f8f8f" size="4">
+					Это был период постоянных маленьких правок и интенсивного тестинга. 
+					Если какая-то часть локации оказывалась слишком просто устроенной, туда можно было добавить секретное место. 
+					Если встречался длительный промежуток без схваток, в него можно было внедрить встречу и разговор с NPC.
+					</p>
+					<p>
+					Никто за пределами студии в эти шесть месяцев игры не касался. 
+					Постоянный тестинг был изнурительным, но каждое улучшение было для ребят маленькой победой. 
+					Только после этого Team Cherry решились выпустить проект, который ждало признание критиков, любовь игроков и более миллиона проданных копий.
+					</p>
+				</div>
+			</section>
+		</div>
+	</div>
+	
+	<!-- Подвал -->
+	
+	<footer>
+		<div class="container" style="">
+			<div class="row">
+				<div>
+					<br><br><br>
+					<center><a href="https://vk.com/tamseler99"><h3>Черников Алексей 2018</h3></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	<script src="js/jquery.min.js"></script>
+	
+  </body>
+</html>

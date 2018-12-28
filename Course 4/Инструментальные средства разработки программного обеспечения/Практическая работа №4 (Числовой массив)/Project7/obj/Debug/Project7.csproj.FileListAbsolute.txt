@@ -1,0 +1,64 @@
+W:\Projects\KIP\Course IV\ИСРПО\Project7\Project7\obj\Debug\Project7.csprojAssemblyReference.cache
+W:\Projects\KIP\Course IV\ИСРПО\Project7\Project7\obj\Debug\MainWindow.g.cs
+W:\Projects\KIP\Course IV\ИСРПО\Project7\Project7\obj\Debug\App.g.cs
+W:\Projects\KIP\Course IV\ИСРПО\Project7\Project7\obj\Debug\Project7_MarkupCompile.cache
+W:\Projects\KIP\Course IV\ИСРПО\Project7\Project7\obj\Debug\Project7_MarkupCompile.lref
+\\Mac\Disk_II\Projects\KIP\Course IV\ИСРПО\Project7\Project7\obj\Debug\Project7.csprojAssemblyReference.cache
+\\Mac\Disk_II\Projects\KIP\Course IV\ИСРПО\Project7\Project7\obj\Debug\MainWindow.g.cs
+\\Mac\Disk_II\Projects\KIP\Course IV\ИСРПО\Project7\Project7\obj\Debug\App.g.cs
+\\Mac\Disk_II\Projects\KIP\Course IV\ИСРПО\Project7\Project7\obj\Debug\Project7_MarkupCompile.cache
+\\Mac\Disk_II\Projects\KIP\Course IV\ИСРПО\Project7\Project7\obj\Debug\Project7_MarkupCompile.lref
+\\Mac\Disk_II\Projects\KIP\Course IV\ИСРПО\Project7\Project7\bin\Debug\Project7.exe.config
+\\Mac\Disk_II\Projects\KIP\Course IV\ИСРПО\Project7\Project7\bin\Debug\Project7.exe
+\\Mac\Disk_II\Projects\KIP\Course IV\ИСРПО\Project7\Project7\bin\Debug\Project7.pdb
+\\Mac\Disk_II\Projects\KIP\Course IV\ИСРПО\Project7\Project7\obj\Debug\MainWindow.baml
+\\Mac\Disk_II\Projects\KIP\Course IV\ИСРПО\Project7\Project7\obj\Debug\Project7.g.resources
+\\Mac\Disk_II\Projects\KIP\Course IV\ИСРПО\Project7\Project7\obj\Debug\Project7.Properties.Resources.resources
+\\Mac\Disk_II\Projects\KIP\Course IV\ИСРПО\Project7\Project7\obj\Debug\Project7.csproj.GenerateResource.cache
+\\Mac\Disk_II\Projects\KIP\Course IV\ИСРПО\Project7\Project7\obj\Debug\Project7.csproj.CoreCompileInputs.cache
+\\Mac\Disk_II\Projects\KIP\Course IV\ИСРПО\Project7\Project7\obj\Debug\Project7.exe
+\\Mac\Disk_II\Projects\KIP\Course IV\ИСРПО\Project7\Project7\obj\Debug\Project7.pdb
+C:\Users\kbstudentint\Desktop\Пр6\Project7\bin\Debug\Project7.exe.config
+C:\Users\kbstudentint\Desktop\Пр6\Project7\obj\Debug\Project7.exe
+C:\Users\kbstudentint\Desktop\Пр6\Project7\obj\Debug\Project7.pdb
+C:\Users\kbstudentint\Desktop\Пр6\Project7\bin\Debug\Project7.exe
+C:\Users\kbstudentint\Desktop\Пр6\Project7\bin\Debug\Project7.pdb
+C:\Users\kbstudentint\Desktop\Пр6\Project7\obj\Debug\Project7.csprojResolveAssemblyReference.cache
+C:\Users\kbstudentint\Desktop\Пр6\Project7\obj\Debug\MainWindow.g.cs
+C:\Users\kbstudentint\Desktop\Пр6\Project7\obj\Debug\App.g.cs
+C:\Users\kbstudentint\Desktop\Пр6\Project7\obj\Debug\Project7_MarkupCompile.cache
+C:\Users\kbstudentint\Desktop\Пр6\Project7\obj\Debug\Project7_MarkupCompile.lref
+C:\Users\kbstudentint\Desktop\Пр6\Project7\obj\Debug\MainWindow.baml
+C:\Users\kbstudentint\Desktop\Пр6\Project7\obj\Debug\Project7.g.resources
+C:\Users\kbstudentint\Desktop\Пр6\Project7\obj\Debug\Project7.Properties.Resources.resources
+C:\Users\kbstudentint\Desktop\Пр6\Project7\obj\Debug\Project7.csproj.GenerateResource.Cache
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Практическая работа №5 (Числовой массив через классы)\Project7\bin\Debug\Project7.exe.config
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Практическая работа №5 (Числовой массив через классы)\Project7\bin\Debug\Project7.exe
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Практическая работа №5 (Числовой массив через классы)\Project7\bin\Debug\Project7.pdb
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Практическая работа №5 (Числовой массив через классы)\Project7\obj\Debug\Project7.csprojResolveAssemblyReference.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Практическая работа №5 (Числовой массив через классы)\Project7\obj\Debug\MainWindow.g.cs
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Практическая работа №5 (Числовой массив через классы)\Project7\obj\Debug\App.g.cs
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Практическая работа №5 (Числовой массив через классы)\Project7\obj\Debug\Project7_MarkupCompile.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Практическая работа №5 (Числовой массив через классы)\Project7\obj\Debug\Project7_MarkupCompile.lref
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Практическая работа №5 (Числовой массив через классы)\Project7\obj\Debug\MainWindow.baml
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Практическая работа №5 (Числовой массив через классы)\Project7\obj\Debug\Project7.g.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Практическая работа №5 (Числовой массив через классы)\Project7\obj\Debug\Project7.Properties.Resources.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Практическая работа №5 (Числовой массив через классы)\Project7\obj\Debug\Project7.csproj.GenerateResource.Cache
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Практическая работа №5 (Числовой массив через классы)\Project7\obj\Debug\Project7.csproj.CoreCompileInputs.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Практическая работа №5 (Числовой массив через классы)\Project7\obj\Debug\Project7.exe
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Практическая работа №5 (Числовой массив через классы)\Project7\obj\Debug\Project7.pdb
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практическая работа №4 (Числовой массив)\Project7\bin\Debug\Project7.exe.config
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практическая работа №4 (Числовой массив)\Project7\bin\Debug\Project7.exe
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практическая работа №4 (Числовой массив)\Project7\bin\Debug\Project7.pdb
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практическая работа №4 (Числовой массив)\Project7\obj\Debug\Project7.csprojResolveAssemblyReference.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практическая работа №4 (Числовой массив)\Project7\obj\Debug\MainWindow.g.cs
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практическая работа №4 (Числовой массив)\Project7\obj\Debug\App.g.cs
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практическая работа №4 (Числовой массив)\Project7\obj\Debug\Project7_MarkupCompile.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практическая работа №4 (Числовой массив)\Project7\obj\Debug\Project7_MarkupCompile.lref
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практическая работа №4 (Числовой массив)\Project7\obj\Debug\MainWindow.baml
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практическая работа №4 (Числовой массив)\Project7\obj\Debug\Project7.g.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практическая работа №4 (Числовой массив)\Project7\obj\Debug\Project7.Properties.Resources.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практическая работа №4 (Числовой массив)\Project7\obj\Debug\Project7.csproj.GenerateResource.Cache
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практическая работа №4 (Числовой массив)\Project7\obj\Debug\Project7.csproj.CoreCompileInputs.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практическая работа №4 (Числовой массив)\Project7\obj\Debug\Project7.exe
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практическая работа №4 (Числовой массив)\Project7\obj\Debug\Project7.pdb

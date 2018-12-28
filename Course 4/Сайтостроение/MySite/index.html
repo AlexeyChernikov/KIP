@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Сайтостроение</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet">
+	<link href="css/slider.css" rel="stylesheet">
+	<style>
+        body {
+            background-size: cover;
+            background-image: url('images/bg.jpg');
+        }
+    </style>
+  </head>
+  
+  <body>
+  
+	<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+	
+	<!-- Верхнее меню -->
+	
+	<div class="wrapper container">
+		<nav class="navbar navbar-default">
+			<ul class="nav navbar-nav">
+				<li><a href="index21.php">Регистрация</a></li>  
+				<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Сайт<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="story.html">Сюжет игры</a></li>
+                        <li><a href="development.html">Разработка игры</a></li>
+                        <li><a href="gamemusic.html">Музыка</a></li>
+                        <li><a href="systemrequirement.html">Системные требования</a></li>
+                    </ul>
+				</li>
+				<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">PHP<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="php1.html">PHP 1</a></li>
+                        <li><a href="php2.html">PHP 2</a></li>
+                    </ul>
+				</li>
+				<li><a href="js.html">JS</a></li>
+				<li><a href="canvas.html">CANVAS</a></li>
+				<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Игры<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+						<li><a href="Race.html">Игра "Race!" на JS</a></li>
+                        <li><a href="Game.php">Игра "Города" на PHP</a></li>
+                    </ul>
+				</li> 
+			</ul>
+		</nav>
+		
+		<!-- Граница -->
+		
+		<div class="heading">
+			<center><h1></h1></center>
+		</div>
+		
+		<!-- Основная часть -->
+		
+		<div class="row">
+		
+		<!-- Правое меню -->
+		
+			<aside class="col-md-7">
+				<ul class="list-group submenu">
+					<li class="list-group-item"><a href="index21.php">Регистрация</a></li>
+					<li class="dropdown list-group-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Сайт<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="index.html">Главная</a></li>
+							<li><a href="story.html">Сюжет игры</a></li>
+							<li><a href="development.html">Разработка игры</a></li>
+							<li><a href="gamemusic.html">Музыка</a></li>
+							<li><a href="systemrequirement.html">Системные требования</a></li>
+						</ul>
+					</li>
+					<li class="dropdown list-group-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle">PHP<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="php1.html">PHP 1</a></li>
+							<li><a href="php2.html">PHP 2</a></li>
+						</ul>
+					</li>
+					<li class="list-group-item"><a href="js.html">JS</a></li>
+					<li class="list-group-item"><a href="canvas.html">CANVAS</a></li>
+					<li class="dropdown list-group-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Игры<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="Race.html">Игра "Race!" на JS</a></li>
+							<li><a href="Game.php">Игра "Города" на PHP</a></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+			
+			<!--Текст -->
+			
+			<section class="col-md-17">
+				<div style="border: 0.1px solid Silver; background: #f3f3f3;">
+					<font size="6"><center>Общее</center></font>
+					<p align="justify"><font color="#8f8f8f" size="4">
+					<b>Hollow Knight</b> — это захватывающая, красивая приключенческая игра в огромном подземном королевстве Халлоунест. 
+					Двумерная игра с акцентом на умения и исследования позволяет вам сражаться с огромным множеством смертоносных существ, 
+					избегая сложных ловушек и разгадывая древние загадки, прокладывая себе путь через грибковые отходы, зелёные массивы и разрушенные подземные города.
+				</p>
+				</div>
+			</section>
+		</div>
+		
+		<!-- Граница -->
+		 
+		<div class="heading">
+			<center><h1></h1></center>
+		</div>
+		
+		<!-- Слайдер -->
+		
+		<div id="block-for-slider">
+			<div id="viewport">
+				<ul id="slidewrapper">
+					<li class="slide"><img src="images/1.jpg" alt="1" class="slide-img"></li>
+					<li class="slide"><img src="images/2.jpg" alt="2" class="slide-img"></li>
+					<li class="slide"><img src="images/3.jpg" alt="3" class="slide-img"></li>
+					<li class="slide"><img src="images/4.jpg" alt="4" class="slide-img"></li>
+				</ul>
+
+				<div id="prev-next-btns">
+					<div id="next-btn"><img src="images/rightarrow.png"></div>
+					<div id="prev-btn"><img src="images/leftarrow.png"></div>
+				</div>
+
+				<ul id="nav-btns">
+					<li class="slide-nav-btn"></li>
+					<li class="slide-nav-btn"></li>
+					<li class="slide-nav-btn"></li>
+					<li class="slide-nav-btn"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Подвал -->
+	
+	<footer>
+		<div class="container" style="">
+			<div class="row">
+				<div>
+					<br><br><br>
+					<center><a href="https://vk.com/tamseler99"><h3>Черников Алексей 2018</h3></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/slider.js"></script> 
+	
+  </body>
+</html>

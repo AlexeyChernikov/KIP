@@ -1,0 +1,14 @@
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Project1\WPF\Project2\bin\Debug\Project2.exe.config
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Project1\WPF\Project2\bin\Debug\Project2.exe
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Project1\WPF\Project2\bin\Debug\Project2.pdb
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Project1\WPF\Project2\obj\Debug\MainWindow.g.cs
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Project1\WPF\Project2\obj\Debug\App.g.cs
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Project1\WPF\Project2\obj\Debug\Project2_MarkupCompile.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Project1\WPF\Project2\obj\Debug\Project2_MarkupCompile.lref
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Project1\WPF\Project2\obj\Debug\MainWindow.baml
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Project1\WPF\Project2\obj\Debug\Project2.g.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Project1\WPF\Project2\obj\Debug\Project2.Properties.Resources.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Project1\WPF\Project2\obj\Debug\Project2.csproj.GenerateResource.Cache
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Project1\WPF\Project2\obj\Debug\Project2.csproj.CoreCompileInputs.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Project1\WPF\Project2\obj\Debug\Project2.exe
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Project1\WPF\Project2\obj\Debug\Project2.pdb

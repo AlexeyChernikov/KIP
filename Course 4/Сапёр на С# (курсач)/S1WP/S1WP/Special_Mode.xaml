@@ -1,0 +1,31 @@
+﻿<Window x:Class="S1WP.Special_Mode"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:S1WP"
+        mc:Ignorable="d"
+        Title="Особый" ResizeMode="NoResize" Height="142" Width="300" Icon="Mine.png" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Высота (?)" HorizontalAlignment="Left" Height="25" Margin="9,1,0,0" VerticalAlignment="Top" Width="77">
+            <Label.ToolTip>
+                <ToolTip>
+                    <TextBlock>Высота не может быть 0 или превышать 20</TextBlock>
+                </ToolTip>
+            </Label.ToolTip>
+        </Label>
+         <TextBox x:Name="Special_Height" HorizontalAlignment="Left" Height="23" Margin="9,26,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="77" PreviewTextInput="Only_Number" PreviewKeyDown="Without_a_Space" TextChanged="Fill_TBH" MaxLength="2"/>
+        <Label Content="Ширина (?)" HorizontalAlignment="Left" Height="25" Margin="102,1,0,0" VerticalAlignment="Top" Width="77">
+            <Label.ToolTip>
+                <ToolTip>
+                    <TextBlock>Ширина не может быть меньше 9 или превышать 40</TextBlock>
+                </ToolTip>
+            </Label.ToolTip>
+        </Label>
+        <TextBox x:Name="Special_Weight" HorizontalAlignment="Left" Height="23" Margin="102,26,0,0" TextWrapping="Wrap" Text="30" VerticalAlignment="Top" Width="77" PreviewTextInput="Only_Number" PreviewKeyDown="Without_a_Space" TextChanged="Fill_TBW" MaxLength="2"/>
+        <Label Content="Мины" HorizontalAlignment="Left" Height="25" Margin="197,1,0,0" VerticalAlignment="Top" Width="77"/>
+        <TextBox x:Name="Special_Mine" HorizontalAlignment="Left" Height="23" Margin="197,26,0,0" TextWrapping="Wrap" Text="145" VerticalAlignment="Top" Width="77" PreviewTextInput="Only_Number" PreviewKeyDown="Without_a_Space" TextChanged="Fill_TBM" MaxLength="3"/>
+        <Button x:Name="NewGame" Content="Новая игра" HorizontalAlignment="Left" Height="33" Margin="78,59,0,0" VerticalAlignment="Top" Width="126" Click="NewGame_Click"/>
+
+    </Grid>
+</Window>

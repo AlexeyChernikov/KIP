@@ -1,0 +1,9 @@
+C:\Users\alex0\OneDrive\Рабочий стол\Project12\ThreadExample2\WindowsFormsApplication12\bin\Debug\WindowsFormsApplication12.exe.config
+C:\Users\alex0\OneDrive\Рабочий стол\Project12\ThreadExample2\WindowsFormsApplication12\bin\Debug\WindowsFormsApplication12.exe
+C:\Users\alex0\OneDrive\Рабочий стол\Project12\ThreadExample2\WindowsFormsApplication12\bin\Debug\WindowsFormsApplication12.pdb
+C:\Users\alex0\OneDrive\Рабочий стол\Project12\ThreadExample2\WindowsFormsApplication12\obj\Debug\WindowsFormsApplication12.Form1.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Project12\ThreadExample2\WindowsFormsApplication12\obj\Debug\WindowsFormsApplication12.Properties.Resources.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Project12\ThreadExample2\WindowsFormsApplication12\obj\Debug\WindowsFormsApplication12.csproj.GenerateResource.Cache
+C:\Users\alex0\OneDrive\Рабочий стол\Project12\ThreadExample2\WindowsFormsApplication12\obj\Debug\WindowsFormsApplication12.csproj.CoreCompileInputs.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Project12\ThreadExample2\WindowsFormsApplication12\obj\Debug\WindowsFormsApplication12.exe
+C:\Users\alex0\OneDrive\Рабочий стол\Project12\ThreadExample2\WindowsFormsApplication12\obj\Debug\WindowsFormsApplication12.pdb

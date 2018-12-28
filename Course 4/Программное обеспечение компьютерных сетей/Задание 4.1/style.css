@@ -1,0 +1,60 @@
+#top {
+    background: #0000CD;
+    border: solid 1px black;
+    padding: 15px 0 15px 10px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+#news {
+    font-size: 90%;
+    width: 200px;
+    background: #E6E6FA;
+    border: solid 1px black;
+    float: right;
+    padding: 3px;
+}
+
+#menu {
+    width: 200px;
+    float: left;
+    padding: 3px;
+}
+#menu p {
+    background: #4B0082;
+    color: white;
+}
+#content {
+    background: #E6E6FA;
+    border: solid 1px black;
+    margin-left: 215px;
+    margin-right: 215px;
+    margin-bottom: 15px;
+}
+
+#content P { 
+    font-size: 90%;
+    text-align: justify;
+    padding: 10px;
+    margin: 0;
+}
+
+H1 {
+    text-align: center;
+    font-size: 180%;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: normal;
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+#bottom {
+    background: #0000CD;
+	text-align: center;
+	color: white;
+    border: solid 1px black;
+    font-size: 90%;
+    padding: 15px 0 15px 10px;
+}

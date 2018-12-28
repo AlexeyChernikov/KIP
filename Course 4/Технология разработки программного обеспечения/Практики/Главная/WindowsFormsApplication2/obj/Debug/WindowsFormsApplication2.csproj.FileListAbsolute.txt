@@ -1,0 +1,40 @@
+C:\Users\kbstudentint\Documents\Visual Studio 2013\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\Users\kbstudentint\Documents\Visual Studio 2013\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+C:\Users\kbstudentint\Documents\Visual Studio 2013\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+C:\Users\kbstudentint\Documents\Visual Studio 2013\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
+C:\Users\kbstudentint\Documents\Visual Studio 2013\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\kbstudentint\Documents\Visual Studio 2013\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+C:\Users\kbstudentint\Documents\Visual Studio 2013\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\kbstudentint\Documents\Visual Studio 2013\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\kbstudentint\Documents\Visual Studio 2013\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.MainForm.resources
+C:\Users\kbstudentint\Documents\Visual Studio 2013\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.PR5.resources
+C:\Users\kbstudentint\Documents\Visual Studio 2013\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.PR4.resources
+C:\Users\kbstudentint\Documents\Visual Studio 2013\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.PR1.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Практики\Главная\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Практики\Главная\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.MainForm.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Практики\Главная\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.PR4.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Практики\Главная\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.PR5.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Практики\Главная\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Практики\Главная\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+C:\Users\alex0\OneDrive\Рабочий стол\Практики\Главная\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\alex0\OneDrive\Рабочий стол\Практики\Главная\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\alex0\OneDrive\Рабочий стол\Практики\Главная\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\Users\alex0\OneDrive\Рабочий стол\Практики\Главная\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+C:\Users\alex0\OneDrive\Рабочий стол\Практики\Главная\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+C:\Users\alex0\OneDrive\Рабочий стол\Практики\Главная\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.CoreCompileInputs.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Практики\Главная\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.PR3.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Технология разработки программного обеспечения\Практики\Главная\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Технология разработки программного обеспечения\Практики\Главная\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Технология разработки программного обеспечения\Практики\Главная\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Технология разработки программного обеспечения\Практики\Главная\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Технология разработки программного обеспечения\Практики\Главная\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.MainForm.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Технология разработки программного обеспечения\Практики\Главная\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.PR3.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Технология разработки программного обеспечения\Практики\Главная\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.PR4.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Технология разработки программного обеспечения\Практики\Главная\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.PR5.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Технология разработки программного обеспечения\Практики\Главная\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.PR7.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Технология разработки программного обеспечения\Практики\Главная\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Технология разработки программного обеспечения\Практики\Главная\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Технология разработки программного обеспечения\Практики\Главная\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.CoreCompileInputs.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Технология разработки программного обеспечения\Практики\Главная\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Технология разработки программного обеспечения\Практики\Главная\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\alex0\OneDrive\Рабочий стол\Учёба\4 курс\Технология разработки программного обеспечения\Практики\Главная\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.PR8.resources

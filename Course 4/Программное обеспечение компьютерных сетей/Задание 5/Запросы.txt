@@ -1,0 +1,55 @@
+Запросы SELECT
+SELECT name FROM user.Table
+
+
+Запросы UPDATE у всех телефонов -1
+UPDATE user.Table SET phone = phone -1
+
+
+Запросы DELETE для выполнения нужна таблица с name Gena1
+DELETE FROM `Table` WHERE name = 'Gena1'
+
+
+Запросы DROP удалить таблицу
+DROP Table user.Table
+
+
+
+
+
+SELECT * FROM user.SS_categories
+
+
+SELECT  name
+FROM user.SS_categories
+WHERE (name LIKE 'k%')
+
+
+SELECT * FROM user.SS_categories LIMIT 2
+
+SELECT * FROM user.SS_categories
+ORDER BY name
+
+UPDATE user.SS_categories SET picture = 1 WHERE name = 'kiri';
+
+SELECT categoryID FROM user.SS_categories
+ WHERE name IN ('kiri')
+
+SELECT MIN(categoryID) AS smallerId
+FROM user.SS_categories;
+
+SELECT MAX(categoryID) AS largerId
+FROM user.SS_categories;
+
+SELECT AVG(categoryID) AS IdAvg FROM user.SS_categories;
+
+SELECT sum(categoryID) AS IdAvg FROM user.SS_categories
+
+
+
+
+
+
+
+
+

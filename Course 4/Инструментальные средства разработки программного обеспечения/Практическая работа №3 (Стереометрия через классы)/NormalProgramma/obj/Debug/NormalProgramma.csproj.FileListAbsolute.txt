@@ -1,0 +1,135 @@
+C:\Users\m_gen\source\repos\NormalProgramma\NormalProgramma\obj\Debug\NormalProgramma.csprojAssemblyReference.cache
+C:\Users\m_gen\source\repos\NormalProgramma\NormalProgramma\obj\Debug\MainWindow.g.cs
+C:\Users\m_gen\source\repos\NormalProgramma\NormalProgramma\obj\Debug\Shar.g.cs
+C:\Users\m_gen\source\repos\NormalProgramma\NormalProgramma\obj\Debug\App.g.cs
+C:\Users\m_gen\source\repos\NormalProgramma\NormalProgramma\obj\Debug\NormalProgramma_MarkupCompile.cache
+C:\Users\m_gen\source\repos\NormalProgramma\NormalProgramma\obj\Debug\NormalProgramma_MarkupCompile.lref
+C:\Users\m_gen\source\repos\NormalProgramma\NormalProgramma\bin\Debug\NormalProgramma.exe.config
+C:\Users\m_gen\source\repos\NormalProgramma\NormalProgramma\bin\Debug\NormalProgramma.exe
+C:\Users\m_gen\source\repos\NormalProgramma\NormalProgramma\bin\Debug\NormalProgramma.pdb
+C:\Users\m_gen\source\repos\NormalProgramma\NormalProgramma\obj\Debug\MainWindow.baml
+C:\Users\m_gen\source\repos\NormalProgramma\NormalProgramma\obj\Debug\Shar.baml
+C:\Users\m_gen\source\repos\NormalProgramma\NormalProgramma\obj\Debug\NormalProgramma.g.resources
+C:\Users\m_gen\source\repos\NormalProgramma\NormalProgramma\obj\Debug\NormalProgramma.Properties.Resources.resources
+C:\Users\m_gen\source\repos\NormalProgramma\NormalProgramma\obj\Debug\NormalProgramma.csproj.GenerateResource.cache
+C:\Users\m_gen\source\repos\NormalProgramma\NormalProgramma\obj\Debug\NormalProgramma.csproj.CoreCompileInputs.cache
+C:\Users\m_gen\source\repos\NormalProgramma\NormalProgramma\obj\Debug\NormalProgramma.exe
+C:\Users\m_gen\source\repos\NormalProgramma\NormalProgramma\obj\Debug\NormalProgramma.pdb
+C:\Users\m_gen\source\repos\NormalProgramma\NormalProgramma\obj\Debug\Konyc.g.cs
+C:\Users\m_gen\source\repos\NormalProgramma\NormalProgramma\obj\Debug\Konyc.baml
+C:\Users\m_gen\source\repos\NormalProgramma\NormalProgramma\obj\Debug\Ycechkonyc.g.cs
+C:\Users\m_gen\source\repos\NormalProgramma\NormalProgramma\obj\Debug\Ycechkonyc.baml
+Z:\NormalProgramma\NormalProgramma\bin\Debug\NormalProgramma.exe.config
+Z:\NormalProgramma\NormalProgramma\bin\Debug\NormalProgramma.exe
+Z:\NormalProgramma\NormalProgramma\bin\Debug\NormalProgramma.pdb
+Z:\NormalProgramma\NormalProgramma\obj\Debug\Konyc.g.cs
+Z:\NormalProgramma\NormalProgramma\obj\Debug\MainWindow.g.cs
+Z:\NormalProgramma\NormalProgramma\obj\Debug\Shar.g.cs
+Z:\NormalProgramma\NormalProgramma\obj\Debug\Ycechkonyc.g.cs
+Z:\NormalProgramma\NormalProgramma\obj\Debug\App.g.cs
+Z:\NormalProgramma\NormalProgramma\obj\Debug\NormalProgramma_MarkupCompile.cache
+Z:\NormalProgramma\NormalProgramma\obj\Debug\NormalProgramma_MarkupCompile.lref
+Z:\NormalProgramma\NormalProgramma\obj\Debug\Konyc.baml
+Z:\NormalProgramma\NormalProgramma\obj\Debug\MainWindow.baml
+Z:\NormalProgramma\NormalProgramma\obj\Debug\Shar.baml
+Z:\NormalProgramma\NormalProgramma\obj\Debug\Ycechkonyc.baml
+Z:\NormalProgramma\NormalProgramma\obj\Debug\NormalProgramma.g.resources
+Z:\NormalProgramma\NormalProgramma\obj\Debug\NormalProgramma.Properties.Resources.resources
+Z:\NormalProgramma\NormalProgramma\obj\Debug\NormalProgramma.csproj.GenerateResource.Cache
+Z:\NormalProgramma\NormalProgramma\obj\Debug\NormalProgramma.csproj.CoreCompileInputs.cache
+Z:\NormalProgramma\NormalProgramma\obj\Debug\NormalProgramma.exe
+Z:\NormalProgramma\NormalProgramma\obj\Debug\NormalProgramma.pdb
+Z:\NormalProgramma\NormalProgramma\obj\Debug\NormalProgramma.csprojResolveAssemblyReference.cache
+Z:\NormalProgramma\NormalProgramma\obj\Debug\barrelxaml.g.cs
+Z:\NormalProgramma\NormalProgramma\obj\Debug\barrelxaml.baml
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 2\NormalProgramma\bin\Debug\NormalProgramma.exe.config
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 2\NormalProgramma\bin\Debug\NormalProgramma.exe
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 2\NormalProgramma\bin\Debug\NormalProgramma.pdb
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 2\NormalProgramma\obj\Debug\NormalProgramma.csprojAssemblyReference.cache
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 2\NormalProgramma\obj\Debug\barrelxaml.g.cs
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 2\NormalProgramma\obj\Debug\Konyc.g.cs
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 2\NormalProgramma\obj\Debug\MainWindow.g.cs
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 2\NormalProgramma\obj\Debug\Shar.g.cs
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 2\NormalProgramma\obj\Debug\Ycechkonyc.g.cs
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 2\NormalProgramma\obj\Debug\App.g.cs
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 2\NormalProgramma\obj\Debug\NormalProgramma_MarkupCompile.cache
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 2\NormalProgramma\obj\Debug\NormalProgramma_MarkupCompile.lref
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 2\NormalProgramma\obj\Debug\barrelxaml.baml
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 2\NormalProgramma\obj\Debug\Konyc.baml
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 2\NormalProgramma\obj\Debug\MainWindow.baml
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 2\NormalProgramma\obj\Debug\Shar.baml
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 2\NormalProgramma\obj\Debug\Ycechkonyc.baml
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 2\NormalProgramma\obj\Debug\NormalProgramma.g.resources
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 2\NormalProgramma\obj\Debug\NormalProgramma.Properties.Resources.resources
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 2\NormalProgramma\obj\Debug\NormalProgramma.csproj.GenerateResource.cache
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 2\NormalProgramma\obj\Debug\NormalProgramma.csproj.CoreCompileInputs.cache
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 2\NormalProgramma\obj\Debug\NormalProgramma.exe
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 2\NormalProgramma\obj\Debug\NormalProgramma.pdb
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 5\NormalProgramma\bin\Debug\NormalProgramma.exe.config
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 5\NormalProgramma\bin\Debug\NormalProgramma.exe
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 5\NormalProgramma\bin\Debug\NormalProgramma.pdb
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 5\NormalProgramma\obj\Debug\NormalProgramma.csprojAssemblyReference.cache
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 5\NormalProgramma\obj\Debug\barrelxaml.g.cs
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 5\NormalProgramma\obj\Debug\Konyc.g.cs
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 5\NormalProgramma\obj\Debug\MainWindow.g.cs
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 5\NormalProgramma\obj\Debug\Shar.g.cs
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 5\NormalProgramma\obj\Debug\Ycechkonyc.g.cs
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 5\NormalProgramma\obj\Debug\App.g.cs
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 5\NormalProgramma\obj\Debug\NormalProgramma_MarkupCompile.cache
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 5\NormalProgramma\obj\Debug\NormalProgramma_MarkupCompile.lref
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 5\NormalProgramma\obj\Debug\barrelxaml.baml
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 5\NormalProgramma\obj\Debug\Konyc.baml
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 5\NormalProgramma\obj\Debug\MainWindow.baml
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 5\NormalProgramma\obj\Debug\Shar.baml
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 5\NormalProgramma\obj\Debug\Ycechkonyc.baml
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 5\NormalProgramma\obj\Debug\NormalProgramma.g.resources
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 5\NormalProgramma\obj\Debug\NormalProgramma.Properties.Resources.resources
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 5\NormalProgramma\obj\Debug\NormalProgramma.csproj.GenerateResource.cache
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 5\NormalProgramma\obj\Debug\NormalProgramma.csproj.CoreCompileInputs.cache
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 5\NormalProgramma\obj\Debug\NormalProgramma.exe
+D:\Учеба\4 курс\Инструментальные средства разработки программного обеспечения\Практика\Задание 5\NormalProgramma\obj\Debug\NormalProgramma.pdb
+C:\Users\kbstudentint\Desktop\Задание 5\NormalProgramma\bin\Debug\NormalProgramma.exe.config
+C:\Users\kbstudentint\Desktop\Задание 5\NormalProgramma\obj\Debug\NormalProgramma.exe
+C:\Users\kbstudentint\Desktop\Задание 5\NormalProgramma\obj\Debug\NormalProgramma.pdb
+C:\Users\kbstudentint\Desktop\Задание 5\NormalProgramma\bin\Debug\NormalProgramma.exe
+C:\Users\kbstudentint\Desktop\Задание 5\NormalProgramma\bin\Debug\NormalProgramma.pdb
+C:\Users\kbstudentint\Desktop\Задание 5\NormalProgramma\obj\Debug\NormalProgramma.csprojResolveAssemblyReference.cache
+C:\Users\kbstudentint\Desktop\Задание 5\NormalProgramma\obj\Debug\barrelxaml.g.cs
+C:\Users\kbstudentint\Desktop\Задание 5\NormalProgramma\obj\Debug\Konyc.g.cs
+C:\Users\kbstudentint\Desktop\Задание 5\NormalProgramma\obj\Debug\MainWindow.g.cs
+C:\Users\kbstudentint\Desktop\Задание 5\NormalProgramma\obj\Debug\Shar.g.cs
+C:\Users\kbstudentint\Desktop\Задание 5\NormalProgramma\obj\Debug\Ycechkonyc.g.cs
+C:\Users\kbstudentint\Desktop\Задание 5\NormalProgramma\obj\Debug\App.g.cs
+C:\Users\kbstudentint\Desktop\Задание 5\NormalProgramma\obj\Debug\NormalProgramma_MarkupCompile.cache
+C:\Users\kbstudentint\Desktop\Задание 5\NormalProgramma\obj\Debug\NormalProgramma_MarkupCompile.lref
+C:\Users\kbstudentint\Desktop\Задание 5\NormalProgramma\obj\Debug\barrelxaml.baml
+C:\Users\kbstudentint\Desktop\Задание 5\NormalProgramma\obj\Debug\Konyc.baml
+C:\Users\kbstudentint\Desktop\Задание 5\NormalProgramma\obj\Debug\MainWindow.baml
+C:\Users\kbstudentint\Desktop\Задание 5\NormalProgramma\obj\Debug\Shar.baml
+C:\Users\kbstudentint\Desktop\Задание 5\NormalProgramma\obj\Debug\Ycechkonyc.baml
+C:\Users\kbstudentint\Desktop\Задание 5\NormalProgramma\obj\Debug\NormalProgramma.g.resources
+C:\Users\kbstudentint\Desktop\Задание 5\NormalProgramma\obj\Debug\NormalProgramma.Properties.Resources.resources
+C:\Users\kbstudentint\Desktop\Задание 5\NormalProgramma\obj\Debug\NormalProgramma.csproj.GenerateResource.Cache
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Задание 5\NormalProgramma\bin\Debug\NormalProgramma.exe.config
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Задание 5\NormalProgramma\bin\Debug\NormalProgramma.exe
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Задание 5\NormalProgramma\bin\Debug\NormalProgramma.pdb
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Задание 5\NormalProgramma\obj\Debug\NormalProgramma.csprojResolveAssemblyReference.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Задание 5\NormalProgramma\obj\Debug\barrelxaml.g.cs
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Задание 5\NormalProgramma\obj\Debug\Konyc.g.cs
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Задание 5\NormalProgramma\obj\Debug\MainWindow.g.cs
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Задание 5\NormalProgramma\obj\Debug\Shar.g.cs
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Задание 5\NormalProgramma\obj\Debug\Ycechkonyc.g.cs
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Задание 5\NormalProgramma\obj\Debug\App.g.cs
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Задание 5\NormalProgramma\obj\Debug\NormalProgramma_MarkupCompile.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Задание 5\NormalProgramma\obj\Debug\NormalProgramma_MarkupCompile.lref
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Задание 5\NormalProgramma\obj\Debug\barrelxaml.baml
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Задание 5\NormalProgramma\obj\Debug\Konyc.baml
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Задание 5\NormalProgramma\obj\Debug\MainWindow.baml
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Задание 5\NormalProgramma\obj\Debug\Shar.baml
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Задание 5\NormalProgramma\obj\Debug\Ycechkonyc.baml
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Задание 5\NormalProgramma\obj\Debug\NormalProgramma.g.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Задание 5\NormalProgramma\obj\Debug\NormalProgramma.Properties.Resources.resources
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Задание 5\NormalProgramma\obj\Debug\NormalProgramma.csproj.GenerateResource.Cache
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Задание 5\NormalProgramma\obj\Debug\NormalProgramma.csproj.CoreCompileInputs.cache
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Задание 5\NormalProgramma\obj\Debug\NormalProgramma.exe
+C:\Users\alex0\OneDrive\Рабочий стол\Новая папка\Практики\Задание 5\NormalProgramma\obj\Debug\NormalProgramma.pdb

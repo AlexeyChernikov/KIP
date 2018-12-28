@@ -1,0 +1,40 @@
+﻿<Window x:Class="Практическая_работа__9__Киреева_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Практическая_работа__9__Киреева_"
+        mc:Ignorable="d"
+        Title="Черников А.В. Группа 4ПКС-115" Height="413" Width="914" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <GroupBox Header="Основные функции работы со строками" HorizontalAlignment="Left" Height="284" Margin="13,14,0,0" VerticalAlignment="Top" Width="298">
+            <Grid HorizontalAlignment="Left" Height="250" Margin="10,8,0,0" VerticalAlignment="Top" Width="264">
+                <RadioButton x:Name="Operation1" Content="Contains" HorizontalAlignment="Left" Height="18" Margin="10,10,0,0" VerticalAlignment="Top" Width="239" Checked="Operation1_Checked"/>
+                <RadioButton x:Name="Operation2" Content="EndsWith" HorizontalAlignment="Left" Height="18" Margin="10,28,0,0" VerticalAlignment="Top" Width="239" Checked="Operation2_Checked"/>
+                <RadioButton x:Name="Operation3" Content="Insert" HorizontalAlignment="Left" Height="18" Margin="10,46,0,0" VerticalAlignment="Top" Width="239" Checked="Operation3_Checked"/>
+                <RadioButton x:Name="Operation4" Content="Replace" HorizontalAlignment="Left" Height="18" Margin="10,64,0,0" VerticalAlignment="Top" Width="239" Checked="Operation4_Checked"/>
+                <RadioButton x:Name="Operation5" Content="ToLower" HorizontalAlignment="Left" Height="18" Margin="10,82,0,0" VerticalAlignment="Top" Width="239" Checked="Operation5_Checked"/>
+                <RadioButton x:Name="Operation6" Content="Concat" HorizontalAlignment="Left" Height="18" Margin="10,100,0,0" VerticalAlignment="Top" Width="239" Checked="Operation6_Checked"/>
+                <RadioButton x:Name="Operation7" Content="Format" HorizontalAlignment="Left" Height="18" Margin="10,118,0,0" VerticalAlignment="Top" Width="239" Checked="Operation7_Checked"/>
+                <RadioButton x:Name="Operation8" Content="Split" HorizontalAlignment="Left" Height="18" Margin="10,136,0,0" VerticalAlignment="Top" Width="239" Checked="Operation8_Checked"/>
+                <RadioButton x:Name="Operation9" Content="ToUpper" HorizontalAlignment="Left" Height="18" Margin="10,154,0,0" VerticalAlignment="Top" Width="239" Checked="Operation9_Checked"/>
+                <RadioButton x:Name="Operation10" Content="IndexOf" HorizontalAlignment="Left" Height="18" Margin="10,172,0,0" VerticalAlignment="Top" Width="239" Checked="Operation10_Checked"/>
+                <RadioButton x:Name="Operation11" Content="LastIndexOf" HorizontalAlignment="Left" Height="18" Margin="10,190,0,0" VerticalAlignment="Top" Width="239" Checked="Operation11_Checked"/>
+                <RadioButton x:Name="Operation12" Content="Trim" HorizontalAlignment="Left" Height="18" Margin="10,208,0,0" VerticalAlignment="Top" Width="239" Checked="Operation12_Checked"/>
+                <RadioButton x:Name="Operation13" Content="SubString
+                             " HorizontalAlignment="Left" Height="18" Margin="10,226,0,0" VerticalAlignment="Top" Width="239" Checked="Operation13_Checked"/>
+            </Grid>
+        </GroupBox>
+        <Label x:Name="L1" Content="Строка 1:" HorizontalAlignment="Left" Height="25" Margin="316,11,0,0" VerticalAlignment="Top" Width="263"/>
+        <TextBox x:Name="TB1" HorizontalAlignment="Left" Height="50" Margin="316,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="263"/>
+        <Label x:Name="L2" Content="Строка 2:" HorizontalAlignment="Left" Height="25" Margin="316,96,0,0" VerticalAlignment="Top" Width="263"/>
+        <TextBox x:Name="TB2" HorizontalAlignment="Left" Height="50" Margin="316,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="263"/>
+        <Label x:Name="L3" Content="Результат:" HorizontalAlignment="Left" Height="25" Margin="316,181,0,0" VerticalAlignment="Top" Width="263"/>
+        <TextBox x:Name="TB3" HorizontalAlignment="Left" Height="50" Margin="316,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="263"/>
+        <TextBox x:Name="TB4" HorizontalAlignment="Left" Height="257" Margin="586,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="299"/>
+        <Label Content="Код реализации:" HorizontalAlignment="Left" Height="25" Margin="586,11,0,0" VerticalAlignment="Top" Width="299"/>
+        <Button x:Name="Perform_Button" Content="Выполнить" HorizontalAlignment="Left" Height="44" Margin="13,314,0,0" VerticalAlignment="Top" Width="298" Click="Perform_Button_Click"/>
+        <Button x:Name="Exit_Button" Content="Выход" HorizontalAlignment="Left" Height="44" Margin="586,314,0,0" VerticalAlignment="Top" Width="298" Click="Exit_Button_Click"/>
+
+    </Grid>
+</Window>
