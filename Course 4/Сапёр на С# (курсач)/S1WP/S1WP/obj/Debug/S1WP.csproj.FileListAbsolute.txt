@@ -28,3 +28,34 @@ C:\Users\alex0\source\repos\S1WP\S1WP\obj\Debug\Records_Window.g.cs
 C:\Users\alex0\source\repos\S1WP\S1WP\obj\Debug\Records_Window.baml
 C:\Users\alex0\source\repos\S1WP\S1WP\obj\Debug\Nick_Name.g.cs
 C:\Users\alex0\source\repos\S1WP\S1WP\obj\Debug\Nick_Name.baml
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\bin\Debug\S1WP.exe.config
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\bin\Debug\S1WP.exe
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\bin\Debug\S1WP.pdb
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\bin\Debug\EntityFramework.dll
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\bin\Debug\EntityFramework.SqlServer.dll
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\bin\Debug\System.Data.SQLite.dll
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\bin\Debug\EntityFramework.xml
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\bin\Debug\EntityFramework.SqlServer.xml
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\bin\Debug\System.Data.SQLite.xml
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\bin\Debug\System.Data.SQLite.dll.config
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\obj\Debug\S1WP.csprojAssemblyReference.cache
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\obj\Debug\MainWindow.g.cs
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\obj\Debug\Nick_Name.g.cs
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\obj\Debug\Records_Window.g.cs
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\obj\Debug\Special_Mode.g.cs
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\obj\Debug\App.g.cs
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\obj\Debug\S1WP_MarkupCompile.cache
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\obj\Debug\S1WP_MarkupCompile.lref
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\obj\Debug\MainWindow.baml
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\obj\Debug\Nick_Name.baml
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\obj\Debug\Records_Window.baml
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\obj\Debug\Special_Mode.baml
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\obj\Debug\S1WP.g.resources
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\obj\Debug\S1WP.Properties.Resources.resources
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\obj\Debug\S1WP.csproj.GenerateResource.cache
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\obj\Debug\S1WP.csproj.CoreCompileInputs.cache
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\obj\Debug\S1WP.csproj.CopyComplete
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\obj\Debug\S1WP.exe
+D:\Github\KIP\Course 4\Сапёр на С# (курсач)\S1WP\S1WP\obj\Debug\S1WP.pdb
