@@ -335,100 +335,154 @@ namespace IntegratedCircuitEmulator
             return Convert.ToString(r, 2);
         }
 
+        //------------------------------------------------------
+
+        private string CodesMultiplication()
+        {
+            int R, x = ByteArrayToInt(DIX), y = ByteArrayToInt(DIY), s = ByteArrayToInt(DI);
+
+            R = x * y + s + CRI8 + CRI0;
+
+            return Convert.ToString(R, 2);
+        }
+
+        private string LogicalRightShift()
+        {
+            int R, x = ByteArrayToInt(DIX), y = ByteArrayToInt(DIY), s = ByteArrayToInt(DI), k = DIY[2] + DIY[1] + DIY[0];
+
+            if (((!G[0] && !G[1] && !Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4])) ||
+                (!G[0] && G[1] && !Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4])) ||
+                (G[0] && !G[1] && Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4])) ||
+                (G[0] && G[1] && Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4]))) && k != 0)
+
+                R = x * (1 << (8 - k)) + CRI8 + CRI0 + s;
+
+            else if ((!G[0] && !G[1] && !Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4])) && k == 0)
+
+                R = x * (1 << 8) + CRI0 + (Convert.ToInt32(DI.ToString().Substring(8, 15)));
+
+            else if (((!G[0] && !G[1] && !Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4])) ||
+                (!G[0] && G[1] && Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4])) ||
+                (G[0] && !G[1] && Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4]))) && k == 0)
+
+                R = x + s + CRI8 + CRI0;
+
+            else
+
+                R = s + CRI8 + CRI0;
+
+            return Convert.ToString(R, 2);
+        }
+
+        private string ArithmeticRightShift()
+        {
+            int R, x = ByteArrayToInt(DIX), y = ByteArrayToInt(DIY), s = ByteArrayToInt(DI), k = DIY[2] + DIY[1] + DIY[0];
+
+            if (V[0] && V[1])
+            {
+                if (((G[0] && G[1] && Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4])) ||
+                    (G[0] && !G[1] && Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4])) ||
+                    (!G[0] && G[1] && !Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4]))) && k != 0)
+
+                    R = x * (1 << (8 - k)) + (1 << 15) - 2 * x[0] * (1 << (8 - k)) + CRI8 + CRI0 + s;
+
+                else if ((!G[0] && !G[1] && !Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4])) && k != 0)
+
+                    R = x * (1 << (8 - k)) + (1 << 16) - 2 * x[0] * (1 << (8 - k)) + CRI8 + CRI0 + (Convert.ToInt32(DI.ToString().Substring(1, 15)));
+
+            }
+
+            if (!V[0] && V[1])
+            {
+                if (((G[0] && G[1] && Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4])) ||
+                    (G[0] && !G[1] && Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4])) ||
+                    (!G[0] && G[1] && !Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4]))) && k != 0)
+
+                    R = x * (1 << (8 - k)) + (1 << 15) - (1 << 7) - 2 * x[0] * (1 << (8 - k)) + CRI8 + CRI0 + s;
+
+                else if ((!G[0] && !G[1] && !Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4])) && k != 0)
+
+                    R = x * (1 << (8 - k)) + (1 << 16) - (1 << 7) - 2 * x[0] * (1 << (8 - k)) + CRI8 + CRI0 + (Convert.ToInt32(DI.ToString().Substring(1, 15)));
+
+            }
+
+            if (!V[1])
+            {
+                if (((G[0] && G[1] && Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4])) ||
+                    (G[0] && !G[1] && Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4])) ||
+                    (!G[0] && G[1] && !Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4])) ||
+                    (!G[0] && !G[1] && !Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4]))) && k != 0)
+
+                    R = x * (1 << (8 - k)) + CRI8 + CRI0 + s;
+
+            }
+
+            if (V[0] && V[1])
+            {
+                if (!G[0] && !G[1] && (!Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4]) ||
+                    Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4]) ||
+                    Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4])) && k != 0)
+
+                    R = (1 << 16) + (Convert.ToInt32(DI.ToString().Substring(1, 8))) + CRI8 + CRI0;
+
+            }
+
+            if (!V[0] && V[1])
+            {
+                if (!G[0] && !G[1] && (!Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4]) ||
+                   Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4]) ||
+                   Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4])) && k != 0)
+
+                    R = (1 << 16) - (1 << 7) + (Convert.ToInt32(DI.ToString().Substring(1, 15))) + CRI8 + CRI0;
+
+            }
+
+            if ((!G[0] && !G[1] && !Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4])) && k == 0)
+
+                R = x + (1 << 8) + CRI0 + (Convert.ToInt32(DI.ToString().Substring(8, 15)));
+
+            if (V[0] && V[1])
+            {
+                if (((!G[0] && !G[1] && !Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4])) ||
+                    (!G[0] && G[1] && Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4])) ||
+                    (G[0] && !G[1] && Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4]))) && k == 0)
+
+                    R = x + (1 << 15) - 2 * x[0] + CRI8 + CRI0 + s;
+
+            }
+
+            if (!V[0] && V[1])
+            {
+                if (((!G[0] && !G[1] && !Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4])) ||
+                    (!G[0] && G[1] && Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4])) ||
+                    (G[0] && !G[1] && Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4]))) && k == 0)
+
+                    R = x + (1 << 15) - 2 * x[0] - (1 << 7) + CRI8 + CRI0 + s;
+
+            }
+
+            if (V[0] && V[1])
+
+                R = (1 << 15) + s + CRI8 + CRI0;
+
+            if (!V[0] && V[1])
+
+                R = (1 << 15) - (1 << 7) + s + CRI8 + CRI0;
+
+            if (!V[1])
+
+                R = s + CRI8 + CRI0;
+
+            return Convert.ToString(R, 2);
+        }
+
+        //------------------------------------------------------
+
         public void ResultsOutput(int i) {
     
         }
     }
 
-    private string LogicalRightShift()
-    {
-        int R, x = ByteArrayToInt(DIX), y = ByteArrayToInt(DIY), s = ByteArrayToInt(DI), k = DIY[2] + DIY[1] + DIY[0];
-
-        if (((!G[0] && !G[1] && !Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4])) ||
-            (!G[0] && G[1] && !Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4])) ||
-            (G[0] && !G[1] && Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4])) ||
-            (G[0] && G[1] && Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4]))) && k != 0)
-
-            R = x * (1 << (8 - k)) + CRI8 + CRI0 + s;
-
-        else if ((!G[0] && !G[1] && !Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4])) && k == 0)
-
-            R = x * (1 << 8) + CRI0 + (Convert.ToInt32(DI.ToString().Substring(8, 15)));
-
-        else if (((!G[0] && !G[1] && !Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4])) ||
-            (!G[0] && G[1] && Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4])) ||
-            (G[0] && !G[1] && Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4]))) && k == 0)
-
-            R = x + s + CRI8 + CRI0;
-
-        else
-
-            R = s + CRI8 + CRI0;
-
-        return Convert.ToString(R, 2);
-    }
-
-    private string ArithmeticLeftShift()
-    {
-        int R, x = ByteArrayToInt(DIX), y = ByteArrayToInt(DIY), s = ByteArrayToInt(DI), k = DIY[2] + DIY[1] + DIY[0];
-
-        if (V[0] && V[1])
-        {
-            if (((G[0] && G[1] && Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4])) ||
-                (G[0] && !G[1] && Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4])) ||
-                (!G[0] && G[1] && !Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4]))) && k != 0)
-
-                R = x * (1 << (8 - k)) + (1 << 15) - 2 * x[0] * (1 << (8 - k)) + CRI8 + CRI0 + s;
-
-            else if ((!G[0] && !G[1] && !Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4])) && k != 0)
-
-                R = x * (1 << (8 - k)) + (1 << 16) - 2 * x[0] * (1 << (8 - k)) + CRI8 + CRI0 + (Convert.ToInt32(DI.ToString().Substring(1, 15)));
-
-        }
-        else if (!V[0] && V[1])
-        {
-            if (((G[0] && G[1] && Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4])) ||
-                (G[0] && !G[1] && Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4])) ||
-                (!G[0] && G[1] && !Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4]))) && k != 0)
-
-                R = x * (1 << (8 - k)) + (1 << 15) - (1 << 7) - 2 * x[0] * (1 << (8 - k)) + CRI8 + CRI0 + s;
-
-            else if ((!G[0] && !G[1] && !Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4])) && k != 0)
-
-                R = x * (1 << (8 - k)) + (1 << 16) - (1 << 7) - 2 * x[0] * (1 << (8 - k)) + CRI8 + CRI0 + (Convert.ToInt32(DI.ToString().Substring(1, 15)));
-
-        }
-        else if (!V[1])
-        {
-            if (((G[0] && G[1] && Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4])) ||
-                (G[0] && !G[1] && Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4])) ||
-                (!G[0] && G[1] && !Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4])) ||
-                (!G[0] && !G[1] && !Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4]))) && k != 0)
-
-                R = x * (1 << (8 - k)) + CRI8 + CRI0 + s;
-
-        }
-        else if (V[0] && V[1])
-        {
-            if (!G[0] && !G[1] && (!Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4]) ||
-                Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4]) ||
-                Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4])) && k != 0)
-
-                R = (1 << 16) + (Convert.ToInt32(DI.ToString().Substring(1, 8))) + CRI8 + CRI0;
-
-        }
-        else if (!V[0] && V[1])
-        {
-            if (!G[0] && !G[1] && (!Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4]) ||
-               Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4]) ||
-               Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4])) && k != 0)
-
-                R = (1 << 16) - (1 << 7) + (Convert.ToInt32(DI.ToString().Substring(1, 15))) + CRI8 + CRI0;
-
-        }
-
-        return Convert.ToString(R, 2);
-    }
 
 
     class Program
