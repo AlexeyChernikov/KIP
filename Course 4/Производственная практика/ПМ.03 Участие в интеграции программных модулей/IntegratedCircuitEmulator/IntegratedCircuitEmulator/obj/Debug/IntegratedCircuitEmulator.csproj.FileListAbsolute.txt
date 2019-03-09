@@ -1,0 +1,7 @@
+C:\Users\Nastya.delltouch\source\repos\IntegratedCircuitEmulator\IntegratedCircuitEmulator\bin\Debug\IntegratedCircuitEmulator.exe.config
+C:\Users\Nastya.delltouch\source\repos\IntegratedCircuitEmulator\IntegratedCircuitEmulator\bin\Debug\IntegratedCircuitEmulator.exe
+C:\Users\Nastya.delltouch\source\repos\IntegratedCircuitEmulator\IntegratedCircuitEmulator\bin\Debug\IntegratedCircuitEmulator.pdb
+C:\Users\Nastya.delltouch\source\repos\IntegratedCircuitEmulator\IntegratedCircuitEmulator\obj\Debug\IntegratedCircuitEmulator.csprojAssemblyReference.cache
+C:\Users\Nastya.delltouch\source\repos\IntegratedCircuitEmulator\IntegratedCircuitEmulator\obj\Debug\IntegratedCircuitEmulator.csproj.CoreCompileInputs.cache
+C:\Users\Nastya.delltouch\source\repos\IntegratedCircuitEmulator\IntegratedCircuitEmulator\obj\Debug\IntegratedCircuitEmulator.exe
+C:\Users\Nastya.delltouch\source\repos\IntegratedCircuitEmulator\IntegratedCircuitEmulator\obj\Debug\IntegratedCircuitEmulator.pdb
