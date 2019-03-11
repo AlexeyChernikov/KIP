@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{987E750F-2FC5-4379-AD7C-22E2789E5F71}</ProjectGuid>
+    <ProjectGuid>{DB8D7629-0988-4AFB-BBD9-CBC8850B0B98}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>IntegratedCircuitEmulator</RootNamespace>
     <AssemblyName>IntegratedCircuitEmulator</AssemblyName>

@@ -1,7 +1,14 @@
-C:\Users\Nastya.delltouch\source\repos\IntegratedCircuitEmulator\IntegratedCircuitEmulator\bin\Debug\IntegratedCircuitEmulator.exe.config
-C:\Users\Nastya.delltouch\source\repos\IntegratedCircuitEmulator\IntegratedCircuitEmulator\bin\Debug\IntegratedCircuitEmulator.exe
-C:\Users\Nastya.delltouch\source\repos\IntegratedCircuitEmulator\IntegratedCircuitEmulator\bin\Debug\IntegratedCircuitEmulator.pdb
-C:\Users\Nastya.delltouch\source\repos\IntegratedCircuitEmulator\IntegratedCircuitEmulator\obj\Debug\IntegratedCircuitEmulator.csprojAssemblyReference.cache
-C:\Users\Nastya.delltouch\source\repos\IntegratedCircuitEmulator\IntegratedCircuitEmulator\obj\Debug\IntegratedCircuitEmulator.csproj.CoreCompileInputs.cache
-C:\Users\Nastya.delltouch\source\repos\IntegratedCircuitEmulator\IntegratedCircuitEmulator\obj\Debug\IntegratedCircuitEmulator.exe
-C:\Users\Nastya.delltouch\source\repos\IntegratedCircuitEmulator\IntegratedCircuitEmulator\obj\Debug\IntegratedCircuitEmulator.pdb
+C:\Users\alex0\source\repos\IntegratedCircuitEmulator\IntegratedCircuitEmulator\bin\Debug\IntegratedCircuitEmulator.exe.config
+C:\Users\alex0\source\repos\IntegratedCircuitEmulator\IntegratedCircuitEmulator\bin\Debug\IntegratedCircuitEmulator.exe
+C:\Users\alex0\source\repos\IntegratedCircuitEmulator\IntegratedCircuitEmulator\bin\Debug\IntegratedCircuitEmulator.pdb
+C:\Users\alex0\source\repos\IntegratedCircuitEmulator\IntegratedCircuitEmulator\obj\Debug\IntegratedCircuitEmulator.csprojAssemblyReference.cache
+C:\Users\alex0\source\repos\IntegratedCircuitEmulator\IntegratedCircuitEmulator\obj\Debug\IntegratedCircuitEmulator.csproj.CoreCompileInputs.cache
+C:\Users\alex0\source\repos\IntegratedCircuitEmulator\IntegratedCircuitEmulator\obj\Debug\IntegratedCircuitEmulator.exe
+C:\Users\alex0\source\repos\IntegratedCircuitEmulator\IntegratedCircuitEmulator\obj\Debug\IntegratedCircuitEmulator.pdb
+D:\Github\KIP\Course 4\Производственная практика\ПМ.03 Участие в интеграции программных модулей\IntegratedCircuitEmulator\IntegratedCircuitEmulator\obj\Debug\IntegratedCircuitEmulator.csprojAssemblyReference.cache
+D:\Github\KIP\Course 4\Производственная практика\ПМ.03 Участие в интеграции программных модулей\IntegratedCircuitEmulator\IntegratedCircuitEmulator\obj\Debug\IntegratedCircuitEmulator.csproj.CoreCompileInputs.cache
+D:\Github\KIP\Course 4\Производственная практика\ПМ.03 Участие в интеграции программных модулей\IntegratedCircuitEmulator\IntegratedCircuitEmulator\obj\Debug\IntegratedCircuitEmulator.exe
+D:\Github\KIP\Course 4\Производственная практика\ПМ.03 Участие в интеграции программных модулей\IntegratedCircuitEmulator\IntegratedCircuitEmulator\obj\Debug\IntegratedCircuitEmulator.pdb
+D:\Github\KIP\Course 4\Производственная практика\ПМ.03 Участие в интеграции программных модулей\IntegratedCircuitEmulator\IntegratedCircuitEmulator\bin\Debug\IntegratedCircuitEmulator.exe.config
+D:\Github\KIP\Course 4\Производственная практика\ПМ.03 Участие в интеграции программных модулей\IntegratedCircuitEmulator\IntegratedCircuitEmulator\bin\Debug\IntegratedCircuitEmulator.exe
+D:\Github\KIP\Course 4\Производственная практика\ПМ.03 Участие в интеграции программных модулей\IntegratedCircuitEmulator\IntegratedCircuitEmulator\bin\Debug\IntegratedCircuitEmulator.pdb
