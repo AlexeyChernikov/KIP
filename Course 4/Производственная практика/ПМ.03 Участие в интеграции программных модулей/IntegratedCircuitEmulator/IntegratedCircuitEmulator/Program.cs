@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace IntegratedCircuitEmulator
 {
-
     class ICEmulator
     {
         byte[] DIY = new byte[8], DIX = new byte[8], DI = new byte[16], INS = new byte[3];
@@ -45,6 +44,7 @@ namespace IntegratedCircuitEmulator
                 data = reader.ReadToEnd().Split(',');
                 data[0] = data[0].Substring(data[0].IndexOf('$'));
                 data[0] = data[0].Substring(data[0].IndexOf(' ')); //trim the header 
+
                 int k = 0;
 
                 for (int i = 0; i < data.Length - 1; i++)
@@ -66,6 +66,7 @@ namespace IntegratedCircuitEmulator
             for (byte n = 0; n < data[i].Length; n++)
             {
                 outputData[n] = data[i][n];
+
                 if (data[i][n] != ' ')
                 {
                     if (pinsplace[k].Contains("V"))
@@ -80,14 +81,13 @@ namespace IntegratedCircuitEmulator
                     else
                         if (pinsplace[k].Contains("DIX"))
                             DIX[7 - Convert.ToByte(pinsplace[k][3].ToString())] = Convert.ToByte(data[i][n].ToString());
-
                         else
                             if (pinsplace[k].Contains("DI"))
                             {
                                 byte ind = Convert.ToByte(pinsplace[k][2].ToString(), 16);
                                 DI[15 - ind] = Convert.ToByte(data[i][n].ToString());
                             }
-    
+
                     if (pinsplace[k].Contains("EH"))
                         EH = data[i][n] == '1';
 
@@ -155,6 +155,8 @@ namespace IntegratedCircuitEmulator
         public void Emulate()
         {
             InputData();
+            StreamWriter stream = new StreamWriter("OutputFile.txt", true, System.Text.Encoding.Default);
+
             for (int i = 0; i < data.Length - 1; i++)
             {
                 GetData(i);
@@ -164,6 +166,8 @@ namespace IntegratedCircuitEmulator
                 {
                     switch (String.Join("", INS))
                     {
+                        case "000": result = CountLeadingZeroes(); break;
+                        case "001": result = CodesMultiplication(); break;
                         case "101": result = Multiplication(); break;
                         case "010": result = LogicalLeftShift(); break;
                         case "110": result = ArithmeticLeftShift(); break;
@@ -173,8 +177,12 @@ namespace IntegratedCircuitEmulator
 
                     result = result.PadLeft(16, '0');
                     OutputResult(i, result);
+                    stream.WriteLine(data[i]);
+                    Console.ReadKey();
                 }
             }
+
+            stream.Close();
         }
 
         private int ByteArrayToInt(byte[] s)
@@ -221,7 +229,37 @@ namespace IntegratedCircuitEmulator
 
             data[ind] = String.Join("", outputData);
             Console.WriteLine(data[ind]);
-            Console.ReadKey();
+        }
+
+        private string CountLeadingZeroes()
+        {
+            int R = 0, ZX = 0, ZY = 0, s = ByteArrayToInt(DI), y = ByteArrayToInt(DIY);
+
+            if (!Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4]))
+            {
+                for (int i = 0; i < DIX.Length; i++)
+                {
+                    if (DIX[i] == 0)
+                        ZX++;
+
+                    if (DIY[i] == 0)
+                        ZY++;
+                }
+
+                if ((ZX == 8) && (ZY == 8))
+                    R = (1 << 11) + s + CRI8 + CRI0;
+                else
+                {
+                    int I = ZX;
+
+                    if (((1 << I + 1) >= y) && (y > (1 << I)))
+                        R = (7 - I) * (1 << 8) + Convert.ToInt32(String.Join("", DI).Substring(8)) + CRI0;
+                }
+
+                return Convert.ToString(R, 2);
+            }
+
+            return "LLLLLLLLLLLLLLLL";
         }
 
         private string Multiplication()
@@ -241,13 +279,13 @@ namespace IntegratedCircuitEmulator
                 R = x * y + (1 << 15) - 2 * Convert.ToByte(DIY[0]) * x - 128 + s + CRI8 + CRI0;
 
             if (V[0] && !V[1] && !(G[0] || G[1]))
-                R = x * y + (1 << 16) + 4 * DIX[0] * Convert.ToByte(DIY[0]) - 2 * DIX[0] * y - 2 * Convert.ToByte(DIY[0]) * x - 256 + Convert.ToInt32(DI.ToString().Substring(1, 15)) + CRI8 + CRI0;
+                R = x * y + (1 << 16) + 4 * DIX[0] * Convert.ToByte(DIY[0]) - 2 * DIX[0] * y - 2 * Convert.ToByte(DIY[0]) * x - 256 + Convert.ToInt32(String.Join("", DI).Substring(1, 15)) + CRI8 + CRI0;
 
             if (!V[0] && V[1] && !(G[0] || G[1]))
                 R = x * y + (1 << 15) - 2 * DIY[0] * x + s + CRI8 + CRI0;
 
             if (V[0] && V[1] && !(G[0] || G[1]))
-                R = x * y + (1 << 16) + 4 * DIX[0] * DIY[0] - 2 * DIX[0] * y - 2 * Convert.ToByte(DIY[0]) * x - 128 + Convert.ToInt32(DI.ToString().Substring(1, 15)) + CRI8 + CRI0;
+                R = x * y + (1 << 16) + 4 * DIX[0] * DIY[0] - 2 * DIX[0] * y - 2 * Convert.ToByte(DIY[0]) * x - 128 + Convert.ToInt32(String.Join("", DI).Substring(1, 15)) + CRI8 + CRI0;
 
             return Convert.ToString(R, 2);
         }
@@ -273,7 +311,7 @@ namespace IntegratedCircuitEmulator
                 R = x * (1 << (8 - k)) + CRI8 + CRI0 + s;
 
             else if (!G[0] && !G[1] && !Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4]) && k == 0)
-                R = x * (1 << 8) + CRI0 + Convert.ToInt32(DI.ToString().Substring(8, 15));
+                R = x * (1 << 8) + CRI0 + Convert.ToInt32(String.Join("", DI).Substring(8));
 
             else if (((!G[0] && !G[1] && Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4])) ||
                 (G[0] && !G[1] && !Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4])) ||
@@ -299,7 +337,7 @@ namespace IntegratedCircuitEmulator
                     R = x * (1 << (8 - k)) + (1 << 15) - 2 * DIX[0] * (1 << (8 - k)) + CRI8 + CRI0 + s;
 
                 else if (!G[0] && !G[1] && !Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4]) && k != 0)
-                    R = x * (1 << (8 - k)) + (1 << 16) - 2 * DIX[0] * (1 << (8 - k)) + CRI8 + CRI0 + Convert.ToInt32(DI.ToString().Substring(1, 15));
+                    R = x * (1 << (8 - k)) + (1 << 16) - 2 * DIX[0] * (1 << (8 - k)) + CRI8 + CRI0 + Convert.ToInt32(String.Join("", DI).Substring(1, 15));
 
             if (V[0] && !V[1])
                 if (((G[0] && G[1] && Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4])) ||
@@ -309,7 +347,7 @@ namespace IntegratedCircuitEmulator
                     R = x * (1 << (8 - k)) + (1 << 15) - (1 << 7) - 2 * DIX[0] * (1 << (8 - k)) + CRI8 + CRI0 + s;
 
                 else if (!G[0] && !G[1] && !Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4]) && k != 0)
-                    R = x * (1 << (8 - k)) + (1 << 16) - (1 << 7) - 2 * DIX[0] * (1 << (8 - k)) + CRI8 + CRI0 + Convert.ToInt32(DI.ToString().Substring(1, 15));
+                    R = x * (1 << (8 - k)) + (1 << 16) - (1 << 7) - 2 * DIX[0] * (1 << (8 - k)) + CRI8 + CRI0 + Convert.ToInt32(String.Join("", DI).Substring(1, 15));
 
             if (!V[0])
                 if (((G[0] && G[1] && Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4])) ||
@@ -324,17 +362,17 @@ namespace IntegratedCircuitEmulator
                     !Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4]) ||
                     Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4])) && k != 0)
 
-                    R = (1 << 16) + Convert.ToInt32(DI.ToString().Substring(1, 8)) + CRI8 + CRI0;
+                    R = (1 << 16) + Convert.ToInt32(String.Join("", DI).Substring(1, 8)) + CRI8 + CRI0;
 
             if (V[0] && !V[1])
                 if (!G[0] && !G[1] && (Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4]) ||
                    !Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4]) ||
                    Convert.ToBoolean(DIY[3]) && Convert.ToBoolean(DIY[4])) && k != 0)
 
-                    R = (1 << 16) - (1 << 7) + Convert.ToInt32(DI.ToString().Substring(1, 15)) + CRI8 + CRI0;
+                    R = (1 << 16) - (1 << 7) + Convert.ToInt32(String.Join("", DI).Substring(1, 15)) + CRI8 + CRI0;
 
             if (!G[0] && !G[1] && !Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4]) && k == 0)
-                R = x + (1 << 8) + CRI0 + Convert.ToInt32(DI.ToString().Substring(8, 15));
+                R = x + (1 << 8) + CRI0 + Convert.ToInt32(String.Join("", DI).Substring(8));
 
             if (V[0] && V[1])
                 if (((!G[0] && !G[1] && Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4])) ||
