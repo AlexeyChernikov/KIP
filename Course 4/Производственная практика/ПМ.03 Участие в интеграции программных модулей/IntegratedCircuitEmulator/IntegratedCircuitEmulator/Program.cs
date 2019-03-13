@@ -27,7 +27,6 @@ namespace IntegratedCircuitEmulator
                 pinsplace = new string[configData.Length / 2];
                 int j = 0;
 
-                //   Console.WriteLine(configData.Length);
                 for (int i = 2; i < configData.Length; i++)
                 {
                     if (configData[i].IndexOf("#") != -1)
@@ -43,18 +42,12 @@ namespace IntegratedCircuitEmulator
                 reader = new StreamReader(dataFile);
                 data = reader.ReadToEnd().Split(',');
                 data[0] = data[0].Substring(data[0].IndexOf('$'));
-                data[0] = data[0].Substring(data[0].IndexOf(' ')); //trim the header 
-
-                int k = 0;
+                data[0] = data[0].Substring(data[0].IndexOf(' '));
 
                 for (int i = 0; i < data.Length - 1; i++)
-                {
-                    data[i] = data[i].Substring(data[i].IndexOf('X'));
-                    //  Console.WriteLine("\n" + data[i]);
-                    k = 0;
-                }
+                    data[i] = data[i].TrimStart();
 
-                reader.Close(); //закрываем поток
+                reader.Close();
             }
         }
 
@@ -66,7 +59,6 @@ namespace IntegratedCircuitEmulator
             for (byte n = 0; n < data[i].Length; n++)
             {
                 outputData[n] = data[i][n];
-
                 if (data[i][n] != ' ')
                 {
                     if (pinsplace[k].Contains("V"))
@@ -80,13 +72,14 @@ namespace IntegratedCircuitEmulator
 
                     else
                         if (pinsplace[k].Contains("DIX"))
-                            DIX[7 - Convert.ToByte(pinsplace[k][3].ToString())] = Convert.ToByte(data[i][n].ToString());
-                        else
+                        DIX[7 - Convert.ToByte(pinsplace[k][3].ToString())] = Convert.ToByte(data[i][n].ToString());
+
+                    else
                             if (pinsplace[k].Contains("DI"))
-                            {
-                                byte ind = Convert.ToByte(pinsplace[k][2].ToString(), 16);
-                                DI[15 - ind] = Convert.ToByte(data[i][n].ToString());
-                            }
+                    {
+                        byte ind = Convert.ToByte(pinsplace[k][2].ToString(), 16);
+                        DI[15 - ind] = Convert.ToByte(data[i][n].ToString());
+                    }
 
                     if (pinsplace[k].Contains("EH"))
                         EH = data[i][n] == '1';
@@ -122,27 +115,20 @@ namespace IntegratedCircuitEmulator
 
         private bool InputFilePaths()
         {
-            //Console.WriteLine("Введите путь к файлу PINSPLACE");
-            // string path = Console.ReadLine();
             string path = "D5.pinsplace.txt";
 
             if (File.Exists(path))
                 this.configFile = new FileStream(path, FileMode.Open, FileAccess.Read);
-
             else
             {
                 Console.WriteLine("Файл PINSPLACE по указанному пути не найден");
                 return false;
             }
 
-            //Console.WriteLine("Введите путь к файлу с данными");
-            // path = Console.ReadLine();
-
             path = "ФК 1 D5 0000.txt";
 
             if (File.Exists(path))
                 this.dataFile = new FileStream(path, FileMode.Open, FileAccess.ReadWrite);
-
             else
             {
                 Console.WriteLine("Файл с данными по указанному пути не найден");
@@ -155,7 +141,7 @@ namespace IntegratedCircuitEmulator
         public void Emulate()
         {
             InputData();
-            StreamWriter stream = new StreamWriter("OutputFile.txt", true, System.Text.Encoding.Default);
+            StreamWriter stream = new StreamWriter("OutputFile.txt", false, System.Text.Encoding.Default);
 
             for (int i = 0; i < data.Length - 1; i++)
             {
@@ -177,8 +163,8 @@ namespace IntegratedCircuitEmulator
 
                     result = result.PadLeft(16, '0');
                     OutputResult(i, result);
-                    stream.WriteLine(data[i]);
-                    Console.ReadKey();
+                    stream.Write(data[i]);
+                    stream.WriteLine(",");
                 }
             }
 
@@ -234,31 +220,29 @@ namespace IntegratedCircuitEmulator
         private string CountLeadingZeroes()
         {
             int R = 0, ZX = 0, ZY = 0, s = ByteArrayToInt(DI), y = ByteArrayToInt(DIY);
-
             if (!Convert.ToBoolean(DIY[3]) && !Convert.ToBoolean(DIY[4]))
             {
                 for (int i = 0; i < DIX.Length; i++)
                 {
-                    if (DIX[i] == 0)
-                        ZX++;
-
-                    if (DIY[i] == 0)
-                        ZY++;
+                    if (DIX[i] == 0) ZX++;
+                    if (DIY[i] == 0) ZY++;
                 }
-
                 if ((ZX == 8) && (ZY == 8))
+                {
                     R = (1 << 11) + s + CRI8 + CRI0;
+                }
                 else
                 {
                     int I = ZX;
-
                     if (((1 << I + 1) >= y) && (y > (1 << I)))
+                    {
                         R = (7 - I) * (1 << 8) + Convert.ToInt32(String.Join("", DI).Substring(8)) + CRI0;
+                    }
+
                 }
 
                 return Convert.ToString(R, 2);
             }
-
             return "LLLLLLLLLLLLLLLL";
         }
 
