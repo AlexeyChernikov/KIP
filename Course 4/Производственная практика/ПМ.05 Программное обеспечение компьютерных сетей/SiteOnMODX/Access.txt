@@ -1,6 +1,0 @@
-db: siteonmodx
-user: siteonmodx
-pass: 1234
-
-admin: admin
-pass: 123456789
