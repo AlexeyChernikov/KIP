@@ -5,8 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CryptographicApplication"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Криптографическое приложение" Height="455.5" Width="422.667" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="logo.png">
     <Grid>
-        
+        <Menu Height="20" Width="448" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <MenuItem Header="Главная"/>
+            <MenuItem Header="Справка"/>
+        </Menu>
+        <Label Content="Алгоритм:" HorizontalAlignment="Left" Margin="13,38,0,0" VerticalAlignment="Top" Width="71"/>
+        <ComboBox HorizontalAlignment="Left" Height="26" Margin="84,38,0,0" VerticalAlignment="Top" Width="306"/>
+        <Label Content="Операция:" HorizontalAlignment="Left" Height="26" Margin="13,69,0,0" VerticalAlignment="Top" Width="71"/>
+        <RadioButton Content="Шифрование" HorizontalAlignment="Left" Height="18" Margin="114,77,0,0" VerticalAlignment="Top" Width="110"/>
+        <RadioButton Content="Дешифрование" HorizontalAlignment="Left" Height="18" Margin="229,77,0,0" VerticalAlignment="Top" Width="110"/>
+        <GroupBox Header="Исходные данные" HorizontalAlignment="Left" Height="228" Margin="13,113,0,0" VerticalAlignment="Top" Width="183">
+            <Grid HorizontalAlignment="Left" Height="196" Margin="3,6,0,0" VerticalAlignment="Top" Width="164">
+                <TextBox HorizontalAlignment="Left" Height="20" Margin="50,10,0,0" TextWrapping="Wrap" Text="//путь к файлу" VerticalAlignment="Top" Width="104"/>
+                <Button Content="ВФ" HorizontalAlignment="Left" Height="20" Margin="4,10,0,0" VerticalAlignment="Top" Width="41"/>
+                <TextBox HorizontalAlignment="Left" Height="117" Margin="6,36,0,0" TextWrapping="Wrap" Text="//исходный текст" VerticalAlignment="Top" Width="148"/>
+                <Button Content="Очистить" HorizontalAlignment="Left" Height="28" Margin="33,158,0,0" VerticalAlignment="Top" Width="91"/>
+            </Grid>
+        </GroupBox>
+        <Button Content="//операция" HorizontalAlignment="Left" Height="28" Margin="154,376,0,0" VerticalAlignment="Top" Width="91"/>
+        <GroupBox Header="Результат" HorizontalAlignment="Left" Height="228" Margin="207,113,0,0" VerticalAlignment="Top" Width="183">
+            <Grid HorizontalAlignment="Left" Height="196" Margin="3,6,0,0" VerticalAlignment="Top" Width="164">
+                <Button Content="Сохр" HorizontalAlignment="Left" Height="20" Margin="4,10,0,0" VerticalAlignment="Top" Width="68"/>
+                <TextBox HorizontalAlignment="Left" Height="117" Margin="6,36,0,0" TextWrapping="Wrap" Text="//зашифрованный текст" VerticalAlignment="Top" Width="148"/>
+                <Button Content="Очистить" HorizontalAlignment="Left" Height="28" Margin="33,158,0,0" VerticalAlignment="Top" Width="91"/>
+                <Button Content="Сохр как" HorizontalAlignment="Left" Height="20" Margin="77,10,0,0" VerticalAlignment="Top" Width="77"/>
+            </Grid>
+        </GroupBox>
+        <Label Content="Ключ:" HorizontalAlignment="Left" Margin="13,346,0,0" VerticalAlignment="Top" Width="71"/>
+        <TextBox HorizontalAlignment="Left" Height="25" Margin="89,346,0,0" TextWrapping="Wrap" Text="//тут ключ" VerticalAlignment="Top" Width="301"/>
+
     </Grid>
 </Window>
