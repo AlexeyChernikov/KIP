@@ -24,5 +24,88 @@ namespace CryptographicApplication
         {
             InitializeComponent();
         }
+
+        #region Функционал
+
+        public void Clear(bool a)
+        {
+            if (a == true)
+            {
+                tb_SourceData.Text = "";
+            }
+            else
+            {
+                tb_EncryptedData.Text = "";
+            }
+        }
+
+        public void Font_Size (bool a, bool b)
+        {
+            double fs1 = tb_SourceData.FontSize;
+            double fs2 = tb_EncryptedData.FontSize;
+
+            if (a == true) //выбор кнопки
+            {
+                if (b == true) //выбор опериции
+                {
+                    if (tb_SourceData.FontSize < 24)
+                        tb_SourceData.FontSize = ++fs1;
+                }
+                else
+                {
+                    if (tb_SourceData.FontSize > 1)
+                        tb_SourceData.FontSize = --fs1;
+                }
+            }
+            else
+            {
+                if (b == true) //выбор опериции
+                {
+                    if (tb_EncryptedData.FontSize < 24)
+                        tb_EncryptedData.FontSize = ++fs2;
+                }
+                else
+                {
+                    if (tb_EncryptedData.FontSize > 1)
+                        tb_EncryptedData.FontSize = --fs2;
+                }
+            }
+        }
+
+        #endregion
+
+        #region Элементы формы
+
+        private void Btn_Clear_1_Click(object sender, RoutedEventArgs e)
+        {
+            Clear(true);
+        }
+
+        private void Btn_Clear_2_Click(object sender, RoutedEventArgs e)
+        {
+            Clear(false);
+        }
+
+        private void Btn_Increase_1_Click(object sender, RoutedEventArgs e)
+        {
+            Font_Size(true, true);
+        }
+
+        private void Btn_Increase_2_Click(object sender, RoutedEventArgs e)
+        {
+            Font_Size(false, true);
+        }
+
+        private void Btn_Reduce_1_Click(object sender, RoutedEventArgs e)
+        {
+            Font_Size(true, false);
+        }
+
+        private void Btn_Reduce_2_Click(object sender, RoutedEventArgs e)
+        {
+            Font_Size(false, false);
+        }
+
+        #endregion
     }
 }
