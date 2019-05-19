@@ -5,44 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CryptographicApplication"
         mc:Ignorable="d"
-        Title="Криптографическое приложение" Height="480" Width="420" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="logo.png">
+        Title="Криптографическое приложение" Height="522" Width="538" WindowStartupLocation="CenterScreen" Icon="logo.png" ResizeMode="NoResize">
     <Grid>
-        <Menu Height="20" Width="414" VerticalAlignment="Top" HorizontalAlignment="Left">
+        <Menu Height="20" VerticalAlignment="Top">
             <MenuItem Header="Главная"/>
             <MenuItem Header="Справка"/>
         </Menu>
-        <GroupBox Header="Исходные данные" HorizontalAlignment="Left" Height="228" Margin="13,116,0,0" VerticalAlignment="Top" Width="183">
-            <Grid HorizontalAlignment="Left" Height="198" Margin="3,6,0,0" VerticalAlignment="Top" Width="164">
-                <TextBox HorizontalAlignment="Left" Height="20" Margin="41,11,0,0" TextWrapping="Wrap" Text="//путь к файлу" VerticalAlignment="Top" Width="113"/>
-                <Button Content="ВФ" HorizontalAlignment="Left" Height="20" Margin="6,11,0,0" VerticalAlignment="Top" Width="30"/>
-                <TextBox x:Name="tb_SourceData" HorizontalAlignment="Left" Height="128" Margin="6,36,0,0" TextWrapping="Wrap" Text="//исходный текст" VerticalAlignment="Top" Width="148"/>
-                <Button x:Name="btn_Clear_1" Content="Очистить" HorizontalAlignment="Left" Height="20" Margin="6,169,0,0" VerticalAlignment="Top" Width="78" Click="Btn_Clear_1_Click"/>
-                <Button x:Name="btn_Increase_1" Content="+" HorizontalAlignment="Left" Height="20" Margin="89,169,0,0" VerticalAlignment="Top" Width="30" Click="Btn_Increase_1_Click"/>
-                <Button x:Name="btn_Reduce_1" Content="-" HorizontalAlignment="Left" Height="20" Margin="124,169,0,0" VerticalAlignment="Top" Width="30" Click="Btn_Reduce_1_Click"/>
+        <GroupBox Header="Исходные данные" HorizontalAlignment="Left" Height="228" Margin="13,139,0,0" VerticalAlignment="Top" Width="245">
+            <Grid Margin="0,6,7,2">
+                <TextBox x:Name="tb_FileName" HorizontalAlignment="Left" Height="20" Margin="46,11,0,0" TextWrapping="Wrap" Text="//путь к файлу" VerticalAlignment="Top" Width="177"/>
+                <Button x:Name="btn_FileSelection" Content="ВФ" HorizontalAlignment="Left" Height="20" Margin="11,10,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.567,-0.9" Click="Btn_FileSelection_Click"/>
+                <TextBox x:Name="tb_SourceData" Margin="10,36,3,34" TextWrapping="Wrap" Text="//исходный текст"/>
+                <Button x:Name="btn_Clear_1" Content="Очистить" HorizontalAlignment="Left" Height="20" Margin="11,169,0,0" VerticalAlignment="Top" Width="78" Click="Btn_Clear_1_Click"/>
+                <Button x:Name="btn_Increase_1" Content="+" HorizontalAlignment="Left" Height="20" Margin="94,169,0,0" VerticalAlignment="Top" Width="30" Click="Btn_Increase_1_Click"/>
+                <Button x:Name="btn_Reduce_1" Content="-" HorizontalAlignment="Left" Height="20" Margin="129,169,0,0" VerticalAlignment="Top" Width="30" Click="Btn_Reduce_1_Click"/>
             </Grid>
         </GroupBox>
-        <Button Content="Выполнить" HorizontalAlignment="Left" Height="28" Margin="155,401,0,0" VerticalAlignment="Top" Width="91"/>
-        <GroupBox Header="Результат" HorizontalAlignment="Left" Height="228" Margin="207,116,0,0" VerticalAlignment="Top" Width="183">
-            <Grid HorizontalAlignment="Left" Height="198" Margin="3,6,0,0" VerticalAlignment="Top" Width="164">
-                <Button Content="Сохранить" HorizontalAlignment="Left" Height="20" Margin="4,10,0,0" VerticalAlignment="Top" Width="68"/>
-                <TextBox x:Name="tb_EncryptedData" HorizontalAlignment="Left" Height="125" Margin="6,36,0,0" TextWrapping="Wrap" Text="//зашифрованный текст" VerticalAlignment="Top" Width="148"/>
-                <Button x:Name="btn_Clear_2" Content="Очистить" HorizontalAlignment="Left" Height="20" Margin="6,166,0,0" VerticalAlignment="Top" Width="78" Click="Btn_Clear_2_Click"/>
-                <Button Content="Сохр как" HorizontalAlignment="Left" Height="20" Margin="77,10,0,0" VerticalAlignment="Top" Width="77"/>
-                <Button x:Name="btn_Increase_2" Content="+" HorizontalAlignment="Left" Height="20" Margin="89,166,0,0" VerticalAlignment="Top" Width="30" Click="Btn_Increase_2_Click"/>
-                <Button x:Name="btn_Reduce_2" Content="-" HorizontalAlignment="Left" Height="20" Margin="124,166,0,0" VerticalAlignment="Top" Width="30" Click="Btn_Reduce_2_Click"/>
+        <Button Content="Выполнить" HorizontalAlignment="Left" Height="28" Margin="215,439,0,0" VerticalAlignment="Top" Width="91"/>
+        <GroupBox Header="Результат" HorizontalAlignment="Left" Height="228" Margin="263,139,0,0" VerticalAlignment="Top" Width="245">
+            <Grid Margin="0,6,-2,2">
+                <Button Content="Сохранить" HorizontalAlignment="Left" Height="20" Margin="11,10,0,0" VerticalAlignment="Top" Width="68"/>
+                <TextBox x:Name="tb_EncryptedData" Margin="10,36,12,37" TextWrapping="Wrap" Text="//зашифрованный текст"/>
+                <Button x:Name="btn_Clear_2" Content="Очистить" HorizontalAlignment="Left" Height="20" Margin="11,166,0,0" VerticalAlignment="Top" Width="78" Click="Btn_Clear_2_Click"/>
+                <Button Content="Сохр как" HorizontalAlignment="Left" Height="20" Margin="146,11,0,0" VerticalAlignment="Top" Width="77"/>
+                <Button x:Name="btn_Increase_2" Content="+" HorizontalAlignment="Left" Height="20" Margin="94,166,0,0" VerticalAlignment="Top" Width="30" Click="Btn_Increase_2_Click"/>
+                <Button x:Name="btn_Reduce_2" Content="-" HorizontalAlignment="Left" Height="20" Margin="129,166,0,0" VerticalAlignment="Top" Width="30" Click="Btn_Reduce_2_Click"/>
             </Grid>
         </GroupBox>
-        <GroupBox Header="Операция" HorizontalAlignment="Left" Height="47" Margin="13,69,0,0" VerticalAlignment="Top" Width="377">
-            <Grid HorizontalAlignment="Left" Height="26" Margin="0,0,-2,-1" VerticalAlignment="Top" Width="366">
-                <RadioButton Content="Шифрование" HorizontalAlignment="Left" Height="20" Margin="46,5,0,0" VerticalAlignment="Top" Width="110"/>
-                <RadioButton Content="Дешифрование" HorizontalAlignment="Left" Height="20" Margin="207,5,0,0" VerticalAlignment="Top" Width="110"/>
+        <GroupBox Header="Операция" HorizontalAlignment="Left" Height="52" Margin="13,82,0,0" VerticalAlignment="Top" Width="495">
+            <Grid Margin="0,0,-2,4">
+                <RadioButton Content="Шифрование" HorizontalAlignment="Left" Height="20" Margin="115,6,0,0" VerticalAlignment="Top" Width="110"/>
+                <RadioButton Content="Дешифрование" HorizontalAlignment="Left" Height="20" Margin="280,6,0,0" VerticalAlignment="Top" Width="110"/>
             </Grid>
         </GroupBox>
-        <GroupBox Header="Алгоритм" HorizontalAlignment="Left" Height="47" Margin="13,25,0,0" VerticalAlignment="Top" Width="377">
-            <ComboBox HorizontalAlignment="Left" Height="20" Margin="10,4,0,0" VerticalAlignment="Top" Width="346"/>
+        <GroupBox Header="Алгоритм" HorizontalAlignment="Left" Height="52" Margin="13,25,0,0" VerticalAlignment="Top" Width="495">
+            <ComboBox Margin="10,4,10,6"/>
         </GroupBox>
-        <GroupBox Header="Ключ" HorizontalAlignment="Left" Height="47" Margin="13,349,0,0" VerticalAlignment="Top" Width="377">
-            <TextBox HorizontalAlignment="Left" Height="20" Margin="10,4,0,0" TextWrapping="Wrap" Text="//тут ключ" VerticalAlignment="Top" Width="346"/>
+        <GroupBox Header="Ключ" HorizontalAlignment="Left" Height="52" Margin="13,372,0,0" VerticalAlignment="Top" Width="495">
+            <TextBox Margin="10,4,9,6" TextWrapping="Wrap" Text="//тут ключ"/>
         </GroupBox>
 
     </Grid>

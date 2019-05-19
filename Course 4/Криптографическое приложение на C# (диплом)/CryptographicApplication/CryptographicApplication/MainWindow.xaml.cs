@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using Microsoft.Win32;
 
 namespace CryptographicApplication
 {
@@ -106,6 +108,19 @@ namespace CryptographicApplication
             Font_Size(false, false);
         }
 
+        private void Btn_FileSelection_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDlg = new OpenFileDialog();
+            Nullable<bool> result = openFileDlg.ShowDialog();
+
+            if (result == true)
+            {
+                tb_FileName.Text = openFileDlg.FileName;
+                tb_SourceData.Text = File.ReadAllText(openFileDlg.FileName, Encoding.Default);
+            }
+        }
+
         #endregion
+
     }
 }
