@@ -74,6 +74,18 @@ namespace CryptographicApplication
             }
         }
 
+        public void File_Selection()
+        {
+            OpenFileDialog openFileDlg = new OpenFileDialog();
+            Nullable<bool> result = openFileDlg.ShowDialog();
+
+            if (result == true)
+            {
+                tb_FileName.Text = openFileDlg.FileName;
+                tb_SourceData.Text = File.ReadAllText(openFileDlg.FileName, Encoding.Default);
+            }
+        }
+
         #endregion
 
         #region Элементы формы
@@ -110,17 +122,21 @@ namespace CryptographicApplication
 
         private void Btn_FileSelection_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog openFileDlg = new OpenFileDialog();
-            Nullable<bool> result = openFileDlg.ShowDialog();
+            File_Selection();
+        }
 
-            if (result == true)
-            {
-                tb_FileName.Text = openFileDlg.FileName;
-                tb_SourceData.Text = File.ReadAllText(openFileDlg.FileName, Encoding.Default);
-            }
+        private void Menu_btn_FileSelection_Click(object sender, RoutedEventArgs e)
+        {
+            File_Selection();
+        }
+
+        private void Menu_btn_Exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
 
         #endregion
 
+        
     }
 }

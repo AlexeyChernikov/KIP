@@ -8,8 +8,16 @@
         Title="Криптографическое приложение" Height="522" Width="538" WindowStartupLocation="CenterScreen" Icon="logo.png" ResizeMode="NoResize">
     <Grid>
         <Menu Height="20" VerticalAlignment="Top">
-            <MenuItem Header="Главная"/>
-            <MenuItem Header="Справка"/>
+            <MenuItem Header="Файл">
+                <MenuItem x:Name="menu_btn_FileSelection" Header="Открыть..." Click="Menu_btn_FileSelection_Click"/>
+                <MenuItem Header="Сохранить"/>
+                <MenuItem Header="Сохранить как..."/>
+                <Separator/>
+                <MenuItem x:Name="menu_btn_Exit" Header="Выход" Click="Menu_btn_Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Справка">
+                <MenuItem Header="О программе"/>
+            </MenuItem>
         </Menu>
         <GroupBox Header="Исходные данные" HorizontalAlignment="Left" Height="228" Margin="13,139,0,0" VerticalAlignment="Top" Width="245">
             <Grid Margin="0,6,7,2">
@@ -34,7 +42,7 @@
         </GroupBox>
         <GroupBox Header="Операция" HorizontalAlignment="Left" Height="52" Margin="13,82,0,0" VerticalAlignment="Top" Width="495">
             <Grid Margin="0,0,-2,4">
-                <RadioButton Content="Шифрование" HorizontalAlignment="Left" Height="20" Margin="115,6,0,0" VerticalAlignment="Top" Width="110"/>
+                <RadioButton Content="Шифрование" HorizontalAlignment="Left" Height="20" Margin="115,6,0,0" VerticalAlignment="Top" Width="110" IsChecked="True"/>
                 <RadioButton Content="Дешифрование" HorizontalAlignment="Left" Height="20" Margin="280,6,0,0" VerticalAlignment="Top" Width="110"/>
             </Grid>
         </GroupBox>
