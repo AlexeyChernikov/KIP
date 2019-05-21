@@ -86,6 +86,17 @@ namespace CryptographicApplication
             }
         }
 
+        public void Save_File_As()
+        {
+            SaveFileDialog saveFileDlg = new SaveFileDialog();
+            Nullable<bool> result = saveFileDlg.ShowDialog();
+
+            if (result == true)
+            {
+                File.WriteAllText(saveFileDlg.FileName, tb_EncryptedData.Text);
+            }
+        }
+
         #endregion
 
         #region Элементы формы
@@ -125,6 +136,16 @@ namespace CryptographicApplication
             File_Selection();
         }
 
+        private void Btn_SaveFile_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Btn_SaveFileAs_Click(object sender, RoutedEventArgs e)
+        {
+            Save_File_As();
+        }
+
         private void Menu_btn_FileSelection_Click(object sender, RoutedEventArgs e)
         {
             File_Selection();
@@ -135,8 +156,8 @@ namespace CryptographicApplication
             this.Close();
         }
 
+
         #endregion
 
-        
     }
 }

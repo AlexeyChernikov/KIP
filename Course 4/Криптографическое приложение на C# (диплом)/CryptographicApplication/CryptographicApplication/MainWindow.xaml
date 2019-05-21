@@ -23,7 +23,7 @@
             <Grid Margin="0,6,7,2">
                 <TextBox x:Name="tb_FileName" HorizontalAlignment="Left" Height="20" Margin="46,11,0,0" TextWrapping="Wrap" Text="//путь к файлу" VerticalAlignment="Top" Width="177"/>
                 <Button x:Name="btn_FileSelection" Content="ВФ" HorizontalAlignment="Left" Height="20" Margin="11,10,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.567,-0.9" Click="Btn_FileSelection_Click"/>
-                <TextBox x:Name="tb_SourceData" Margin="10,36,3,34" TextWrapping="Wrap" Text="//исходный текст"/>
+                <TextBox x:Name="tb_SourceData" Margin="10,36,3,34" TextWrapping="Wrap" Text="//исходный текст" Grid.Column="1" Grid.Row="3" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" AcceptsReturn="True"/>
                 <Button x:Name="btn_Clear_1" Content="Очистить" HorizontalAlignment="Left" Height="20" Margin="11,169,0,0" VerticalAlignment="Top" Width="78" Click="Btn_Clear_1_Click"/>
                 <Button x:Name="btn_Increase_1" Content="+" HorizontalAlignment="Left" Height="20" Margin="94,169,0,0" VerticalAlignment="Top" Width="30" Click="Btn_Increase_1_Click"/>
                 <Button x:Name="btn_Reduce_1" Content="-" HorizontalAlignment="Left" Height="20" Margin="129,169,0,0" VerticalAlignment="Top" Width="30" Click="Btn_Reduce_1_Click"/>
@@ -32,10 +32,10 @@
         <Button Content="Выполнить" HorizontalAlignment="Left" Height="28" Margin="215,439,0,0" VerticalAlignment="Top" Width="91"/>
         <GroupBox Header="Результат" HorizontalAlignment="Left" Height="228" Margin="263,139,0,0" VerticalAlignment="Top" Width="245">
             <Grid Margin="0,6,-2,2">
-                <Button Content="Сохранить" HorizontalAlignment="Left" Height="20" Margin="11,10,0,0" VerticalAlignment="Top" Width="68"/>
-                <TextBox x:Name="tb_EncryptedData" Margin="10,36,12,37" TextWrapping="Wrap" Text="//зашифрованный текст"/>
+                <Button x:Name="btn_SaveFile" Content="Сохранить" HorizontalAlignment="Left" Height="20" Margin="11,10,0,0" VerticalAlignment="Top" Width="68" Click="Btn_SaveFile_Click"/>
+                <TextBox x:Name="tb_EncryptedData" Margin="10,36,12,37" TextWrapping="Wrap" Text="//зашифрованный текст" Grid.Column="1" Grid.Row="3" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" AcceptsReturn="True"/>
                 <Button x:Name="btn_Clear_2" Content="Очистить" HorizontalAlignment="Left" Height="20" Margin="11,166,0,0" VerticalAlignment="Top" Width="78" Click="Btn_Clear_2_Click"/>
-                <Button Content="Сохр как" HorizontalAlignment="Left" Height="20" Margin="146,11,0,0" VerticalAlignment="Top" Width="77"/>
+                <Button x:Name="btn_SaveFileAs" Content="Сохр как" HorizontalAlignment="Left" Height="20" Margin="146,11,0,0" VerticalAlignment="Top" Width="77" Click="Btn_SaveFileAs_Click"/>
                 <Button x:Name="btn_Increase_2" Content="+" HorizontalAlignment="Left" Height="20" Margin="94,166,0,0" VerticalAlignment="Top" Width="30" Click="Btn_Increase_2_Click"/>
                 <Button x:Name="btn_Reduce_2" Content="-" HorizontalAlignment="Left" Height="20" Margin="129,166,0,0" VerticalAlignment="Top" Width="30" Click="Btn_Reduce_2_Click"/>
             </Grid>
