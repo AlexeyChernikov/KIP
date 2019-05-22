@@ -77,6 +77,11 @@ namespace CryptographicApplication
         public void File_Selection()
         {
             OpenFileDialog openFileDlg = new OpenFileDialog();
+
+            openFileDlg.DefaultExt = ".txt";
+            openFileDlg.Filter = "Текстовый документ (.txt) | * .txt";
+            openFileDlg.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
             Nullable<bool> result = openFileDlg.ShowDialog();
 
             if (result == true)
@@ -89,6 +94,13 @@ namespace CryptographicApplication
         public void Save_File_As()
         {
             SaveFileDialog saveFileDlg = new SaveFileDialog();
+
+            saveFileDlg.DefaultExt = ".txt";
+            saveFileDlg.Filter = "Текстовый документ (.txt) | * .txt";
+            saveFileDlg.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            //saveFileDlg.FileName = "Зашифрованный файл";
+
+
             Nullable<bool> result = saveFileDlg.ShowDialog();
 
             if (result == true)
@@ -149,6 +161,11 @@ namespace CryptographicApplication
         private void Menu_btn_FileSelection_Click(object sender, RoutedEventArgs e)
         {
             File_Selection();
+        }
+
+        private void Menu_btn_SaveFileAs_Click(object sender, RoutedEventArgs e)
+        {
+            Save_File_As();
         }
 
         private void Menu_btn_Exit_Click(object sender, RoutedEventArgs e)
