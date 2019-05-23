@@ -41,7 +41,7 @@ namespace CryptographicApplication
             }
         }
 
-        public void Font_Size (bool a, bool b)
+        public void Font_Size(bool a, bool b)
         {
             double fs1 = tb_SourceData.FontSize;
             double fs2 = tb_EncryptedData.FontSize;
@@ -74,7 +74,7 @@ namespace CryptographicApplication
             }
         }
 
-        public void File_Selection()
+        public void File_Selection(TextBox localFileName, TextBox localFileText)
         {
             OpenFileDialog openFileDlg = new OpenFileDialog();
 
@@ -86,12 +86,17 @@ namespace CryptographicApplication
 
             if (result == true)
             {
-                tb_FileName.Text = openFileDlg.FileName;
-                tb_SourceData.Text = File.ReadAllText(openFileDlg.FileName, Encoding.Default);
+                localFileName.Text = openFileDlg.FileName;
+                localFileText.Text = File.ReadAllText(openFileDlg.FileName, Encoding.Default);
             }
         }
 
-        public void Save_File_As()
+        public void Save_File(TextBox localFileName, TextBox TextToSave)
+        {
+            File.WriteAllText(localFileName.Text, TextToSave.Text, Encoding.Default);
+        }
+
+        public void Save_File_As(TextBox NewFileName, TextBox TextToSave)
         {
             SaveFileDialog saveFileDlg = new SaveFileDialog();
 
@@ -105,13 +110,67 @@ namespace CryptographicApplication
 
             if (result == true)
             {
-                File.WriteAllText(saveFileDlg.FileName, tb_EncryptedData.Text);
+                NewFileName.Text = saveFileDlg.FileName;
+                File.WriteAllText(saveFileDlg.FileName, TextToSave.Text, Encoding.Default);
+            }
+        }
+
+        public void Changed_File_Name_TB (TextBox ChangedTB, Button BtnUsed, MenuItem MIUsed)
+        {
+            if (ChangedTB.Text == "")
+            {
+                BtnUsed.IsEnabled = false;
+                MIUsed.IsEnabled = false;
+            }
+            else
+            {
+                BtnUsed.IsEnabled = true;
+                MIUsed.IsEnabled = true;
             }
         }
 
         #endregion
 
         #region Элементы формы
+
+        #region Меню
+
+        private void Menu_btn_Exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        #endregion
+
+        #region Исходные данные
+
+        private void Btn_FileSelection_Source_Click(object sender, RoutedEventArgs e)
+        {
+            File_Selection(tb_FileName_Source, tb_SourceData);
+        }
+
+        private void Btn_SaveFile_Source_Click(object sender, RoutedEventArgs e)
+        {
+            Save_File(tb_FileName_Source, tb_SourceData);
+        }
+
+        private void Btn_SaveFileAs_Source_Click(object sender, RoutedEventArgs e)
+        {
+            Save_File_As(tb_FileName_Source, tb_SourceData);
+        }
+
+        private void Tb_FileName_Source_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Changed_File_Name_TB(tb_FileName_Source, btn_SaveFile_Source, menu_btn_SaveFile);
+        }
+
+        #endregion
+
+        #region Результат
+
+
+
+        #endregion
 
         private void Btn_Clear_1_Click(object sender, RoutedEventArgs e)
         {
@@ -143,38 +202,6 @@ namespace CryptographicApplication
             Font_Size(false, false);
         }
 
-        private void Btn_FileSelection_Click(object sender, RoutedEventArgs e)
-        {
-            File_Selection();
-        }
-
-        private void Btn_SaveFile_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void Btn_SaveFileAs_Click(object sender, RoutedEventArgs e)
-        {
-            Save_File_As();
-        }
-
-        private void Menu_btn_FileSelection_Click(object sender, RoutedEventArgs e)
-        {
-            File_Selection();
-        }
-
-        private void Menu_btn_SaveFileAs_Click(object sender, RoutedEventArgs e)
-        {
-            Save_File_As();
-        }
-
-        private void Menu_btn_Exit_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
-
         #endregion
-
     }
 }
