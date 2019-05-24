@@ -22,12 +22,65 @@ namespace CryptographicApplication
     /// </summary>
     public partial class MainWindow : Window
     {
+        public char[] lang = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"#$%^&*()+=-_'?.,|/`~№:;@[]{} ".ToCharArray();
+        
+        /*static public char[][] alphabet = new char[][]
+        {
+            alphabet [0] = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ".ToCharArray(),
+            alphabet [1] = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя".ToCharArray(),
+            alphabet [2] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray(),
+            alphabet [3] = "abcdefghijklmnopqrstuvwxyz".ToCharArray(),
+            alphabet [4] = "0123456789".ToCharArray(),
+            alphabet [5] = "!\"#$%^&*()+=-_'?.,|/`~№:;@[]{} ".ToCharArray()
+        };*/
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
         #region Функционал
+
+        #region Алгоритмы шифрования и дешифровки
+
+        public string Monoalphabetic_Cipher()
+        {
+            StringBuilder code = new StringBuilder();
+            string sourcetext = tb_SourceData.Text;
+            int shift = Convert.ToInt32(tb_Key.Text);
+            
+            
+            //Шифрование
+            /*for (int i = 0; i < sourcetext.Length; i++)
+            {
+                for (int j = 0; j < lang.Length; j++)
+                {
+                    if (sourcetext[i] == lang[j])
+                    {
+                        code.Append(lang[(j + shift) % lang.Length]);
+                    }
+                }
+            }*/
+
+
+            //Дешифрование
+            /*for (int i = 0; i < sourcetext.Length; i++)
+            {
+                for (int j = 0; j < lang.Length; j++)
+                {
+                    if (sourcetext[i] == lang[j])
+                    {
+                        code.Append(lang[(j - shift + lang.Length) % lang.Length]);
+                    }
+                }
+            }*/
+
+            return code.ToString();
+        }
+
+        #endregion
+
+        #region Прочие функции
 
         public void Clear(bool a)
         {
@@ -115,7 +168,7 @@ namespace CryptographicApplication
             }
         }
 
-        public void Changed_File_Name_TB (TextBox ChangedTB, Button BtnUsed, MenuItem MIUsed)
+        public void Changed_File_Name_TB(TextBox ChangedTB, Button BtnUsed, MenuItem MIUsed)
         {
             if (ChangedTB.Text == "")
             {
@@ -128,6 +181,8 @@ namespace CryptographicApplication
                 MIUsed.IsEnabled = true;
             }
         }
+
+        #endregion
 
         #endregion
 
@@ -164,44 +219,47 @@ namespace CryptographicApplication
             Changed_File_Name_TB(tb_FileName_Source, btn_SaveFile_Source, menu_btn_SaveFile);
         }
 
-        #endregion
-
-        #region Результат
-
-
-
-        #endregion
-
-        private void Btn_Clear_1_Click(object sender, RoutedEventArgs e)
+        private void Btn_Clear_Source_Click(object sender, RoutedEventArgs e)
         {
             Clear(true);
         }
 
-        private void Btn_Clear_2_Click(object sender, RoutedEventArgs e)
-        {
-            Clear(false);
-        }
-
-        private void Btn_Increase_1_Click(object sender, RoutedEventArgs e)
+        private void Btn_Increase_Source_Click(object sender, RoutedEventArgs e)
         {
             Font_Size(true, true);
         }
 
-        private void Btn_Increase_2_Click(object sender, RoutedEventArgs e)
-        {
-            Font_Size(false, true);
-        }
-
-        private void Btn_Reduce_1_Click(object sender, RoutedEventArgs e)
+        private void Btn_Reduce_Source_Click(object sender, RoutedEventArgs e)
         {
             Font_Size(true, false);
         }
 
-        private void Btn_Reduce_2_Click(object sender, RoutedEventArgs e)
+        #endregion
+
+        #region Результат
+
+        private void Btn_Clear_Encrypted_Click(object sender, RoutedEventArgs e)
+        {
+            Clear(false);
+        }
+
+        private void Btn_Increase_Encrypted_Click(object sender, RoutedEventArgs e)
+        {
+            Font_Size(false, true);
+        }
+
+        private void Btn_Reduce_Encrypted_Click(object sender, RoutedEventArgs e)
         {
             Font_Size(false, false);
         }
 
         #endregion
+
+        #endregion
+
+        private void Btn_ExecuteOperation_Click(object sender, RoutedEventArgs e)
+        {
+            tb_EncryptedData.Text = Monoalphabetic_Cipher();
+        }
     }
 }
