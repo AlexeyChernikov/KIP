@@ -22,21 +22,18 @@ namespace CryptographicApplication
     /// </summary>
     public partial class MainWindow : Window
     {
-        public char[] lang = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"#$%^&*()+=-_'?.,|/`~№:;@[]{} ".ToCharArray();
         
-        /*static public char[][] alphabet = new char[][]
-        {
-            alphabet [0] = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ".ToCharArray(),
-            alphabet [1] = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя".ToCharArray(),
-            alphabet [2] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray(),
-            alphabet [3] = "abcdefghijklmnopqrstuvwxyz".ToCharArray(),
-            alphabet [4] = "0123456789".ToCharArray(),
-            alphabet [5] = "!\"#$%^&*()+=-_'?.,|/`~№:;@[]{} ".ToCharArray()
-        };*/
+        #region Глобальные переменные
+
+        public char[] lang = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"#$%^&*()+=-_'?.,|/`~№:;@[]{}\\ ".ToCharArray();
+        public int algorithmID = -1;
+
+        #endregion
 
         public MainWindow()
         {
             InitializeComponent();
+            rb_Encryption.IsChecked = true;
         }
 
         #region Функционал
@@ -48,32 +45,34 @@ namespace CryptographicApplication
             StringBuilder code = new StringBuilder();
             string sourcetext = tb_SourceData.Text;
             int shift = Convert.ToInt32(tb_Key.Text);
+
             
-            
-            //Шифрование
-            /*for (int i = 0; i < sourcetext.Length; i++)
+            for (int i = 0; i < sourcetext.Length; i++)
             {
                 for (int j = 0; j < lang.Length; j++)
                 {
+                    //поиск символа в алфавите
                     if (sourcetext[i] == lang[j])
                     {
-                        code.Append(lang[(j + shift) % lang.Length]);
+                        if (rb_Encryption.IsChecked == true) //Шифрование
+                        {
+                            code.Append(lang[(j + shift) % lang.Length]);
+                            break;
+                        }
+                        else if (rb_Decryption.IsChecked == true) //Дешифрование
+                        {
+                            code.Append(lang[(j - shift + lang.Length) % lang.Length]);
+                            break;
+                        }
+                        
                     }
-                }
-            }*/
-
-
-            //Дешифрование
-            /*for (int i = 0; i < sourcetext.Length; i++)
-            {
-                for (int j = 0; j < lang.Length; j++)
-                {
-                    if (sourcetext[i] == lang[j])
+                    //если символ не найден на последней позиции алфавита
+                    else if (j == lang.Length - 1)
                     {
-                        code.Append(lang[(j - shift + lang.Length) % lang.Length]);
+                        code.Append(sourcetext[i]);
                     }
                 }
-            }*/
+            }
 
             return code.ToString();
         }
@@ -259,6 +258,10 @@ namespace CryptographicApplication
 
         private void Btn_ExecuteOperation_Click(object sender, RoutedEventArgs e)
         {
+            /*switch ()
+            {
+
+            }*/
             tb_EncryptedData.Text = Monoalphabetic_Cipher();
         }
     }

@@ -54,20 +54,20 @@
         </GroupBox>
         <GroupBox Header="Операция" HorizontalAlignment="Left" Height="56" Margin="13,26,0,0" VerticalAlignment="Top" Width="495">
             <Grid Margin="0,0,-2,4">
-                <RadioButton Content="Шифрование" HorizontalAlignment="Left" Height="15" Margin="107,10,0,0" VerticalAlignment="Top" Width="110" IsChecked="True"/>
-                <RadioButton Content="Дешифрование" HorizontalAlignment="Left" Height="15" Margin="272,10,0,0" VerticalAlignment="Top" Width="110"/>
+                <RadioButton x:Name="rb_Encryption" Content="Шифрование" HorizontalAlignment="Left" Height="15" Margin="107,10,0,0" VerticalAlignment="Top" Width="110"/>
+                <RadioButton x:Name="rb_Decryption" Content="Дешифрование" HorizontalAlignment="Left" Height="15" Margin="272,10,0,0" VerticalAlignment="Top" Width="110"/>
             </Grid>
         </GroupBox>
         <GroupBox Header="Алгоритм" HorizontalAlignment="Left" Height="61" Margin="13,87,0,0" VerticalAlignment="Top" Width="495">
             <ComboBox Margin="10,6,10,8">
-                <ListBoxItem Content="Шифр одноалфавитной замены"/>
+                <ListBoxItem x:Name="MonoalphabeticCipherAlg" Content="Шифр одноалфавитной замены" Width="453"/>
 
             </ComboBox>
         </GroupBox>
         <GroupBox Header="Ключ" HorizontalAlignment="Left" Height="61" Margin="13,555,0,0" VerticalAlignment="Top" Width="495">
             <Grid Margin="0,6,-2,2">
                 <Button x:Name="btn_FileSelection_Copy1" Content="ВФ" HorizontalAlignment="Left" Height="25" Margin="10,0,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.567,-0.9"/>
-                <TextBox x:Name="tb_Key" Margin="45,0,12,0" TextWrapping="Wrap" Text="//тут ключ" Height="25" VerticalAlignment="Top"/>
+                <TextBox x:Name="tb_Key" Margin="45,0,12,0" TextWrapping="Wrap" Height="25" VerticalAlignment="Top"/>
             </Grid>
         </GroupBox>
 
