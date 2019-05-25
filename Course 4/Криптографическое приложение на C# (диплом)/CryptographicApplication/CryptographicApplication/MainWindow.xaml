@@ -47,9 +47,9 @@
                 <Button x:Name="btn_SaveFile_Encrypted" Content="Сохранить" HorizontalAlignment="Left" Height="25" Margin="10,135,0,0" VerticalAlignment="Top" Width="110" IsEnabled="False"/>
                 <Button x:Name="btn_Increase_Encrypted" Content="+" HorizontalAlignment="Left" Height="25" Margin="408,135,0,0" VerticalAlignment="Top" Width="30" Click="Btn_Increase_Encrypted_Click"/>
                 <Button x:Name="btn_Reduce_Encrypted" Content="-" HorizontalAlignment="Left" Height="25" Margin="443,135,0,0" VerticalAlignment="Top" Width="30" Click="Btn_Reduce_Encrypted_Click"/>
-                <Button x:Name="btn_SaveFileAs_Encrypted" Content="Сохранить как" HorizontalAlignment="Left" Height="25" Margin="125,135,0,0" VerticalAlignment="Top" Width="110"/>
+                <Button x:Name="btn_SaveFileAs_Encrypted" Content="Сохранить как" HorizontalAlignment="Left" Height="25" Margin="125,135,0,0" VerticalAlignment="Top" Width="110" Click="Btn_SaveFileAs_Encrypted_Click"/>
                 <TextBox x:Name="tb_FileName_Encrypted" Margin="45,0,12,0" TextWrapping="Wrap" Height="25" VerticalAlignment="Top" IsEnabled="False"/>
-                <Button x:Name="btn_FileSelection_Encrypted" Content="ВФ" HorizontalAlignment="Left" Height="25" Margin="10,0,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.567,-0.9"/>
+                <Button x:Name="btn_FileSelection_Encrypted" Content="ВФ" HorizontalAlignment="Left" Height="25" Margin="10,0,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.567,-0.9" Click="Btn_FileSelection_Encrypted_Click"/>
             </Grid>
         </GroupBox>
         <GroupBox Header="Операция" HorizontalAlignment="Left" Height="56" Margin="13,26,0,0" VerticalAlignment="Top" Width="495">
@@ -59,9 +59,14 @@
             </Grid>
         </GroupBox>
         <GroupBox Header="Алгоритм" HorizontalAlignment="Left" Height="61" Margin="13,87,0,0" VerticalAlignment="Top" Width="495">
-            <ComboBox Margin="10,6,10,8">
-                <ListBoxItem x:Name="MonoalphabeticCipherAlg" Content="Шифр одноалфавитной замены" Width="453"/>
-
+            <ComboBox x:Name="cb_Algorithms" Margin="10,6,10,8">
+                <ComboBoxItem x:Name="MonoalphabeticCipherAlg">Шифр одноалфавитной замены</ComboBoxItem>
+                <ComboBoxItem x:Name="PolyalphabeticCipherAlg">Шифр многоалфавитной замены</ComboBoxItem>
+                <ComboBoxItem x:Name="TwoLiterCipherAlg">Двухлитерный шифр</ComboBoxItem>
+                <ComboBoxItem x:Name="HomophonicCipherAlg">Омофонический шифр</ComboBoxItem>
+                <ComboBoxItem x:Name="RSACipherAlg">Rivest, Shamir, Adleman (RSA)</ComboBoxItem>
+                <ComboBoxItem x:Name="DSACipherAlg">Digital Signature Algorithm (DSA)</ComboBoxItem>
+                <ComboBoxItem x:Name="AESCipherAlg">Advanced Encryption Standard (AES)</ComboBoxItem>
             </ComboBox>
         </GroupBox>
         <GroupBox Header="Ключ" HorizontalAlignment="Left" Height="61" Margin="13,555,0,0" VerticalAlignment="Top" Width="495">

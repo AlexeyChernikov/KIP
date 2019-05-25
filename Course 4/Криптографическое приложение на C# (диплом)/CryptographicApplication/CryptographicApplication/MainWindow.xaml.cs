@@ -23,10 +23,9 @@ namespace CryptographicApplication
     public partial class MainWindow : Window
     {
         
-        #region Глобальные переменные
+        #region Переменные
 
         public char[] lang = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"#$%^&*()+=-_'?.,|/`~№:;@[]{}\\ ".ToCharArray();
-        public int algorithmID = -1;
 
         #endregion
 
@@ -237,6 +236,16 @@ namespace CryptographicApplication
 
         #region Результат
 
+        private void Btn_FileSelection_Encrypted_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Btn_SaveFileAs_Encrypted_Click(object sender, RoutedEventArgs e)
+        {
+            Save_File_As(tb_FileName_Encrypted, tb_EncryptedData);
+        }
+
         private void Btn_Clear_Encrypted_Click(object sender, RoutedEventArgs e)
         {
             Clear(false);
@@ -258,11 +267,17 @@ namespace CryptographicApplication
 
         private void Btn_ExecuteOperation_Click(object sender, RoutedEventArgs e)
         {
-            /*switch ()
+            switch (cb_Algorithms.SelectedIndex)
             {
-
-            }*/
-            tb_EncryptedData.Text = Monoalphabetic_Cipher();
-        }
+                case -1: MessageBox.Show("Выберите алгоритм"); break;
+                case 0: tb_EncryptedData.Text = Monoalphabetic_Cipher(); break;
+                case 1: MessageBox.Show("Шифр многоалфавитной замены"); break;
+                case 2: MessageBox.Show("Двухлитерный шифр"); break;
+                case 3: MessageBox.Show("Омофонический шифр"); break;
+                case 4: MessageBox.Show("Rivest, Shamir, Adleman (RSA)"); break;
+                case 5: MessageBox.Show("Digital Signature Algorithm (DSA)"); break;
+                case 6: MessageBox.Show("Advanced Encryption Standard (AES)"); break;
+            }
+        }        
     }
 }
