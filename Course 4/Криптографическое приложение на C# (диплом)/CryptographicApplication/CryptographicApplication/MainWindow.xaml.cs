@@ -45,30 +45,89 @@ namespace CryptographicApplication
             string sourcetext = tb_SourceData.Text;
             int shift = Convert.ToInt32(tb_Key.Text);
 
-            
             for (int i = 0; i < sourcetext.Length; i++)
             {
+                //поиск символа в алфавите
                 for (int j = 0; j < lang.Length; j++)
                 {
-                    //поиск символа в алфавите
+                    //если символ найден
                     if (sourcetext[i] == lang[j])
                     {
                         if (rb_Encryption.IsChecked == true) //Шифрование
                         {
                             code.Append(lang[(j + shift) % lang.Length]);
-                            break;
                         }
                         else if (rb_Decryption.IsChecked == true) //Дешифрование
                         {
                             code.Append(lang[(j - shift + lang.Length) % lang.Length]);
-                            break;
                         }
-                        
+                        break;
                     }
-                    //если символ не найден на последней позиции алфавита
+                    //если символ не найден
                     else if (j == lang.Length - 1)
                     {
                         code.Append(sourcetext[i]);
+                    }
+                }
+            }
+
+            return code.ToString();
+        }
+
+        public string Polyalphabetic_Cipher()
+        {
+            StringBuilder code = new StringBuilder();
+            string sourcetext = tb_SourceData.Text;
+            string key = tb_Key.Text;
+            int[] key_id = new int[key.Length];
+            int t = 0;
+
+            //поиск индексов букв ключа
+            for (int i = 0; i < key.Length; i++)
+            {
+                for (int j = 0; j < lang.Length; j++)
+                {
+                    if (key[i] == lang[j])
+                    {
+                        key_id[i] = j;
+                        break;
+                    }
+                }    
+            }
+
+            for (int i = 0; i < sourcetext.Length; i++)
+            {
+                //поиск символа в алфавите
+                for (int j = 0; j < lang.Length; j++)
+                {
+                    //если символ найден
+                    if (sourcetext[i] == lang[j])
+                    {
+                        if (rb_Encryption.IsChecked == true) //Шифрование 
+                        {
+                            if (t > key.Length - 1)
+                            {
+                                t = 0;
+                            }
+                            code.Append(lang[(j + key_id[t]) % lang.Length]);
+                            t++;
+                        }
+                        else if (rb_Decryption.IsChecked == true) //Дешифрование
+                        {
+                            if (t > key.Length - 1)
+                            {
+                                t = 0;
+                            }
+                            code.Append(lang[(j + lang.Length - key_id[t]) % lang.Length]);
+                            t++;
+                        }
+                        break;
+                    }
+                    //если символ не найден
+                    else if (j == lang.Length - 1)
+                    {
+                        code.Append(sourcetext[i]);
+                        t++;
                     }
                 }
             }
@@ -236,11 +295,6 @@ namespace CryptographicApplication
 
         #region Результат
 
-        private void Btn_FileSelection_Encrypted_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
         private void Btn_SaveFileAs_Encrypted_Click(object sender, RoutedEventArgs e)
         {
             Save_File_As(tb_FileName_Encrypted, tb_EncryptedData);
@@ -269,14 +323,15 @@ namespace CryptographicApplication
         {
             switch (cb_Algorithms.SelectedIndex)
             {
-                case -1: MessageBox.Show("Выберите алгоритм"); break;
+                case -1: MessageBox.Show("Выберите метод шифрования"); break;
                 case 0: tb_EncryptedData.Text = Monoalphabetic_Cipher(); break;
-                case 1: MessageBox.Show("Шифр многоалфавитной замены"); break;
+                case 1: tb_EncryptedData.Text = Polyalphabetic_Cipher(); break;
                 case 2: MessageBox.Show("Двухлитерный шифр"); break;
                 case 3: MessageBox.Show("Омофонический шифр"); break;
-                case 4: MessageBox.Show("Rivest, Shamir, Adleman (RSA)"); break;
-                case 5: MessageBox.Show("Digital Signature Algorithm (DSA)"); break;
-                case 6: MessageBox.Show("Advanced Encryption Standard (AES)"); break;
+                case 4: MessageBox.Show("Исключающее ИЛИ (XOR)"); break;
+                case 5: MessageBox.Show("Rivest, Shamir, Adleman (RSA)"); break;
+                case 6: MessageBox.Show("Digital Signature Algorithm (DSA)"); break;
+                case 7: MessageBox.Show("Advanced Encryption Standard (AES)"); break;
             }
         }        
     }

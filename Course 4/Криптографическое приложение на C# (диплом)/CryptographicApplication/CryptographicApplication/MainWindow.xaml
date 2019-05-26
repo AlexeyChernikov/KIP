@@ -5,32 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CryptographicApplication"
         mc:Ignorable="d"
-        Title="Криптографическое приложение" Height="710" Width="538" WindowStartupLocation="CenterScreen" Icon="logo.png" ResizeMode="NoResize">
+        Title="Криптографическое приложение" Height="715" Width="538" WindowStartupLocation="CenterScreen" Icon="logo.png" ResizeMode="NoResize">
     <Grid>
-        <Menu Height="20" VerticalAlignment="Top">
+        <Menu Height="25" VerticalAlignment="Top">
             <MenuItem Header="Файл">
                 <MenuItem x:Name="menu_btn_FileSelection" Header="Открыть..."/>
-                <MenuItem Header="Сохранить">
-                    <MenuItem x:Name="menu_btn_SaveFile" Header="Исходный текст" IsEnabled="False"/>
-                    <MenuItem Header="Зашифрованный текст" IsEnabled="False"/>
-                    <MenuItem Header="Ключ" IsEnabled="False"/>
-                </MenuItem>
+                <MenuItem x:Name="menu_btn_SaveFile" Header="Сохранить" IsEnabled="False"/>
+
                 <MenuItem Header="Сохранить как...">
-                    <MenuItem Header="Исходный текст"/>
-                    <MenuItem Header="Зашифрованный текст"/>
-                    <MenuItem Header="Ключ"/>
+                    <MenuItem Header="Сохранить исходный текст"/>
+                    <MenuItem Header="Сохранить зашифрованный текст"/>
+                    <MenuItem Header="Сохранить ключ"/>
                 </MenuItem>
                 <Separator/>
                 <MenuItem x:Name="menu_btn_Exit" Header="Выход" Click="Menu_btn_Exit_Click"/>
             </MenuItem>
-            <MenuItem Header="Справка">
+            <MenuItem Header="Справка" Height="25">
                 <MenuItem Header="О программе"/>
             </MenuItem>
         </Menu>
-        <GroupBox Header="Исходные данные" HorizontalAlignment="Left" Height="196" Margin="13,153,0,0" VerticalAlignment="Top" Width="495">
+        <GroupBox Header="Исходные данные" HorizontalAlignment="Left" Height="196" Margin="13,158,0,0" VerticalAlignment="Top" Width="495">
             <Grid Margin="0,6,7,2">
                 <TextBox x:Name="tb_FileName_Source" Margin="45,0,3,0" TextWrapping="Wrap" Height="25" VerticalAlignment="Top" IsEnabled="False" TextChanged="Tb_FileName_Source_TextChanged"/>
-                <Button x:Name="btn_FileSelection_Source" Content="ВФ" HorizontalAlignment="Left" Height="25" Margin="10,0,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.567,-0.9" Click="Btn_FileSelection_Source_Click"/>
+                <Button x:Name="btn_FileSelection_Source" Content=". . ." HorizontalAlignment="Left" Height="25" Margin="10,0,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.567,-0.9" Click="Btn_FileSelection_Source_Click"/>
                 <TextBox x:Name="tb_SourceData" Margin="10,30,3,0" TextWrapping="Wrap" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" AcceptsReturn="True" Height="100" VerticalAlignment="Top"/>
                 <Button x:Name="btn_Clear_Source" Content="Очистить" HorizontalAlignment="Left" Height="25" Margin="325,135,0,0" VerticalAlignment="Top" Width="78" Click="Btn_Clear_Source_Click"/>
                 <Button x:Name="btn_Increase_Source" Content="+" HorizontalAlignment="Left" Height="25" Margin="408,135,0,0" VerticalAlignment="Top" Width="30" Click="Btn_Increase_Source_Click"/>
@@ -39,40 +36,40 @@
                 <Button x:Name="btn_SaveFileAs_Source" Content="Сохранить как" HorizontalAlignment="Left" Height="25" Margin="125,135,0,0" VerticalAlignment="Top" Width="110" Click="Btn_SaveFileAs_Source_Click"/>
             </Grid>
         </GroupBox>
-        <Button x:Name="btn_ExecuteOperation" Content="Выполнить" HorizontalAlignment="Left" Height="25" Margin="221,630,0,0" VerticalAlignment="Top" Width="91" Click="Btn_ExecuteOperation_Click"/>
-        <GroupBox Header="Результат" HorizontalAlignment="Left" Height="196" Margin="13,354,0,0" VerticalAlignment="Top" Width="495">
+        <Button x:Name="btn_ExecuteOperation" Content="Выполнить" HorizontalAlignment="Left" Height="25" Margin="221,635,0,0" VerticalAlignment="Top" Width="91" Click="Btn_ExecuteOperation_Click"/>
+        <GroupBox Header="Результат" HorizontalAlignment="Left" Height="196" Margin="13,359,0,0" VerticalAlignment="Top" Width="495">
             <Grid Margin="0,6,-2,2">
                 <TextBox x:Name="tb_EncryptedData" Margin="10,30,12,0" TextWrapping="Wrap" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" AcceptsReturn="True" Height="100" VerticalAlignment="Top"/>
                 <Button x:Name="btn_Clear_Encrypted" Content="Очистить" HorizontalAlignment="Left" Height="25" Margin="325,135,0,0" VerticalAlignment="Top" Width="78" Click="Btn_Clear_Encrypted_Click"/>
-                <Button x:Name="btn_SaveFile_Encrypted" Content="Сохранить" HorizontalAlignment="Left" Height="25" Margin="10,135,0,0" VerticalAlignment="Top" Width="110" IsEnabled="False"/>
                 <Button x:Name="btn_Increase_Encrypted" Content="+" HorizontalAlignment="Left" Height="25" Margin="408,135,0,0" VerticalAlignment="Top" Width="30" Click="Btn_Increase_Encrypted_Click"/>
                 <Button x:Name="btn_Reduce_Encrypted" Content="-" HorizontalAlignment="Left" Height="25" Margin="443,135,0,0" VerticalAlignment="Top" Width="30" Click="Btn_Reduce_Encrypted_Click"/>
-                <Button x:Name="btn_SaveFileAs_Encrypted" Content="Сохранить как" HorizontalAlignment="Left" Height="25" Margin="125,135,0,0" VerticalAlignment="Top" Width="110" Click="Btn_SaveFileAs_Encrypted_Click"/>
-                <TextBox x:Name="tb_FileName_Encrypted" Margin="45,0,12,0" TextWrapping="Wrap" Height="25" VerticalAlignment="Top" IsEnabled="False"/>
-                <Button x:Name="btn_FileSelection_Encrypted" Content="ВФ" HorizontalAlignment="Left" Height="25" Margin="10,0,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.567,-0.9" Click="Btn_FileSelection_Encrypted_Click"/>
+                <Button x:Name="btn_SaveFileAs_Encrypted" Content="Сохранить как" HorizontalAlignment="Left" Height="25" Margin="10,135,0,0" VerticalAlignment="Top" Width="110" Click="Btn_SaveFileAs_Encrypted_Click"/>
+                <TextBox x:Name="tb_FileName_Encrypted" Margin="10,0,12,0" TextWrapping="Wrap" Height="25" VerticalAlignment="Top" IsEnabled="False"/>
             </Grid>
         </GroupBox>
-        <GroupBox Header="Операция" HorizontalAlignment="Left" Height="56" Margin="13,26,0,0" VerticalAlignment="Top" Width="495">
+        <GroupBox Header="Операция" HorizontalAlignment="Left" Height="56" Margin="13,31,0,0" VerticalAlignment="Top" Width="495">
             <Grid Margin="0,0,-2,4">
                 <RadioButton x:Name="rb_Encryption" Content="Шифрование" HorizontalAlignment="Left" Height="15" Margin="107,10,0,0" VerticalAlignment="Top" Width="110"/>
                 <RadioButton x:Name="rb_Decryption" Content="Дешифрование" HorizontalAlignment="Left" Height="15" Margin="272,10,0,0" VerticalAlignment="Top" Width="110"/>
             </Grid>
         </GroupBox>
-        <GroupBox Header="Алгоритм" HorizontalAlignment="Left" Height="61" Margin="13,87,0,0" VerticalAlignment="Top" Width="495">
+        <GroupBox Header="Метод шифрования" HorizontalAlignment="Left" Height="61" Margin="13,92,0,0" VerticalAlignment="Top" Width="495">
             <ComboBox x:Name="cb_Algorithms" Margin="10,6,10,8">
-                <ComboBoxItem x:Name="MonoalphabeticCipherAlg">Шифр одноалфавитной замены</ComboBoxItem>
-                <ComboBoxItem x:Name="PolyalphabeticCipherAlg">Шифр многоалфавитной замены</ComboBoxItem>
+                <ComboBoxItem x:Name="MonoalphabeticCipherAlg">Моноалфавитный шифр</ComboBoxItem>
+                <ComboBoxItem x:Name="PolyalphabeticCipherAlg">Полиалфавитный шифр</ComboBoxItem>
                 <ComboBoxItem x:Name="TwoLiterCipherAlg">Двухлитерный шифр</ComboBoxItem>
                 <ComboBoxItem x:Name="HomophonicCipherAlg">Омофонический шифр</ComboBoxItem>
+                <ComboBoxItem x:Name="XORCipherAlg">Исключающее ИЛИ (XOR)</ComboBoxItem>
                 <ComboBoxItem x:Name="RSACipherAlg">Rivest, Shamir, Adleman (RSA)</ComboBoxItem>
                 <ComboBoxItem x:Name="DSACipherAlg">Digital Signature Algorithm (DSA)</ComboBoxItem>
                 <ComboBoxItem x:Name="AESCipherAlg">Advanced Encryption Standard (AES)</ComboBoxItem>
             </ComboBox>
         </GroupBox>
-        <GroupBox Header="Ключ" HorizontalAlignment="Left" Height="61" Margin="13,555,0,0" VerticalAlignment="Top" Width="495">
+        <GroupBox Header="Ключ" HorizontalAlignment="Left" Height="61" Margin="13,560,0,0" VerticalAlignment="Top" Width="495">
             <Grid Margin="0,6,-2,2">
-                <Button x:Name="btn_FileSelection_Copy1" Content="ВФ" HorizontalAlignment="Left" Height="25" Margin="10,0,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.567,-0.9"/>
-                <TextBox x:Name="tb_Key" Margin="45,0,12,0" TextWrapping="Wrap" Height="25" VerticalAlignment="Top"/>
+                <Button x:Name="btn_FileSelection_Copy1" Content=". . ." HorizontalAlignment="Left" Height="25" Margin="125,0,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.567,-0.9"/>
+                <TextBox x:Name="tb_Key" Margin="160,0,12,0" TextWrapping="Wrap" Height="25" VerticalAlignment="Top"/>
+                <Button x:Name="btn_SaveFileAs_Encrypted_Copy" Content="Сохранить как" HorizontalAlignment="Left" Height="25" Margin="10,0,0,0" VerticalAlignment="Top" Width="110" Click="Btn_SaveFileAs_Encrypted_Click"/>
             </Grid>
         </GroupBox>
 
