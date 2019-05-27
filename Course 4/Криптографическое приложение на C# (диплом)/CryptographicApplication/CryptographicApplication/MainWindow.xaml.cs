@@ -135,6 +135,55 @@ namespace CryptographicApplication
             return code.ToString();
         }
 
+        public string XOR_Cipher()
+        {
+            StringBuilder code = new StringBuilder();
+            string sourcetext = tb_SourceData.Text;
+            string key = tb_Key.Text;
+            int[] key_id = new int[key.Length];
+            int t = 0;
+
+            //поиск индексов букв ключа
+            for (int i = 0; i < key.Length; i++)
+            {
+                for (int j = 0; j < lang.Length; j++)
+                {
+                    if (key[i] == lang[j])
+                    {
+                        key_id[i] = j;
+                        break;
+                    }
+                }
+            }
+
+            for (int i = 0; i < sourcetext.Length; i++)
+            {
+                //поиск символа в алфавите
+                for (int j = 0; j < lang.Length; j++)
+                {
+                    //если символ найден
+                    if (sourcetext[i] == lang[j])
+                    {
+                        if (t > key.Length - 1)
+                        {
+                            t = 0;
+                        }
+                        code.Append(lang[(j ^ key_id[t] % 32) % lang.Length]);
+                        t++;
+                        break;
+                    }
+                    //если символ не найден
+                    else if (j == lang.Length - 1)
+                    {
+                        code.Append(sourcetext[i]);
+                        t++;
+                    }
+                }
+            }
+
+            return code.ToString();
+        }
+
         #endregion
 
         #region Прочие функции
@@ -328,7 +377,7 @@ namespace CryptographicApplication
                 case 1: tb_EncryptedData.Text = Polyalphabetic_Cipher(); break;
                 case 2: MessageBox.Show("Двухлитерный шифр"); break;
                 case 3: MessageBox.Show("Омофонический шифр"); break;
-                case 4: MessageBox.Show("Исключающее ИЛИ (XOR)"); break;
+                case 4: tb_EncryptedData.Text = XOR_Cipher(); break;
                 case 5: MessageBox.Show("Rivest, Shamir, Adleman (RSA)"); break;
                 case 6: MessageBox.Show("Digital Signature Algorithm (DSA)"); break;
                 case 7: MessageBox.Show("Advanced Encryption Standard (AES)"); break;
