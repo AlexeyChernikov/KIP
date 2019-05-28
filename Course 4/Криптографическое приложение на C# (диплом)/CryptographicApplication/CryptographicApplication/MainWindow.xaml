@@ -57,11 +57,9 @@
             <ComboBox x:Name="cb_Algorithms" Margin="10,6,10,8">
                 <ComboBoxItem x:Name="MonoalphabeticCipherAlg">Моноалфавитный шифр</ComboBoxItem>
                 <ComboBoxItem x:Name="PolyalphabeticCipherAlg">Полиалфавитный шифр</ComboBoxItem>
-                <ComboBoxItem x:Name="TwoLiterCipherAlg">Двухлитерный шифр</ComboBoxItem>
-                <ComboBoxItem x:Name="HomophonicCipherAlg">Омофонический шифр</ComboBoxItem>
+                <ComboBoxItem x:Name="HomophonicCipherAlg">Одноразовый блокнот</ComboBoxItem>
                 <ComboBoxItem x:Name="XORCipherAlg">Исключающее ИЛИ (XOR)</ComboBoxItem>
                 <ComboBoxItem x:Name="RSACipherAlg">Rivest, Shamir, Adleman (RSA)</ComboBoxItem>
-                <ComboBoxItem x:Name="DSACipherAlg">Digital Signature Algorithm (DSA)</ComboBoxItem>
                 <ComboBoxItem x:Name="AESCipherAlg">Advanced Encryption Standard (AES)</ComboBoxItem>
             </ComboBox>
         </GroupBox>

@@ -375,12 +375,10 @@ namespace CryptographicApplication
                 case -1: MessageBox.Show("Выберите метод шифрования"); break;
                 case 0: tb_EncryptedData.Text = Monoalphabetic_Cipher(); break;
                 case 1: tb_EncryptedData.Text = Polyalphabetic_Cipher(); break;
-                case 2: MessageBox.Show("Двухлитерный шифр"); break;
-                case 3: MessageBox.Show("Омофонический шифр"); break;
-                case 4: tb_EncryptedData.Text = XOR_Cipher(); break;
-                case 5: MessageBox.Show("Rivest, Shamir, Adleman (RSA)"); break;
-                case 6: MessageBox.Show("Digital Signature Algorithm (DSA)"); break;
-                case 7: MessageBox.Show("Advanced Encryption Standard (AES)"); break;
+                case 2: MessageBox.Show("Одноразовый блокнот"); break;
+                case 3: tb_EncryptedData.Text = XOR_Cipher(); break;
+                case 4: MessageBox.Show("Rivest, Shamir, Adleman (RSA)"); break;
+                case 5: MessageBox.Show("Advanced Encryption Standard (AES)"); break;
             }
         }        
     }
