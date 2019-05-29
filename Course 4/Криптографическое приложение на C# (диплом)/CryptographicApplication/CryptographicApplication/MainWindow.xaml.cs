@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using Microsoft.Win32;
+using System.Security.Cryptography;
 
 namespace CryptographicApplication
 {
@@ -26,6 +27,7 @@ namespace CryptographicApplication
         #region Переменные
 
         public char[] lang = "АБВГДЕЁЖЗИЙ ЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"#$%^&*()+=-_'?.,|/`~№:;@[]{}\\ ".ToCharArray();
+        public AESAlg obj_AES;
 
         #endregion
 
@@ -33,7 +35,9 @@ namespace CryptographicApplication
         {
             InitializeComponent();
             rb_Encryption.IsChecked = true;
+            obj_AES = new AESAlg();
         }
+        
 
         #region Функционал
 
@@ -224,6 +228,18 @@ namespace CryptographicApplication
             }
 
             return code.ToString();
+        }
+
+        public void AES_Cipher()
+        {
+            if (rb_Encryption.IsChecked == true) //Шифрование 
+            {
+                tb_EncryptedData.Text = obj_AES.AES_Encrypt(tb_SourceData.Text);
+            }
+            else if (rb_Decryption.IsChecked == true) //Дешифрование
+            {
+                tb_EncryptedData.Text = obj_AES.AES_Decrypt(tb_SourceData.Text);
+            }
         }
 
         #endregion
@@ -420,7 +436,7 @@ namespace CryptographicApplication
                 case 2: tb_EncryptedData.Text = Vernam_Cipher(); break;
                 case 3: tb_EncryptedData.Text = XOR_Cipher(); break;
                 case 4: MessageBox.Show("Rivest, Shamir, Adleman (RSA)"); break;
-                case 5: MessageBox.Show("Advanced Encryption Standard (AES)"); break;
+                case 5: AES_Cipher(); break;
             }
         }        
     }
