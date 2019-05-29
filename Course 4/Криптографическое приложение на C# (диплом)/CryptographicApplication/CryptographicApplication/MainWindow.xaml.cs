@@ -25,7 +25,7 @@ namespace CryptographicApplication
         
         #region Переменные
 
-        public char[] lang = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"#$%^&*()+=-_'?.,|/`~№:;@[]{}\\ ".ToCharArray();
+        public char[] lang = "АБВГДЕЁЖЗИЙ ЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"#$%^&*()+=-_'?.,|/`~№:;@[]{}\\ ".ToCharArray();
 
         #endregion
 
@@ -128,6 +128,48 @@ namespace CryptographicApplication
                     {
                         code.Append(sourcetext[i]);
                         t++;
+                    }
+                }
+            }
+
+            return code.ToString();
+        }
+
+        public string Vernam_Cipher()
+        {
+            StringBuilder code = new StringBuilder();
+            string sourcetext = tb_SourceData.Text;
+            string key = tb_Key.Text;
+            int[] key_id = new int[key.Length];
+
+            //поиск индексов букв ключа
+            for (int i = 0; i < key.Length; i++)
+            {
+                for (int j = 0; j < lang.Length; j++)
+                {
+                    if (key[i] == lang[j])
+                    {
+                        key_id[i] = j;
+                        break;
+                    }
+                }
+            }
+
+            for (int i = 0; i < sourcetext.Length; i++)
+            {
+                //поиск символа в алфавите
+                for (int j = 0; j < lang.Length; j++)
+                {
+                    //если символ найден
+                    if (sourcetext[i] == lang[j])
+                    {
+                        code.Append(lang[(j ^ key_id[i] % 32) % lang.Length]);
+                        break;
+                    }
+                    //если символ не найден
+                    else if (j == lang.Length - 1)
+                    {
+                        code.Append(sourcetext[i]);
                     }
                 }
             }
@@ -375,7 +417,7 @@ namespace CryptographicApplication
                 case -1: MessageBox.Show("Выберите метод шифрования"); break;
                 case 0: tb_EncryptedData.Text = Monoalphabetic_Cipher(); break;
                 case 1: tb_EncryptedData.Text = Polyalphabetic_Cipher(); break;
-                case 2: MessageBox.Show("Одноразовый блокнот"); break;
+                case 2: tb_EncryptedData.Text = Vernam_Cipher(); break;
                 case 3: tb_EncryptedData.Text = XOR_Cipher(); break;
                 case 4: MessageBox.Show("Rivest, Shamir, Adleman (RSA)"); break;
                 case 5: MessageBox.Show("Advanced Encryption Standard (AES)"); break;
