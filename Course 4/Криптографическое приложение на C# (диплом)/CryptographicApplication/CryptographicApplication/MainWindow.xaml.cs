@@ -26,8 +26,8 @@ namespace CryptographicApplication
         
         #region Переменные
 
-        public char[] lang = "АБВГДЕЁЖЗИЙ ЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"#$%^&*()+=-_'?.,|/`~№:;@[]{}\\ ".ToCharArray();
-        public AESAlg obj_AES;
+        public char[] lang = "АБВГДЕЁЖЗИЙ ЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"#$%^&*()+=-_'?.,|/`~№:;@[]{}\\".ToCharArray();
+        Transposition t;
 
         #endregion
 
@@ -35,13 +35,26 @@ namespace CryptographicApplication
         {
             InitializeComponent();
             rb_Encryption.IsChecked = true;
-            obj_AES = new AESAlg();
+            t = new Transposition();
         }
-        
 
         #region Функционал
 
         #region Алгоритмы шифрования и дешифровки
+
+        public void Transposition_Cipher()
+        {
+            t.SetKey(tb_Key.Text);
+
+            if (rb_Encryption.IsChecked == true)
+            {
+                tb_EncryptedData.Text = t.Encrypt(tb_SourceData.Text);
+            }
+            else
+            {
+                tb_EncryptedData.Text = t.Decrypt(tb_SourceData.Text);
+            }
+        }
 
         public string Monoalphabetic_Cipher()
         {
@@ -230,18 +243,6 @@ namespace CryptographicApplication
             return code.ToString();
         }
 
-        public void AES_Cipher()
-        {
-            if (rb_Encryption.IsChecked == true) //Шифрование 
-            {
-                tb_EncryptedData.Text = obj_AES.AES_Encrypt(tb_SourceData.Text);
-            }
-            else if (rb_Decryption.IsChecked == true) //Дешифрование
-            {
-                tb_EncryptedData.Text = obj_AES.AES_Decrypt(tb_SourceData.Text);
-            }
-        }
-
         #endregion
 
         #region Прочие функции
@@ -424,6 +425,28 @@ namespace CryptographicApplication
 
         #endregion
 
+        #region Ключ
+
+        private void Btn_FileSelection_Key_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_SaveFileAs_Key_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Without_a_Space(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+            {
+                e.Handled = true;
+            }
+        }
+
+        #endregion
+
         #endregion
 
         private void Btn_ExecuteOperation_Click(object sender, RoutedEventArgs e)
@@ -431,13 +454,30 @@ namespace CryptographicApplication
             switch (cb_Algorithms.SelectedIndex)
             {
                 case -1: MessageBox.Show("Выберите метод шифрования"); break;
-                case 0: tb_EncryptedData.Text = Monoalphabetic_Cipher(); break;
-                case 1: tb_EncryptedData.Text = Polyalphabetic_Cipher(); break;
-                case 2: tb_EncryptedData.Text = Vernam_Cipher(); break;
-                case 3: tb_EncryptedData.Text = XOR_Cipher(); break;
-                case 4: MessageBox.Show("Rivest, Shamir, Adleman (RSA)"); break;
-                case 5: AES_Cipher(); break;
+                case 0: Transposition_Cipher(); break;
+                case 1: tb_EncryptedData.Text = Monoalphabetic_Cipher(); break;
+                case 2: tb_EncryptedData.Text = Polyalphabetic_Cipher(); break;
+                case 3: tb_EncryptedData.Text = Vernam_Cipher(); break;
+                case 4: tb_EncryptedData.Text = XOR_Cipher(); break;
+                case 5: MessageBox.Show("Rivest, Shamir, Adleman (RSA)"); break;
             }
-        }        
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e) //Горячие клавиши
+        {
+            /*switch (e.Key)
+            {
+                case Key.F1: New_Game(); break; //Новая игра
+                case Key.F2: Beginner_Mode(); break; //Новичок
+                case Key.F3: Enthusiast_Mode(); break; //Любитель
+                case Key.F4: Professional_Mode(); break; //Профессионал
+                case Key.F5: Transition_Special_Window(); break; //Особый
+                case Key.F6: Help(); break; //Как играть
+                case Key.F7: Transition_Records_Window(); break;  //Рекорды
+                case Key.F12: this.Close(); break; //Выход
+                case Key.OemMinus: Game_Size_Switch(false); break; //Уменьшение размера игры 
+                case Key.OemPlus: Game_Size_Switch(true); break; //Увеличение размера игры
+            }*/
+        }
     }
 }
