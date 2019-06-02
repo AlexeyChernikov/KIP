@@ -69,6 +69,7 @@
                 <TextBox x:Name="tb_Key" Margin="160,0,12,0" TextWrapping="Wrap" Height="25" VerticalAlignment="Top" PreviewKeyDown="Without_a_Space"/>
                 <Button x:Name="btn_SaveFileAs_Key" Content="Сохранить как" HorizontalAlignment="Left" Height="25" Margin="10,0,0,0" VerticalAlignment="Top" Width="110" Click="Btn_SaveFileAs_Key_Click"/>
                 <TextBox x:Name="tb_Key_2" Margin="160,30,12,0" TextWrapping="Wrap" Height="25" VerticalAlignment="Top" PreviewKeyDown="Without_a_Space"/>
+                <Button x:Name="btn_Random_Key" Content="Сгенерировать ключ" HorizontalAlignment="Left" Height="25" Margin="10,30,0,0" VerticalAlignment="Top" Width="145"/>
             </Grid>
         </GroupBox>
 

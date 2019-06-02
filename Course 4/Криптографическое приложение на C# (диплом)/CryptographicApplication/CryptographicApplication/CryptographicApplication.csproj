@@ -63,6 +63,7 @@
     <Compile Include="Alphabet.cs" />
     <Compile Include="Monoalphabetic.cs" />
     <Compile Include="Polyalphabetic.cs" />
+    <Compile Include="RSA.cs" />
     <Compile Include="Transposition.cs" />
     <Compile Include="Vernam.cs" />
     <Compile Include="XOR.cs" />
