@@ -14,7 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using Microsoft.Win32;
-using System.Security.Cryptography;
+using System.Numerics;
+using System.Diagnostics;
 
 namespace CryptographicApplication
 {
@@ -26,8 +27,12 @@ namespace CryptographicApplication
         
         #region Переменные
 
-        public char[] lang = "АБВГДЕЁЖЗИЙ ЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"#$%^&*()+=-_'?.,|/`~№:;@[]{}\\".ToCharArray();
-        Transposition t;
+        public char[] lang = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"#$%^&*()+=-_'?.,|/`~№:;@[]{}\\".ToCharArray();
+        Transposition trans_obj;
+        Monoalphabetic mono_obj;
+        Polyalphabetic poly_obj;
+        XOR xor_obj;
+        Vernam vernam_obj;
 
         #endregion
 
@@ -35,7 +40,11 @@ namespace CryptographicApplication
         {
             InitializeComponent();
             rb_Encryption.IsChecked = true;
-            t = new Transposition();
+            trans_obj = new Transposition();
+            mono_obj = new Monoalphabetic();
+            poly_obj = new Polyalphabetic();
+            xor_obj = new XOR();
+            vernam_obj = new Vernam();
         }
 
         #region Функционал
@@ -44,203 +53,170 @@ namespace CryptographicApplication
 
         public void Transposition_Cipher()
         {
-            t.SetKey(tb_Key.Text);
+            trans_obj.SetKey(tb_Key.Text);
 
             if (rb_Encryption.IsChecked == true)
             {
-                tb_EncryptedData.Text = t.Encrypt(tb_SourceData.Text);
+                tb_EncryptedData.Text = trans_obj.Encrypt(tb_SourceData.Text);
             }
             else
             {
-                tb_EncryptedData.Text = t.Decrypt(tb_SourceData.Text);
+                tb_EncryptedData.Text = trans_obj.Decrypt(tb_SourceData.Text);
             }
         }
 
-        public string Monoalphabetic_Cipher()
+        public void Monoalphabetic_Cipher()
         {
-            StringBuilder code = new StringBuilder();
-            string sourcetext = tb_SourceData.Text;
-            int shift = Convert.ToInt32(tb_Key.Text);
-
-            for (int i = 0; i < sourcetext.Length; i++)
+            if (rb_Encryption.IsChecked == true)
             {
-                //поиск символа в алфавите
-                for (int j = 0; j < lang.Length; j++)
-                {
-                    //если символ найден
-                    if (sourcetext[i] == lang[j])
-                    {
-                        if (rb_Encryption.IsChecked == true) //Шифрование
-                        {
-                            code.Append(lang[(j + shift) % lang.Length]);
-                        }
-                        else if (rb_Decryption.IsChecked == true) //Дешифрование
-                        {
-                            code.Append(lang[(j - shift + lang.Length) % lang.Length]);
-                        }
-                        break;
-                    }
-                    //если символ не найден
-                    else if (j == lang.Length - 1)
-                    {
-                        code.Append(sourcetext[i]);
-                    }
-                }
+                tb_EncryptedData.Text = mono_obj.Encrypt(tb_SourceData.Text, Convert.ToInt32(tb_Key.Text));
             }
-
-            return code.ToString();
+            else
+            {
+                tb_EncryptedData.Text = mono_obj.Decrypt(tb_SourceData.Text, Convert.ToInt32(tb_Key.Text));
+            }
         }
 
-        public string Polyalphabetic_Cipher()
+        public void Polyalphabetic_Cipher()
         {
-            StringBuilder code = new StringBuilder();
-            string sourcetext = tb_SourceData.Text;
-            string key = tb_Key.Text;
-            int[] key_id = new int[key.Length];
-            int t = 0;
-
-            //поиск индексов букв ключа
-            for (int i = 0; i < key.Length; i++)
+            if (rb_Encryption.IsChecked == true)
             {
-                for (int j = 0; j < lang.Length; j++)
-                {
-                    if (key[i] == lang[j])
-                    {
-                        key_id[i] = j;
-                        break;
-                    }
-                }    
+                tb_EncryptedData.Text = poly_obj.Encrypt(tb_SourceData.Text, tb_Key.Text);
             }
-
-            for (int i = 0; i < sourcetext.Length; i++)
+            else
             {
-                //поиск символа в алфавите
-                for (int j = 0; j < lang.Length; j++)
-                {
-                    //если символ найден
-                    if (sourcetext[i] == lang[j])
-                    {
-                        if (rb_Encryption.IsChecked == true) //Шифрование 
-                        {
-                            if (t > key.Length - 1)
-                            {
-                                t = 0;
-                            }
-                            code.Append(lang[(j + key_id[t]) % lang.Length]);
-                            t++;
-                        }
-                        else if (rb_Decryption.IsChecked == true) //Дешифрование
-                        {
-                            if (t > key.Length - 1)
-                            {
-                                t = 0;
-                            }
-                            code.Append(lang[(j + lang.Length - key_id[t]) % lang.Length]);
-                            t++;
-                        }
-                        break;
-                    }
-                    //если символ не найден
-                    else if (j == lang.Length - 1)
-                    {
-                        code.Append(sourcetext[i]);
-                        t++;
-                    }
-                }
+                tb_EncryptedData.Text = poly_obj.Decrypt(tb_SourceData.Text, tb_Key.Text);
             }
-
-            return code.ToString();
         }
 
-        public string Vernam_Cipher()
+        public void Vernam_Cipher()
         {
-            StringBuilder code = new StringBuilder();
-            string sourcetext = tb_SourceData.Text;
-            string key = tb_Key.Text;
-            int[] key_id = new int[key.Length];
-
-            //поиск индексов букв ключа
-            for (int i = 0; i < key.Length; i++)
-            {
-                for (int j = 0; j < lang.Length; j++)
-                {
-                    if (key[i] == lang[j])
-                    {
-                        key_id[i] = j;
-                        break;
-                    }
-                }
-            }
-
-            for (int i = 0; i < sourcetext.Length; i++)
-            {
-                //поиск символа в алфавите
-                for (int j = 0; j < lang.Length; j++)
-                {
-                    //если символ найден
-                    if (sourcetext[i] == lang[j])
-                    {
-                        code.Append(lang[(j ^ key_id[i] % 32) % lang.Length]);
-                        break;
-                    }
-                    //если символ не найден
-                    else if (j == lang.Length - 1)
-                    {
-                        code.Append(sourcetext[i]);
-                    }
-                }
-            }
-
-            return code.ToString();
+            tb_EncryptedData.Text = vernam_obj.Encrypt_and_Decrypt(tb_SourceData.Text, tb_Key.Text);
         }
 
-        public string XOR_Cipher()
+        public void XOR_Cipher()
         {
-            StringBuilder code = new StringBuilder();
-            string sourcetext = tb_SourceData.Text;
-            string key = tb_Key.Text;
-            int[] key_id = new int[key.Length];
-            int t = 0;
+            tb_EncryptedData.Text = xor_obj.Encrypt_and_Decrypt(tb_SourceData.Text, tb_Key.Text);
+        }
 
-            //поиск индексов букв ключа
-            for (int i = 0; i < key.Length; i++)
+        public void RSA_Cipher()
+        {
+            long p = Convert.ToInt64(tb_Key.Text);
+            long q = Convert.ToInt64(tb_Key_2.Text);
+
+            if (IsTheNumberSimple(p) && IsTheNumberSimple(q))
             {
-                for (int j = 0; j < lang.Length; j++)
-                {
-                    if (key[i] == lang[j])
-                    {
-                        key_id[i] = j;
-                        break;
-                    }
-                }
+                string sourcetext = tb_SourceData.Text;
+
+                long n = p * q;
+                long m = (p - 1) * (q - 1);
+                long d = Calculate_d(m);
+                long e_ = Calculate_e(d, m);
+
+                List<string> result = RSA_Endoce(sourcetext, e_, n);
+
+                MessageBox.Show(d.ToString());
+                MessageBox.Show(n.ToString());
+
+                /*StreamWriter sw = new StreamWriter("out1.txt");
+                foreach (string item in result)
+                    sw.WriteLine(item);
+                sw.Close();
+
+                Process.Start("out1.txt");*/
+            }
+            else
+                MessageBox.Show("p или q - не простые числа!");
+        }
+
+        private bool IsTheNumberSimple(long n) //является ли число простым
+        {
+            if (n < 2)
+                return false;
+
+            if (n == 2)
+                return true;
+
+            for (long i = 2; i < n; i++)
+                if (n % i == 0)
+                    return false;
+
+            return true;
+        }
+
+        private long Calculate_e(long d, long m) //вычисление открытой экспоненты
+        {
+            long e = 10;
+
+            while (true)
+            {
+                if ((e * d) % m == 1)
+                    break;
+                else
+                    e++;
             }
 
-            for (int i = 0; i < sourcetext.Length; i++)
-            {
-                //поиск символа в алфавите
-                for (int j = 0; j < lang.Length; j++)
+            return e;
+        }
+
+        private long Calculate_d(long m) //вычисление закрытой экспоненты
+        {
+            long d = m - 1;
+
+            for (long i = 2; i <= m; i++)
+                if ((m % i == 0) && (d % i == 0)) //если имеют общие делители
                 {
-                    //если символ найден
-                    if (sourcetext[i] == lang[j])
-                    {
-                        if (t > key.Length - 1)
-                        {
-                            t = 0;
-                        }
-                        code.Append(lang[(j ^ key_id[t] % 32) % lang.Length]);
-                        t++;
-                        break;
-                    }
-                    //если символ не найден
-                    else if (j == lang.Length - 1)
-                    {
-                        code.Append(sourcetext[i]);
-                        t++;
-                    }
+                    d--;
+                    i = 1;
                 }
+
+            return d;
+        }
+
+        private List<string> RSA_Endoce(string s, long e, long n) //шифрование
+        {
+            List<string> result = new List<string>();
+
+            BigInteger bi;
+
+            for (int i = 0; i < s.Length; i++)
+            {
+                int index = Array.IndexOf(lang, s[i]);
+
+                bi = new BigInteger(index);
+                bi = BigInteger.Pow(bi, (int)e);
+
+                BigInteger n_ = new BigInteger((int)n);
+
+                bi = bi % n_;
+
+                result.Add(bi.ToString());
             }
 
-            return code.ToString();
+            return result;
+        }
+
+        private string RSA_Dedoce(List<string> input, long d, long n) //дешифрование
+        {
+            string result = "";
+
+            BigInteger bi;
+
+            foreach (string item in input)
+            {
+                bi = new BigInteger(Convert.ToDouble(item));
+                bi = BigInteger.Pow(bi, (int)d);
+
+                BigInteger n_ = new BigInteger((int)n);
+
+                bi = bi % n_;
+
+                int index = Convert.ToInt32(bi.ToString());
+
+                result += lang[index].ToString();
+            }
+
+            return result;
         }
 
         #endregion
@@ -455,15 +431,15 @@ namespace CryptographicApplication
             {
                 case -1: MessageBox.Show("Выберите метод шифрования"); break;
                 case 0: Transposition_Cipher(); break;
-                case 1: tb_EncryptedData.Text = Monoalphabetic_Cipher(); break;
-                case 2: tb_EncryptedData.Text = Polyalphabetic_Cipher(); break;
-                case 3: tb_EncryptedData.Text = Vernam_Cipher(); break;
-                case 4: tb_EncryptedData.Text = XOR_Cipher(); break;
-                case 5: MessageBox.Show("Rivest, Shamir, Adleman (RSA)"); break;
+                case 1: Monoalphabetic_Cipher(); break;
+                case 2: Polyalphabetic_Cipher(); break;
+                case 3: XOR_Cipher(); break;
+                case 4: Vernam_Cipher(); break;
+                case 5: RSA_Cipher(); break;
             }
         }
 
-        private void Window_KeyDown(object sender, KeyEventArgs e) //Горячие клавиши
+        private void Window_KeyDown(object sender, KeyEventArgs e) //горячие клавиши
         {
             /*switch (e.Key)
             {
