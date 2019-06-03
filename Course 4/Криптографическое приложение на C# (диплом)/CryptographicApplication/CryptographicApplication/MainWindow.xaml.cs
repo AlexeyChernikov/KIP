@@ -48,8 +48,6 @@ namespace CryptographicApplication
             rsa_obj = new RSA();
         }
 
-        #region Функционал
-
         #region Алгоритмы
 
         public void Transposition_Cipher()
@@ -119,43 +117,6 @@ namespace CryptographicApplication
 
         #endregion
 
-        #region Прочие функции
-
-        public void File_Selection(TextBox localFileName, TextBox localFileText)
-        {
-            OpenFileDialog openFileDlg = new OpenFileDialog();
-
-            openFileDlg.DefaultExt = ".txt";
-            openFileDlg.Filter = "Текстовый документ (.txt) | * .txt";
-            openFileDlg.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-
-            Nullable<bool> result = openFileDlg.ShowDialog();
-
-            if (result == true)
-            {
-                localFileName.Text = openFileDlg.FileName;
-                localFileText.Text = File.ReadAllText(openFileDlg.FileName, Encoding.Default);
-            }
-        }
-
-        public void Changed_File_Name_TB(TextBox ChangedTB, Button BtnUsed, MenuItem MIUsed)
-        {
-            if (ChangedTB.Text == "")
-            {
-                BtnUsed.IsEnabled = false;
-                MIUsed.IsEnabled = false;
-            }
-            else
-            {
-                BtnUsed.IsEnabled = true;
-                MIUsed.IsEnabled = true;
-            }
-        }
-
-        #endregion
-
-        #endregion
-
         #region Элементы формы
 
         #region Меню
@@ -175,21 +136,24 @@ namespace CryptographicApplication
             tb_SourceData.FontSize = 12;
 
             //результат
-            tb_FileName_Encrypted.Text = "";
             tb_EncryptedData.Text = "";
             tb_EncryptedData.FontSize = 12;
 
             //ключ
             tb_Key.Text = "";
+            tb_Key.FontSize = 12;
             tb_Key_2.Text = "";
         }
 
         private void Menu_btn_FileSelection_Source_Click(object sender, RoutedEventArgs e)
         {
-
+            func_obj.File_Selection(tb_FileName_Source, tb_SourceData, tb_EncryptedData);
         }
 
-        //открыть ключ
+        private void Menu_btn_FileSelection_Key_Click(object sender, RoutedEventArgs e)
+        {
+            func_obj.File_Selection(tb_Key);
+        }
 
         private void Menu_btn_SaveFile_Click(object sender, RoutedEventArgs e)
         {
@@ -198,15 +162,18 @@ namespace CryptographicApplication
 
         private void Menu_btn_SaveFileAs_Source_Click(object sender, RoutedEventArgs e)
         {
-            func_obj.Save_File_As(cb_Algorithms, tb_FileName_Source, tb_SourceData, true);
+            func_obj.Save_File_As(tb_FileName_Source, tb_SourceData);
         }
 
         private void Menu_btn_SaveFileAs_Encrypted_Click(object sender, RoutedEventArgs e)
         {
-            func_obj.Save_File_As(cb_Algorithms, tb_FileName_Encrypted, tb_EncryptedData, false);
+            func_obj.Save_File_As(cb_Algorithms, tb_EncryptedData, rb_Encryption, true);
         }
 
-        //сохранить ключ
+        private void Menu_btn_SaveFileAs_Key_Click(object sender, RoutedEventArgs e)
+        {
+            func_obj.Save_File_As(cb_Algorithms, tb_Key, rb_Encryption, false);
+        }
 
         private void Menu_btn_Exit_Click(object sender, RoutedEventArgs e)
         {
@@ -219,7 +186,7 @@ namespace CryptographicApplication
 
         private void Btn_FileSelection_Source_Click(object sender, RoutedEventArgs e)
         {
-            File_Selection(tb_FileName_Source, tb_SourceData);
+            func_obj.File_Selection(tb_FileName_Source, tb_SourceData, tb_EncryptedData);
         }
 
         private void Btn_SaveFile_Source_Click(object sender, RoutedEventArgs e)
@@ -229,12 +196,12 @@ namespace CryptographicApplication
 
         private void Btn_SaveFileAs_Source_Click(object sender, RoutedEventArgs e)
         {
-            func_obj.Save_File_As(cb_Algorithms, tb_FileName_Source, tb_SourceData, true);
+            func_obj.Save_File_As(tb_FileName_Source, tb_SourceData);
         }
 
         private void Tb_FileName_Source_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Changed_File_Name_TB(tb_FileName_Source, btn_SaveFile_Source, menu_btn_SaveFile);
+            func_obj.Changed_File_Name_TB(tb_FileName_Source, btn_SaveFile_Source, menu_btn_SaveFile);
         }
 
         private void Btn_Clear_Source_Click(object sender, RoutedEventArgs e)
@@ -258,7 +225,7 @@ namespace CryptographicApplication
 
         private void Btn_SaveFileAs_Encrypted_Click(object sender, RoutedEventArgs e)
         {
-            func_obj.Save_File_As(cb_Algorithms, tb_FileName_Encrypted, tb_EncryptedData, false);
+            func_obj.Save_File_As(cb_Algorithms, tb_EncryptedData, rb_Encryption, true);
         }
 
         private void Btn_Clear_Encrypted_Click(object sender, RoutedEventArgs e)
@@ -282,20 +249,27 @@ namespace CryptographicApplication
 
         private void Btn_FileSelection_Key_Click(object sender, RoutedEventArgs e)
         {
-
+            func_obj.File_Selection(tb_Key);
         }
 
         private void Btn_SaveFileAs_Key_Click(object sender, RoutedEventArgs e)
         {
-
+            func_obj.Save_File_As(cb_Algorithms, tb_Key, rb_Encryption, false);
         }
 
-        private void Without_a_Space(object sender, KeyEventArgs e)
+        private void Btn_Clear_Key_Click(object sender, RoutedEventArgs e)
         {
-            /*if (e.Key == Key.Space)
-            {
-                e.Handled = true;
-            }*/
+            func_obj.Clear_tb(tb_Key);
+        }
+
+        private void Btn_Increase_Key_Click(object sender, RoutedEventArgs e)
+        {
+            func_obj.Font_Size(tb_Key, true);
+        }
+
+        private void Btn_Reduce_Key_Click(object sender, RoutedEventArgs e)
+        {
+            func_obj.Font_Size(tb_Key, false);
         }
 
         #endregion
@@ -306,7 +280,7 @@ namespace CryptographicApplication
         {
             switch (cb_Algorithms.SelectedIndex)
             {
-                case -1: MessageBox.Show("Выберите способ шифрования"); cb_Algorithms_Border.Background = Brushes.Red; break;
+                case -1: cb_Algorithms_Border.Background = Brushes.Red; break;
                 case 0: Transposition_Cipher(); break;
                 case 1: Monoalphabetic_Cipher(); break;
                 case 2: Polyalphabetic_Cipher(); break;
@@ -333,9 +307,20 @@ namespace CryptographicApplication
             }*/
         }
 
-        private void Cb_Algorithms_SelectionChanged(object sender, SelectionChangedEventArgs e) //изменение цвета
+        private void Cb_Algorithms_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             cb_Algorithms_Border.Background = this.Background;
+            func_obj.Changed_CB(cb_Algorithms, btn_Key_Generation, menu_btn_Key_Generation); //разблокирует или блокирует кнопку "Сгенерировать ключ"
+        }
+
+        private void Rb_Encryption_Checked(object sender, RoutedEventArgs e)
+        {
+            menu_btn_SaveFileAs_Encrypted.Header = "Сохранить зашифрованный текст";
+        }
+
+        private void Rb_Decryption_Checked(object sender, RoutedEventArgs e)
+        {
+            menu_btn_SaveFileAs_Encrypted.Header = "Сохранить дешифрованный текст";
         }
     }
 }

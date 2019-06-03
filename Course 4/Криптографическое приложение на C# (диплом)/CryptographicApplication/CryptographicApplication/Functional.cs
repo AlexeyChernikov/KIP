@@ -35,7 +35,7 @@ namespace CryptographicApplication
         {
             if (b == true)
             {
-                if (a.FontSize < 24)
+                if (a.FontSize < 20)
                     a.FontSize++;
             }
             else
@@ -45,12 +45,64 @@ namespace CryptographicApplication
             }
         }
 
+        public void File_Selection(TextBox localFileText) // для ключа
+        {
+            OpenFileDialog openFileDlg = new OpenFileDialog();
+
+            openFileDlg.DefaultExt = ".txt";
+            openFileDlg.Filter = "Текстовый документ (.txt) | * .txt";
+            openFileDlg.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+            Nullable<bool> result = openFileDlg.ShowDialog();
+
+            if (result == true)
+            {
+                localFileText.Text = File.ReadAllText(openFileDlg.FileName, Encoding.Default);
+            }
+        }
+
+        public void File_Selection(TextBox localFileName, TextBox localFileText, TextBox clearFileText) // для исходного
+        {
+            OpenFileDialog openFileDlg = new OpenFileDialog();
+
+            openFileDlg.DefaultExt = ".txt";
+            openFileDlg.Filter = "Текстовый документ (.txt) | * .txt";
+            openFileDlg.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+            Nullable<bool> result = openFileDlg.ShowDialog();
+
+            if (result == true)
+            {
+                localFileName.Text = openFileDlg.FileName;
+                localFileText.Text = File.ReadAllText(openFileDlg.FileName, Encoding.Default);
+                clearFileText.Text = "";
+            }
+        }
+
         public void Save_File(TextBox localFileName, TextBox TextToSave)
         {
             File.WriteAllText(localFileName.Text, TextToSave.Text, Encoding.Default);
         }
 
-        public void Save_File_As(ComboBox cb, TextBox NewFileName, TextBox TextToSave, bool a)
+        public void Save_File_As(TextBox NewFileName, TextBox TextToSave) // для исходного
+        {
+            SaveFileDialog saveFileDlg = new SaveFileDialog();
+
+            saveFileDlg.DefaultExt = ".txt";
+            saveFileDlg.Filter = "Текстовый документ (.txt) | * .txt";
+            saveFileDlg.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            saveFileDlg.FileName = "Новый текстовый документ";
+
+            Nullable<bool> result = saveFileDlg.ShowDialog();
+
+            if (result == true)
+            {
+                NewFileName.Text = saveFileDlg.FileName;
+                File.WriteAllText(saveFileDlg.FileName, TextToSave.Text, Encoding.Default);
+            }
+        }
+
+        public void Save_File_As(ComboBox cb, TextBox TextToSave, RadioButton operation, bool a) // для ключа и зашифрованного
         {
             SaveFileDialog saveFileDlg = new SaveFileDialog();
 
@@ -60,19 +112,53 @@ namespace CryptographicApplication
 
             if (a == true)
             {
-                saveFileDlg.FileName = "Новый текстовый документ";
+                if (operation.IsChecked == true)
+                {
+                    saveFileDlg.FileName = "Зашифрованный файл (способ - " + cb.Text + ")";
+                }
+                else
+                {
+                    saveFileDlg.FileName = "Дешифрованный файл (способ - " + cb.Text + ")";
+                }
             }
             else
             {
-                saveFileDlg.FileName = "Зашифрованный файл (способ: " + cb.Text + ")";
+                saveFileDlg.FileName = "Ключ (способ - " + cb.Text + ")";
             }
 
             Nullable<bool> result = saveFileDlg.ShowDialog();
 
             if (result == true)
             {
-                NewFileName.Text = saveFileDlg.FileName;
                 File.WriteAllText(saveFileDlg.FileName, TextToSave.Text, Encoding.Default);
+            }
+        }
+
+        public void Changed_File_Name_TB(TextBox ChangedTB, Button BtnUsed, MenuItem MIUsed)
+        {
+            if (ChangedTB.Text == "")
+            {
+                BtnUsed.IsEnabled = false;
+                MIUsed.IsEnabled = false;
+            }
+            else
+            {
+                BtnUsed.IsEnabled = true;
+                MIUsed.IsEnabled = true;
+            }
+        }
+
+        public void Changed_CB(ComboBox ChangedCB, Button BtnUsed, MenuItem MIUsed)
+        {
+            if (ChangedCB.SelectedIndex == -1)
+            {
+                BtnUsed.IsEnabled = false;
+                MIUsed.IsEnabled = false;
+            }
+            else
+            {
+                BtnUsed.IsEnabled = true;
+                MIUsed.IsEnabled = true;
             }
         }
     }
