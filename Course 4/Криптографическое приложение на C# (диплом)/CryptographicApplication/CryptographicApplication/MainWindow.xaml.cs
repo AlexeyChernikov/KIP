@@ -22,9 +22,10 @@ namespace CryptographicApplication
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+
         #region Переменные
 
+        Functional func_obj;
         Transposition trans_obj;
         Monoalphabetic mono_obj;
         Polyalphabetic poly_obj;
@@ -38,6 +39,7 @@ namespace CryptographicApplication
         {
             InitializeComponent();
             rb_Encryption.IsChecked = true;
+            func_obj = new Functional();
             trans_obj = new Transposition();
             mono_obj = new Monoalphabetic();
             poly_obj = new Polyalphabetic();
@@ -48,7 +50,7 @@ namespace CryptographicApplication
 
         #region Функционал
 
-        #region Алгоритмы шифрования и дешифровки
+        #region Алгоритмы
 
         public void Transposition_Cipher()
         {
@@ -119,51 +121,6 @@ namespace CryptographicApplication
 
         #region Прочие функции
 
-        public void Clear(bool a)
-        {
-            if (a == true)
-            {
-                tb_SourceData.Text = "";
-            }
-            else
-            {
-                tb_EncryptedData.Text = "";
-            }
-        }
-
-        public void Font_Size(bool a, bool b)
-        {
-            double fs1 = tb_SourceData.FontSize;
-            double fs2 = tb_EncryptedData.FontSize;
-
-            if (a == true) //выбор кнопки
-            {
-                if (b == true) //выбор опериции
-                {
-                    if (tb_SourceData.FontSize < 24)
-                        tb_SourceData.FontSize = ++fs1;
-                }
-                else
-                {
-                    if (tb_SourceData.FontSize > 1)
-                        tb_SourceData.FontSize = --fs1;
-                }
-            }
-            else
-            {
-                if (b == true) //выбор опериции
-                {
-                    if (tb_EncryptedData.FontSize < 24)
-                        tb_EncryptedData.FontSize = ++fs2;
-                }
-                else
-                {
-                    if (tb_EncryptedData.FontSize > 1)
-                        tb_EncryptedData.FontSize = --fs2;
-                }
-            }
-        }
-
         public void File_Selection(TextBox localFileName, TextBox localFileText)
         {
             OpenFileDialog openFileDlg = new OpenFileDialog();
@@ -178,30 +135,6 @@ namespace CryptographicApplication
             {
                 localFileName.Text = openFileDlg.FileName;
                 localFileText.Text = File.ReadAllText(openFileDlg.FileName, Encoding.Default);
-            }
-        }
-
-        public void Save_File(TextBox localFileName, TextBox TextToSave)
-        {
-            File.WriteAllText(localFileName.Text, TextToSave.Text, Encoding.Default);
-        }
-
-        public void Save_File_As(TextBox NewFileName, TextBox TextToSave)
-        {
-            SaveFileDialog saveFileDlg = new SaveFileDialog();
-
-            saveFileDlg.DefaultExt = ".txt";
-            saveFileDlg.Filter = "Текстовый документ (.txt) | * .txt";
-            saveFileDlg.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            //saveFileDlg.FileName = "Зашифрованный файл";
-
-
-            Nullable<bool> result = saveFileDlg.ShowDialog();
-
-            if (result == true)
-            {
-                NewFileName.Text = saveFileDlg.FileName;
-                File.WriteAllText(saveFileDlg.FileName, TextToSave.Text, Encoding.Default);
             }
         }
 
@@ -227,6 +160,54 @@ namespace CryptographicApplication
 
         #region Меню
 
+        private void Menu_btn_Refresh_Click(object sender, RoutedEventArgs e)
+        {
+            //операция
+            rb_Encryption.IsChecked = true;
+
+            //способ шифрования
+            cb_Algorithms.SelectedIndex = -1;
+            cb_Algorithms_Border.Background = this.Background;
+
+            //исходные
+            tb_FileName_Source.Text = "";
+            tb_SourceData.Text = "";
+            tb_SourceData.FontSize = 12;
+
+            //результат
+            tb_FileName_Encrypted.Text = "";
+            tb_EncryptedData.Text = "";
+            tb_EncryptedData.FontSize = 12;
+
+            //ключ
+            tb_Key.Text = "";
+            tb_Key_2.Text = "";
+        }
+
+        private void Menu_btn_FileSelection_Source_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        //открыть ключ
+
+        private void Menu_btn_SaveFile_Click(object sender, RoutedEventArgs e)
+        {
+            func_obj.Save_File(tb_FileName_Source, tb_SourceData);
+        }
+
+        private void Menu_btn_SaveFileAs_Source_Click(object sender, RoutedEventArgs e)
+        {
+            func_obj.Save_File_As(cb_Algorithms, tb_FileName_Source, tb_SourceData, true);
+        }
+
+        private void Menu_btn_SaveFileAs_Encrypted_Click(object sender, RoutedEventArgs e)
+        {
+            func_obj.Save_File_As(cb_Algorithms, tb_FileName_Encrypted, tb_EncryptedData, false);
+        }
+
+        //сохранить ключ
+
         private void Menu_btn_Exit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -243,12 +224,12 @@ namespace CryptographicApplication
 
         private void Btn_SaveFile_Source_Click(object sender, RoutedEventArgs e)
         {
-            Save_File(tb_FileName_Source, tb_SourceData);
+            func_obj.Save_File(tb_FileName_Source, tb_SourceData);
         }
 
         private void Btn_SaveFileAs_Source_Click(object sender, RoutedEventArgs e)
         {
-            Save_File_As(tb_FileName_Source, tb_SourceData);
+            func_obj.Save_File_As(cb_Algorithms, tb_FileName_Source, tb_SourceData, true);
         }
 
         private void Tb_FileName_Source_TextChanged(object sender, TextChangedEventArgs e)
@@ -258,17 +239,17 @@ namespace CryptographicApplication
 
         private void Btn_Clear_Source_Click(object sender, RoutedEventArgs e)
         {
-            Clear(true);
+            func_obj.Clear_tb(tb_SourceData);
         }
 
         private void Btn_Increase_Source_Click(object sender, RoutedEventArgs e)
         {
-            Font_Size(true, true);
+            func_obj.Font_Size(tb_SourceData, true);
         }
 
         private void Btn_Reduce_Source_Click(object sender, RoutedEventArgs e)
         {
-            Font_Size(true, false);
+            func_obj.Font_Size(tb_SourceData, false);
         }
 
         #endregion
@@ -277,22 +258,22 @@ namespace CryptographicApplication
 
         private void Btn_SaveFileAs_Encrypted_Click(object sender, RoutedEventArgs e)
         {
-            Save_File_As(tb_FileName_Encrypted, tb_EncryptedData);
+            func_obj.Save_File_As(cb_Algorithms, tb_FileName_Encrypted, tb_EncryptedData, false);
         }
 
         private void Btn_Clear_Encrypted_Click(object sender, RoutedEventArgs e)
         {
-            Clear(false);
+            func_obj.Clear_tb(tb_EncryptedData);
         }
 
         private void Btn_Increase_Encrypted_Click(object sender, RoutedEventArgs e)
         {
-            Font_Size(false, true);
+            func_obj.Font_Size(tb_EncryptedData, true);
         }
 
         private void Btn_Reduce_Encrypted_Click(object sender, RoutedEventArgs e)
         {
-            Font_Size(false, false);
+            func_obj.Font_Size(tb_EncryptedData, false);
         }
 
         #endregion
@@ -325,7 +306,7 @@ namespace CryptographicApplication
         {
             switch (cb_Algorithms.SelectedIndex)
             {
-                case -1: MessageBox.Show("Выберите метод шифрования"); break;
+                case -1: MessageBox.Show("Выберите способ шифрования"); cb_Algorithms_Border.Background = Brushes.Red; break;
                 case 0: Transposition_Cipher(); break;
                 case 1: Monoalphabetic_Cipher(); break;
                 case 2: Polyalphabetic_Cipher(); break;
@@ -350,6 +331,11 @@ namespace CryptographicApplication
                 case Key.OemMinus: Game_Size_Switch(false); break; //Уменьшение размера игры 
                 case Key.OemPlus: Game_Size_Switch(true); break; //Увеличение размера игры
             }*/
+        }
+
+        private void Cb_Algorithms_SelectionChanged(object sender, SelectionChangedEventArgs e) //изменение цвета
+        {
+            cb_Algorithms_Border.Background = this.Background;
         }
     }
 }

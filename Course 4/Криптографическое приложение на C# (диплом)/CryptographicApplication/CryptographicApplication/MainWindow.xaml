@@ -9,15 +9,24 @@
     <Grid>
         <Menu Height="25" VerticalAlignment="Top">
             <MenuItem Header="Файл">
-                <MenuItem x:Name="menu_btn_FileSelection" Header="Открыть..."/>
-                <MenuItem x:Name="menu_btn_SaveFile" Header="Сохранить" IsEnabled="False"/>
+                <MenuItem x:Name="menu_btn_Refresh" Header="Обновить" Click="Menu_btn_Refresh_Click"/>
+                <MenuItem x:Name="menu_btn_Key_Generation" Header="Сгенерировать ключ"/>
 
-                <MenuItem Header="Сохранить как...">
-                    <MenuItem Header="Сохранить исходный текст"/>
-                    <MenuItem Header="Сохранить зашифрованный текст"/>
-                    <MenuItem Header="Сохранить ключ"/>
-                </MenuItem>
                 <Separator/>
+
+                <MenuItem Header="Открыть...">
+                    <MenuItem x:Name="menu_btn_FileSelection_Source" Header="Открыть исходный текст" Click="Menu_btn_FileSelection_Source_Click"/>
+                    <MenuItem x:Name="menu_btn_FileSelection_Key" Header="Открыть ключ"/>
+                </MenuItem>
+                <MenuItem x:Name="menu_btn_SaveFile" Header="Сохранить" IsEnabled="False" Click="Menu_btn_SaveFile_Click"/>
+                <MenuItem Header="Сохранить как...">
+                    <MenuItem x:Name="menu_btn_SaveFileAs_Source" Header="Сохранить исходный текст" Click="Menu_btn_SaveFileAs_Source_Click"/>
+                    <MenuItem x:Name="menu_btn_SaveFileAs_Encrypted" Header="Сохранить зашифрованный текст" Click="Menu_btn_SaveFileAs_Encrypted_Click"/>
+                    <MenuItem x:Name="menu_btn_SaveFileAs_Key" Header="Сохранить ключ"/>
+                </MenuItem>
+
+                <Separator/>
+
                 <MenuItem x:Name="menu_btn_Exit" Header="Выход" Click="Menu_btn_Exit_Click"/>
             </MenuItem>
             <MenuItem Header="Справка" Height="25">
@@ -53,15 +62,20 @@
                 <RadioButton x:Name="rb_Decryption" Content="Дешифрование" HorizontalAlignment="Left" Height="15" Margin="272,10,0,0" VerticalAlignment="Top" Width="110"/>
             </Grid>
         </GroupBox>
-        <GroupBox Header="Метод шифрования" HorizontalAlignment="Left" Height="61" Margin="13,92,0,0" VerticalAlignment="Top" Width="495">
-            <ComboBox x:Name="cb_Algorithms" Margin="10,6,10,8">
-                <ComboBoxItem x:Name="TranspositionCipherAlg">Транспозиция</ComboBoxItem>
-                <ComboBoxItem x:Name="MonoalphabeticCipherAlg">Моноалфавитный шифр</ComboBoxItem>
-                <ComboBoxItem x:Name="PolyalphabeticCipherAlg">Полиалфавитный шифр</ComboBoxItem>
-                <ComboBoxItem x:Name="XORCipherAlg">Исключающее ИЛИ (XOR)</ComboBoxItem>
-                <ComboBoxItem x:Name="VernamCipherAlg">Одноразовый блокнот</ComboBoxItem>
-                <ComboBoxItem x:Name="RSACipherAlg">Rivest, Shamir, Adleman (RSA)</ComboBoxItem>
-            </ComboBox>
+        <GroupBox Header="Способ шифрования" HorizontalAlignment="Left" Height="61" Margin="13,92,0,0" VerticalAlignment="Top" Width="495">
+            <Grid Margin="0,0,-2,4">
+                
+                <Border x:Name="cb_Algorithms_Border" BorderThickness="0" HorizontalAlignment="Left" Height="29" Margin="7,3,0,0" VerticalAlignment="Top" Width="467">
+                    <ComboBox x:Name="cb_Algorithms" Margin="2,2,0,0" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="463" SelectionChanged="Cb_Algorithms_SelectionChanged">
+                        <ComboBoxItem x:Name="TranspositionCipherAlg">Транспозиция</ComboBoxItem>
+                        <ComboBoxItem x:Name="MonoalphabeticCipherAlg">Моноалфавитный шифр</ComboBoxItem>
+                        <ComboBoxItem x:Name="PolyalphabeticCipherAlg">Полиалфавитный шифр</ComboBoxItem>
+                        <ComboBoxItem x:Name="XORCipherAlg">Исключающее ИЛИ (XOR)</ComboBoxItem>
+                        <ComboBoxItem x:Name="VernamCipherAlg">Одноразовый блокнот</ComboBoxItem>
+                        <ComboBoxItem x:Name="RSACipherAlg">Rivest, Shamir, Adleman (RSA)</ComboBoxItem>
+                    </ComboBox>
+                </Border>
+            </Grid>
         </GroupBox>
         <GroupBox Header="Ключ" HorizontalAlignment="Left" Height="93" Margin="13,516,0,0" VerticalAlignment="Top" Width="495">
             <Grid Margin="0,6,-2,2">
@@ -69,9 +83,8 @@
                 <TextBox x:Name="tb_Key" Margin="160,0,12,0" TextWrapping="Wrap" Height="25" VerticalAlignment="Top" PreviewKeyDown="Without_a_Space"/>
                 <Button x:Name="btn_SaveFileAs_Key" Content="Сохранить как" HorizontalAlignment="Left" Height="25" Margin="10,0,0,0" VerticalAlignment="Top" Width="110" Click="Btn_SaveFileAs_Key_Click"/>
                 <TextBox x:Name="tb_Key_2" Margin="160,30,12,0" TextWrapping="Wrap" Height="25" VerticalAlignment="Top" PreviewKeyDown="Without_a_Space"/>
-                <Button x:Name="btn_Random_Key" Content="Сгенерировать ключ" HorizontalAlignment="Left" Height="25" Margin="10,30,0,0" VerticalAlignment="Top" Width="145"/>
+                <Button x:Name="btn_Key_Generation" Content="Сгенерировать ключ" HorizontalAlignment="Left" Height="25" Margin="10,30,0,0" VerticalAlignment="Top" Width="145"/>
             </Grid>
         </GroupBox>
-
     </Grid>
 </Window>

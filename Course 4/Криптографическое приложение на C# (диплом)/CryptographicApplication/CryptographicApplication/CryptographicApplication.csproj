@@ -61,6 +61,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Alphabet.cs" />
+    <Compile Include="Functional.cs" />
     <Compile Include="Monoalphabetic.cs" />
     <Compile Include="Polyalphabetic.cs" />
     <Compile Include="RSA.cs" />
