@@ -9,28 +9,29 @@
     <Grid>
         <Menu Height="25" VerticalAlignment="Top">
             <MenuItem Header="Файл">
-                <MenuItem x:Name="menu_btn_Refresh" Header="Обновить" Click="Menu_btn_Refresh_Click"/>
-                <MenuItem x:Name="menu_btn_Key_Generation" Header="Сгенерировать ключ" IsEnabled="False"/>
+                <MenuItem x:Name="menu_btn_ExecuteOperation" Header="Выполнить" InputGestureText="  F1"/>
+                <MenuItem x:Name="menu_btn_Refresh" Header="Обновить" Click="Menu_btn_Refresh_Click" InputGestureText="  F2"/>
+                <MenuItem x:Name="menu_btn_Key_Generation" Header="Сгенерировать ключ" IsEnabled="False" InputGestureText="  F3"/>
 
                 <Separator/>
 
                 <MenuItem Header="Открыть...">
-                    <MenuItem x:Name="menu_btn_FileSelection_Source" Header="Открыть файл с исходным текстом" Click="Menu_btn_FileSelection_Source_Click"/>
-                    <MenuItem x:Name="menu_btn_FileSelection_Key" Header="Открыть файл с ключом" Click="Menu_btn_FileSelection_Key_Click"/>
+                    <MenuItem x:Name="menu_btn_FileSelection_Source" Header="Открыть файл с исходным текстом" Click="Menu_btn_FileSelection_Source_Click" InputGestureText="  F4"/>
+                    <MenuItem x:Name="menu_btn_FileSelection_Key" Header="Открыть файл с ключом" Click="Menu_btn_FileSelection_Key_Click" InputGestureText="  F5"/>
                 </MenuItem>
-                <MenuItem x:Name="menu_btn_SaveFile" Header="Сохранить" IsEnabled="False" Click="Menu_btn_SaveFile_Click"/>
+                <MenuItem x:Name="menu_btn_SaveFile" Header="Сохранить" IsEnabled="False" Click="Menu_btn_SaveFile_Click" InputGestureText="  F6"/>
                 <MenuItem Header="Сохранить как...">
-                    <MenuItem x:Name="menu_btn_SaveFileAs_Source" Header="Сохранить исходный текст" Click="Menu_btn_SaveFileAs_Source_Click"/>
-                    <MenuItem x:Name="menu_btn_SaveFileAs_Encrypted" Header="Сохранить зашифрованный текст" Click="Menu_btn_SaveFileAs_Encrypted_Click"/>
-                    <MenuItem x:Name="menu_btn_SaveFileAs_Key" Header="Сохранить ключ" Click="Menu_btn_SaveFileAs_Key_Click"/>
+                    <MenuItem x:Name="menu_btn_SaveFileAs_Source" Header="Сохранить исходный текст" Click="Menu_btn_SaveFileAs_Source_Click" InputGestureText="  F7"/>
+                    <MenuItem x:Name="menu_btn_SaveFileAs_Encrypted" Header="Сохранить зашифрованный текст" Click="Menu_btn_SaveFileAs_Encrypted_Click" InputGestureText="  F8"/>
+                    <MenuItem x:Name="menu_btn_SaveFileAs_Key" Header="Сохранить ключ" Click="Menu_btn_SaveFileAs_Key_Click" InputGestureText="  F9"/>
                 </MenuItem>
 
                 <Separator/>
 
-                <MenuItem x:Name="menu_btn_Exit" Header="Выход" Click="Menu_btn_Exit_Click"/>
+                <MenuItem x:Name="menu_btn_Exit" Header="Выход" Click="Menu_btn_Exit_Click" InputGestureText="F12"/>
             </MenuItem>
             <MenuItem Header="Справка" Height="25">
-                <MenuItem Header="О программе"/>
+                <MenuItem Header="О программе" InputGestureText="F10"/>
             </MenuItem>
         </Menu>
         <GroupBox Header="Исходные данные" HorizontalAlignment="Left" Height="172" Margin="13,158,0,0" VerticalAlignment="Top" Width="495">

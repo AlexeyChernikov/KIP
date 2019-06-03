@@ -114,11 +114,11 @@ namespace CryptographicApplication
             {
                 if (operation.IsChecked == true)
                 {
-                    saveFileDlg.FileName = "Зашифрованный файл (способ - " + cb.Text + ")";
+                    saveFileDlg.FileName = "Зашифрованный текст (способ - " + cb.Text + ")";
                 }
                 else
                 {
-                    saveFileDlg.FileName = "Дешифрованный файл (способ - " + cb.Text + ")";
+                    saveFileDlg.FileName = "Дешифрованный текст (способ - " + cb.Text + ")";
                 }
             }
             else

@@ -123,26 +123,7 @@ namespace CryptographicApplication
 
         private void Menu_btn_Refresh_Click(object sender, RoutedEventArgs e)
         {
-            //операция
-            rb_Encryption.IsChecked = true;
-
-            //способ шифрования
-            cb_Algorithms.SelectedIndex = -1;
-            cb_Algorithms_Border.Background = this.Background;
-
-            //исходные
-            tb_FileName_Source.Text = "";
-            tb_SourceData.Text = "";
-            tb_SourceData.FontSize = 12;
-
-            //результат
-            tb_EncryptedData.Text = "";
-            tb_EncryptedData.FontSize = 12;
-
-            //ключ
-            tb_Key.Text = "";
-            tb_Key.FontSize = 12;
-            tb_Key_2.Text = "";
+            Refresh();
         }
 
         private void Menu_btn_FileSelection_Source_Click(object sender, RoutedEventArgs e)
@@ -274,6 +255,68 @@ namespace CryptographicApplication
 
         #endregion
 
+        #region Прочее
+
+        public void Refresh() //обновить всё
+        {
+            //операция
+            rb_Encryption.IsChecked = true;
+
+            //способ шифрования
+            cb_Algorithms.SelectedIndex = -1;
+            cb_Algorithms_Border.Background = this.Background;
+
+            //исходные
+            tb_FileName_Source.Text = "";
+            tb_SourceData.Text = "";
+            tb_SourceData.FontSize = 12;
+
+            //результат
+            tb_EncryptedData.Text = "";
+            tb_EncryptedData.FontSize = 12;
+
+            //ключ
+            tb_Key.Text = "";
+            tb_Key.FontSize = 12;
+            tb_Key_2.Text = "";
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e) //горячие клавиши
+        {
+            switch (e.Key)
+            {
+                case Key.F1: MessageBox.Show("Выполнить"); break; //выполнить
+                case Key.F2: Refresh(); break; //обновить
+                case Key.F3: MessageBox.Show("Сгенерировать ключ"); break; //сгенерировать ключ
+                case Key.F4: func_obj.File_Selection(tb_FileName_Source, tb_SourceData, tb_EncryptedData); break; //открыть файл с исходным текстом
+                case Key.F5: func_obj.File_Selection(tb_Key); break; //открыть файл с ключом
+                case Key.F6: if (tb_FileName_Source.Text != "") func_obj.Save_File(tb_FileName_Source, tb_SourceData); break; //сохранить
+                case Key.F7: func_obj.Save_File_As(tb_FileName_Source, tb_SourceData); break;  //сохранить исходный текст
+                case Key.F8: func_obj.Save_File_As(cb_Algorithms, tb_EncryptedData, rb_Encryption, true); break;  //сохранить зашифрованный/дешифрованный текст
+                case Key.F9: func_obj.Save_File_As(cb_Algorithms, tb_Key, rb_Encryption, false); break;  //сохранить ключ
+                case Key.F10: MessageBox.Show("О программе"); break;  //о программе
+                case Key.F12: this.Close(); break; //выход
+            }
+        }
+
+        private void Cb_Algorithms_SelectionChanged(object sender, SelectionChangedEventArgs e) //изменения комбобокса
+        {
+            cb_Algorithms_Border.Background = this.Background;
+            func_obj.Changed_CB(cb_Algorithms, btn_Key_Generation, menu_btn_Key_Generation); //разблокирует или блокирует кнопку "Сгенерировать ключ"
+        }
+
+        private void Rb_Encryption_Checked(object sender, RoutedEventArgs e)
+        {
+            menu_btn_SaveFileAs_Encrypted.Header = "Сохранить зашифрованный текст";
+        }
+
+        private void Rb_Decryption_Checked(object sender, RoutedEventArgs e)
+        {
+            menu_btn_SaveFileAs_Encrypted.Header = "Сохранить дешифрованный текст";
+        }
+
+        #endregion
+
         #endregion
 
         private void Btn_ExecuteOperation_Click(object sender, RoutedEventArgs e)
@@ -288,39 +331,6 @@ namespace CryptographicApplication
                 case 4: Vernam_Cipher(); break;
                 case 5: RSA_Cipher(); break;
             }
-        }
-
-        private void Window_KeyDown(object sender, KeyEventArgs e) //горячие клавиши
-        {
-            /*switch (e.Key)
-            {
-                case Key.F1: New_Game(); break; //Новая игра
-                case Key.F2: Beginner_Mode(); break; //Новичок
-                case Key.F3: Enthusiast_Mode(); break; //Любитель
-                case Key.F4: Professional_Mode(); break; //Профессионал
-                case Key.F5: Transition_Special_Window(); break; //Особый
-                case Key.F6: Help(); break; //Как играть
-                case Key.F7: Transition_Records_Window(); break;  //Рекорды
-                case Key.F12: this.Close(); break; //Выход
-                case Key.OemMinus: Game_Size_Switch(false); break; //Уменьшение размера игры 
-                case Key.OemPlus: Game_Size_Switch(true); break; //Увеличение размера игры
-            }*/
-        }
-
-        private void Cb_Algorithms_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            cb_Algorithms_Border.Background = this.Background;
-            func_obj.Changed_CB(cb_Algorithms, btn_Key_Generation, menu_btn_Key_Generation); //разблокирует или блокирует кнопку "Сгенерировать ключ"
-        }
-
-        private void Rb_Encryption_Checked(object sender, RoutedEventArgs e)
-        {
-            menu_btn_SaveFileAs_Encrypted.Header = "Сохранить зашифрованный текст";
-        }
-
-        private void Rb_Decryption_Checked(object sender, RoutedEventArgs e)
-        {
-            menu_btn_SaveFileAs_Encrypted.Header = "Сохранить дешифрованный текст";
         }
     }
 }
