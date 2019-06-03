@@ -1,14 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace CryptographicApplication
 {
     class Vernam
     {
         Alphabet alph = new Alphabet();
+
+        Random rnd = new Random();
+
+        public string Rand_Key_Generation(int sizesourcetext)
+        {
+            StringBuilder code = new StringBuilder();
+
+            int value;
+
+            for (int i = 0; i < sizesourcetext; i++)
+            {
+                value = rnd.Next(1, alph.lang.Length);
+                code.Append(alph.lang[value - 1]);
+            }
+
+            return code.ToString();
+        }
 
         public string Encrypt_and_Decrypt(string sourcetext, string key)
         {
@@ -51,42 +67,3 @@ namespace CryptographicApplication
         }
     }
 }
-
-/*StringBuilder code = new StringBuilder();
-            string sourcetext = tb_SourceData.Text;
-            string key = tb_Key.Text;
-            int[] key_id = new int[key.Length];
-
-            //поиск индексов букв ключа
-            for (int i = 0; i < key.Length; i++)
-            {
-                for (int j = 0; j < lang.Length; j++)
-                {
-                    if (key[i] == lang[j])
-                    {
-                        key_id[i] = j;
-                        break;
-                    }
-                }
-            }
-
-            for (int i = 0; i < sourcetext.Length; i++)
-            {
-                //поиск символа в алфавите
-                for (int j = 0; j < lang.Length; j++)
-                {
-                    //если символ найден
-                    if (sourcetext[i] == lang[j])
-                    {
-                        code.Append(lang[(j ^ key_id[i] % 33) % lang.Length]);
-                        break;
-                    }
-                    //если символ не найден
-                    else if (j == lang.Length - 1)
-                    {
-                        code.Append(sourcetext[i]);
-                    }
-                }
-            }
-
-            return code.ToString();*/

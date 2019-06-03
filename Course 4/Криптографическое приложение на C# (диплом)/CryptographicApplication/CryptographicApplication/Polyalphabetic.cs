@@ -10,6 +10,14 @@ namespace CryptographicApplication
     {
         Alphabet alph = new Alphabet();
 
+        Random rnd = new Random();
+
+        public string Rand_Key_Generation()
+        {
+            int value = rnd.Next(1, alph.lang.Length);
+            return Convert.ToString(value);
+        }
+
         public string Encrypt(string sourcetext, string key)
         {
             StringBuilder code = new StringBuilder();

@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using Microsoft.Win32;
+using System.Diagnostics;
 
 namespace CryptographicApplication
 {
@@ -121,9 +122,19 @@ namespace CryptographicApplication
 
         #region Меню
 
+        private void Menu_btn_ExecuteOperation_Click(object sender, RoutedEventArgs e)
+        {
+            List_of_Operations_to_Perform();
+        }
+
         private void Menu_btn_Refresh_Click(object sender, RoutedEventArgs e)
         {
             Refresh();
+        }
+
+        private void Menu_btn_Key_Generation_Click(object sender, RoutedEventArgs e)
+        {
+            List_of_Key_Generation_Methods();
         }
 
         private void Menu_btn_FileSelection_Source_Click(object sender, RoutedEventArgs e)
@@ -159,6 +170,11 @@ namespace CryptographicApplication
         private void Menu_btn_Exit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void Menu_btn_About_the_Program_Click(object sender, RoutedEventArgs e)
+        {
+            Calling_Help();
         }
 
         #endregion
@@ -257,6 +273,49 @@ namespace CryptographicApplication
 
         #region Прочее
 
+        public void List_of_Operations_to_Perform() //меню, определяющее какой метод выполнять
+        {
+            switch (cb_Algorithms.SelectedIndex)
+            {
+                case -1: cb_Algorithms_Border.Background = Brushes.Red; break;
+                case 0: Transposition_Cipher(); break;
+                case 1: Monoalphabetic_Cipher(); break;
+                case 2: Polyalphabetic_Cipher(); break;
+                case 3: XOR_Cipher(); break;
+                case 4: Vernam_Cipher(); break;
+                case 5: RSA_Cipher(); break;
+            }
+        }
+
+        public void List_of_Key_Generation_Methods () //меню, определяющее для какого метода генерировать ключ
+        {
+            switch (cb_Algorithms.SelectedIndex)
+            {
+                case 0: Transposition_Cipher(); break;
+                case 1: tb_Key.Text = mono_obj.Rand_Key_Generation(); break;
+                case 2: Polyalphabetic_Cipher(); break;
+                case 3: XOR_Cipher(); break;
+                case 4: tb_Key.Text = vernam_obj.Rand_Key_Generation(tb_SourceData.Text.Length); break;
+                case 5: RSA_Cipher(); break;
+            }
+        }
+
+        public void Calling_Help()
+        {
+            try
+            {
+                string commandText = "Help.chm";
+                var proc = new Process();
+                proc.StartInfo.FileName = commandText;
+                proc.StartInfo.UseShellExecute = true;
+                proc.Start();
+            }
+            catch
+            {
+                MessageBox.Show("Не найден файл справки!");
+            }
+        }
+
         public void Refresh() //обновить всё
         {
             //операция
@@ -285,16 +344,16 @@ namespace CryptographicApplication
         {
             switch (e.Key)
             {
-                case Key.F1: MessageBox.Show("Выполнить"); break; //выполнить
+                case Key.F1: List_of_Operations_to_Perform(); break; //выполнить
                 case Key.F2: Refresh(); break; //обновить
-                case Key.F3: MessageBox.Show("Сгенерировать ключ"); break; //сгенерировать ключ
+                case Key.F3: if (cb_Algorithms.SelectedIndex != -1) List_of_Key_Generation_Methods(); break; //сгенерировать ключ
                 case Key.F4: func_obj.File_Selection(tb_FileName_Source, tb_SourceData, tb_EncryptedData); break; //открыть файл с исходным текстом
                 case Key.F5: func_obj.File_Selection(tb_Key); break; //открыть файл с ключом
                 case Key.F6: if (tb_FileName_Source.Text != "") func_obj.Save_File(tb_FileName_Source, tb_SourceData); break; //сохранить
                 case Key.F7: func_obj.Save_File_As(tb_FileName_Source, tb_SourceData); break;  //сохранить исходный текст
                 case Key.F8: func_obj.Save_File_As(cb_Algorithms, tb_EncryptedData, rb_Encryption, true); break;  //сохранить зашифрованный/дешифрованный текст
                 case Key.F9: func_obj.Save_File_As(cb_Algorithms, tb_Key, rb_Encryption, false); break;  //сохранить ключ
-                case Key.F10: MessageBox.Show("О программе"); break;  //о программе
+                case Key.F11: Calling_Help(); break;  //о программе
                 case Key.F12: this.Close(); break; //выход
             }
         }
@@ -315,22 +374,18 @@ namespace CryptographicApplication
             menu_btn_SaveFileAs_Encrypted.Header = "Сохранить дешифрованный текст";
         }
 
-        #endregion
-
-        #endregion
-
         private void Btn_ExecuteOperation_Click(object sender, RoutedEventArgs e)
         {
-            switch (cb_Algorithms.SelectedIndex)
-            {
-                case -1: cb_Algorithms_Border.Background = Brushes.Red; break;
-                case 0: Transposition_Cipher(); break;
-                case 1: Monoalphabetic_Cipher(); break;
-                case 2: Polyalphabetic_Cipher(); break;
-                case 3: XOR_Cipher(); break;
-                case 4: Vernam_Cipher(); break;
-                case 5: RSA_Cipher(); break;
-            }
+            List_of_Operations_to_Perform();
         }
+
+        private void Btn_Key_Generation_Click(object sender, RoutedEventArgs e)
+        {
+            List_of_Key_Generation_Methods();
+        }
+
+        #endregion
+
+        #endregion
     }
 }
