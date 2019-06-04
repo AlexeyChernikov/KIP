@@ -10,14 +10,6 @@ namespace CryptographicApplication
     {
         Alphabet alph = new Alphabet();
 
-        Random rnd = new Random();
-
-        public string Rand_Key_Generation()
-        {
-            int value = rnd.Next(1, alph.lang.Length);
-            return Convert.ToString(value);
-        }
-
         public string Encrypt(string sourcetext, int shift)
         {
             StringBuilder code = new StringBuilder();
@@ -72,37 +64,3 @@ namespace CryptographicApplication
         }
     }
 }
-
-
-/*StringBuilder code = new StringBuilder();
-string sourcetext = tb_SourceData.Text;
-int shift = Convert.ToInt32(tb_Key.Text);
-
-            for (int i = 0; i<sourcetext.Length; i++)
-            {
-                //поиск символа в алфавите
-                for (int j = 0; j<lang.Length; j++)
-                {
-                    //если символ найден
-                    if (sourcetext[i] == lang[j])
-                    {
-                        if (rb_Encryption.IsChecked == true) //Шифрование
-                        {
-                            code.Append(lang[(j + shift) % lang.Length]);
-                        }
-                        else if (rb_Decryption.IsChecked == true) //Дешифрование
-                        {
-                            code.Append(lang[(j - shift + lang.Length) % lang.Length]);
-                        }
-                        break;
-                    }
-                    //если символ не найден
-                    else if (j == lang.Length - 1)
-                    {
-                        code.Append(sourcetext[i]);
-                    }
-                }
-            }
-
-            return code.ToString();
-*/

@@ -9,23 +9,6 @@ namespace CryptographicApplication
     {
         Alphabet alph = new Alphabet();
 
-        Random rnd = new Random();
-
-        public string Rand_Key_Generation(int sizesourcetext)
-        {
-            StringBuilder code = new StringBuilder();
-
-            int value;
-
-            for (int i = 0; i < sizesourcetext; i++)
-            {
-                value = rnd.Next(1, alph.lang.Length);
-                code.Append(alph.lang[value - 1]);
-            }
-
-            return code.ToString();
-        }
-
         public string Encrypt_and_Decrypt(string sourcetext, string key)
         {
             StringBuilder code = new StringBuilder();

@@ -78,16 +78,24 @@
             </Grid>
         </GroupBox>
         <GroupBox Header="Ключ" HorizontalAlignment="Left" Height="93" Margin="13,485,0,0" VerticalAlignment="Top" Width="495">
-            <Grid Margin="0,6,-2,2">
-                <Button x:Name="btn_FileSelection_Key" Content=". . ." HorizontalAlignment="Left" Height="25" Margin="10,0,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.567,-0.9" Click="Btn_FileSelection_Key_Click"/>
-                <TextBox x:Name="tb_Key" Margin="45,0,12,0" TextWrapping="Wrap" Height="25" VerticalAlignment="Top"/>
-                <Button x:Name="btn_SaveFileAs_Key" Content="Сохранить как" HorizontalAlignment="Left" Height="25" Margin="10,30,0,0" VerticalAlignment="Top" Width="110" Click="Btn_SaveFileAs_Key_Click"/>
-                <TextBox x:Name="tb_Key_2" Margin="275,30,165,0" TextWrapping="Wrap" Height="25" VerticalAlignment="Top" Text="Нет"/>
-                <Button x:Name="btn_Key_Generation" Content="Сгенерировать ключ" HorizontalAlignment="Left" Height="25" Margin="125,30,0,0" VerticalAlignment="Top" Width="145" IsEnabled="False" Click="Btn_Key_Generation_Click"/>
-                <Button x:Name="btn_Clear_Key" Content="Очистить" HorizontalAlignment="Left" Height="25" Margin="325,30,0,0" VerticalAlignment="Top" Width="78" Click="Btn_Clear_Key_Click"/>
-                <Button x:Name="btn_Increase_Key" Content="+" HorizontalAlignment="Left" Height="25" Margin="408,30,0,0" VerticalAlignment="Top" Width="30" Click="Btn_Increase_Key_Click"/>
-                <Button x:Name="btn_Reduce_Key" Content="-" HorizontalAlignment="Left" Height="25" Margin="443,30,0,0" VerticalAlignment="Top" Width="30" Click="Btn_Reduce_Key_Click"/>
-            </Grid>
+            <StackPanel Margin="0,0,-2,1">
+                <Grid x:Name="Grid_Main_Key_Menu" Margin="0,6,0,0" Height="63" VerticalAlignment="Top" Visibility="Visible">
+                    <Button x:Name="btn_FileSelection_Key" Content=". . ." HorizontalAlignment="Left" Height="25" Margin="10,0,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.567,-0.9" Click="Btn_FileSelection_Key_Click"/>
+                    <TextBox x:Name="tb_Key" Margin="45,0,12,0" TextWrapping="Wrap" Height="25" VerticalAlignment="Top"/>
+                    <Button x:Name="btn_SaveFileAs_Key" Content="Сохранить как" HorizontalAlignment="Left" Height="25" Margin="10,30,0,0" VerticalAlignment="Top" Width="110" Click="Btn_SaveFileAs_Key_Click"/>
+                    <Button x:Name="btn_Key_Generation" Content="Сгенерировать ключ" HorizontalAlignment="Left" Height="25" Margin="125,30,0,0" VerticalAlignment="Top" Width="145" IsEnabled="False" Click="Btn_Key_Generation_Click"/>
+                    <Button x:Name="btn_Clear_Key" Content="Очистить" HorizontalAlignment="Left" Height="25" Margin="325,30,0,0" VerticalAlignment="Top" Width="78" Click="Btn_Clear_Key_Click"/>
+                    <Button x:Name="btn_Increase_Key" Content="+" HorizontalAlignment="Left" Height="25" Margin="408,30,0,0" VerticalAlignment="Top" Width="30" Click="Btn_Increase_Key_Click"/>
+                    <Button x:Name="btn_Reduce_Key" Content="-" HorizontalAlignment="Left" Height="25" Margin="443,30,0,0" VerticalAlignment="Top" Width="30" Click="Btn_Reduce_Key_Click"/>
+                </Grid>
+                <Grid x:Name="Grid_Generation_Key_Menu_1" Margin="0,6,0,0" Height="63" VerticalAlignment="Top" Visibility="Collapsed">
+                    <TextBox x:Name="tb_Key_Size" Margin="10,0,246,0" TextWrapping="Wrap" Height="25" VerticalAlignment="Top" Text="Введите размер ключа" PreviewMouseDown="Tb_Key_Size_PreviewMouseDown" Foreground="#FFABADB3" LostFocus="Tb_Key_Size_LostFocus" PreviewKeyDown="Tb_Key_Size_PreviewKeyDown" PreviewTextInput="Tb_Key_Size_PreviewTextInput" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MaxLength="3"/>
+                    <TextBox x:Name="tb_Key_1" Margin="244,0,12,0" TextWrapping="Wrap" Height="25" VerticalAlignment="Top" Text="Ваш ключ" Foreground="#FFABADB3" PreviewMouseDown="Tb_Key_1_PreviewMouseDown" LostFocus="Tb_Key_1_LostFocus" PreviewKeyDown="Tb_Key_1_PreviewKeyDown" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextChanged="Tb_Key_1_TextChanged"/>
+                    <Button x:Name="btn_Backward" Content="Назад" HorizontalAlignment="Left" Height="25" Margin="10,30,0,0" VerticalAlignment="Top" Width="110" Click="Btn_Backward_Click"/>
+                    <Button x:Name="btn_OK" Content="Ок" HorizontalAlignment="Left" Height="25" Margin="363,30,0,0" VerticalAlignment="Top" Width="110" Click="Btn_OK_Click" IsEnabled="False"/>
+                    <Button x:Name="btn_Key_Generation_1" Content="Сгенерировать ключ" HorizontalAlignment="Left" Height="25" Margin="169,30,0,0" VerticalAlignment="Top" Width="145" Click="Btn_Key_Generation_1_Click"/>
+                </Grid>
+            </StackPanel>
         </GroupBox>
     </Grid>
 </Window>

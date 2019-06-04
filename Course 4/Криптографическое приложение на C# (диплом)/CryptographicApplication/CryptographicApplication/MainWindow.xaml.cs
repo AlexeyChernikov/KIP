@@ -27,12 +27,15 @@ namespace CryptographicApplication
         #region Переменные
 
         Functional func_obj;
+        RandomKeyGeneration rndkey_obj;
         Transposition trans_obj;
         Monoalphabetic mono_obj;
         Polyalphabetic poly_obj;
         XOR xor_obj;
         Vernam vernam_obj;
         RSA rsa_obj;
+
+        public bool transition = false;
 
         #endregion
 
@@ -47,6 +50,7 @@ namespace CryptographicApplication
             xor_obj = new XOR();
             vernam_obj = new Vernam();
             rsa_obj = new RSA();
+            rndkey_obj = new RandomKeyGeneration();
         }
 
         #region Алгоритмы
@@ -105,14 +109,14 @@ namespace CryptographicApplication
 
             if (rb_Encryption.IsChecked == true)
             {
-                tb_EncryptedData.Text = rsa_obj.Encrypt(tb_SourceData.Text, tb_Key.Text, tb_Key_2.Text);
+                tb_EncryptedData.Text = rsa_obj.Encrypt(tb_SourceData.Text, tb_Key.Text, tb_Key.Text);
             }
             else
             {
                 String[] s = tb_SourceData.Text.Split(new String[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
                 List<string> sourcetext = new List<string>(s);
 
-                tb_EncryptedData.Text = rsa_obj.Decrypt(sourcetext, tb_Key.Text, tb_Key_2.Text);
+                tb_EncryptedData.Text = rsa_obj.Decrypt(sourcetext, tb_Key.Text, tb_Key.Text);
             }
         }
 
@@ -244,6 +248,8 @@ namespace CryptographicApplication
 
         #region Ключ
 
+        #region Основное меню
+
         private void Btn_FileSelection_Key_Click(object sender, RoutedEventArgs e)
         {
             func_obj.File_Selection(tb_Key);
@@ -271,6 +277,100 @@ namespace CryptographicApplication
 
         #endregion
 
+        #region Меню для генерации ключей с выбором размера
+
+        private void Btn_Key_Generation_1_Click(object sender, RoutedEventArgs e)
+        {
+            Key_Generation_Selection();
+        }
+
+        private void Btn_Backward_Click(object sender, RoutedEventArgs e) //назад
+        {
+            transition = false;
+
+            Grid_Main_Key_Menu.Visibility = Visibility.Visible;
+
+            tb_Key_Size.Text = "";
+            tb_Key_1.Text = "";
+            func_obj.Сheck_the_Сursor(tb_Key_Size, 0);
+            func_obj.Сheck_the_Сursor(tb_Key_1, 1);
+
+            Grid_Generation_Key_Menu_1.Visibility = Visibility.Collapsed;
+        }
+
+        private void Btn_OK_Click(object sender, RoutedEventArgs e) //ок
+        {
+            transition = false;
+
+            Grid_Main_Key_Menu.Visibility = Visibility.Visible;
+
+            tb_Key.Text = tb_Key_1.Text;
+            tb_Key_Size.Text = "";
+            tb_Key_1.Text = "";
+            func_obj.Сheck_the_Сursor(tb_Key_Size, 0);
+            func_obj.Сheck_the_Сursor(tb_Key_1, 1);
+
+            Grid_Generation_Key_Menu_1.Visibility = Visibility.Collapsed;
+        }
+
+        private void Tb_Key_Size_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            func_obj.Сheck_for_Text(tb_Key_Size);
+        }
+
+        private void Tb_Key_Size_LostFocus(object sender, RoutedEventArgs e)
+        {
+            func_obj.Сheck_the_Сursor(tb_Key_Size, 0);
+        }
+
+        private void Tb_Key_Size_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            func_obj.Without_a_Space(tb_Key_Size, e);
+        }
+
+        private void Tb_Key_Size_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            func_obj.Only_Number(e);
+        }
+
+        private void Tb_Key_1_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            func_obj.Сheck_for_Text(tb_Key_1);
+        }
+
+        private void Tb_Key_1_LostFocus(object sender, RoutedEventArgs e)
+        {
+            func_obj.Сheck_the_Сursor(tb_Key_1, 1);
+        }
+
+        private void Tb_Key_1_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            func_obj.Without_a_Space(tb_Key_1, e);
+        }
+
+        private void Tb_Key_1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                if (tb_Key_1.Text == "Ваш ключ" || tb_Key_1.Text == "")
+                {
+                    btn_OK.IsEnabled = false;
+                }
+                else
+                {
+                    btn_OK.IsEnabled = true;
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        #endregion
+
+        #endregion
+
         #region Прочее
 
         public void List_of_Operations_to_Perform() //меню, определяющее какой метод выполнять
@@ -287,15 +387,95 @@ namespace CryptographicApplication
             }
         }
 
-        public void List_of_Key_Generation_Methods () //меню, определяющее для какого метода генерировать ключ
+        public void Displaying_the_Key_Generation_Menu(bool a)
+        {
+            if (a == true)
+            {
+                transition = true;
+                Grid_Main_Key_Menu.Visibility = Visibility.Collapsed;
+                Grid_Generation_Key_Menu_1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                transition = true;
+            }
+        }
+
+        public void List_of_Key_Generation_Methods() //меню, определяющее для какого способа генерировать ключ
         {
             switch (cb_Algorithms.SelectedIndex)
             {
-                case 0: Transposition_Cipher(); break;
-                case 1: tb_Key.Text = mono_obj.Rand_Key_Generation(); break;
-                case 2: Polyalphabetic_Cipher(); break;
-                case 3: XOR_Cipher(); break;
-                case 4: tb_Key.Text = vernam_obj.Rand_Key_Generation(tb_SourceData.Text.Length); break;
+                case 0:
+                    if (transition == false)
+                    {
+                        Displaying_the_Key_Generation_Menu(true);
+                    }
+                    else
+                    {
+                        Key_Generation_Selection();
+                    }  
+                    break;
+
+                case 1: Key_Generation_Selection(); break;
+
+                case 2:
+                    if (transition == false)
+                    {
+                        Displaying_the_Key_Generation_Menu(true);
+                    }
+                    else
+                    {
+                        Key_Generation_Selection();
+                    }
+                    break;
+
+                case 3:
+                    if (transition == false)
+                    {
+                        Displaying_the_Key_Generation_Menu(true);
+                    }
+                    else
+                    {
+                        Key_Generation_Selection();
+                    }
+                    break;
+
+                case 4: Key_Generation_Selection(); break;
+
+                case 5:
+                    if (transition == false)
+                    {
+                        Displaying_the_Key_Generation_Menu(false);
+                    }
+                    else
+                    {
+                        Key_Generation_Selection();
+                    }
+                    break;
+            }
+        }
+
+        public void Key_Generation_Selection() //меню, для выбора генерации ключей
+        {
+            switch (cb_Algorithms.SelectedIndex)
+            {
+                case 0:
+                    tb_Key_1.Foreground = Brushes.Black;
+                    tb_Key_1.Text = rndkey_obj.Rand_Key_Generation_Transposition(Convert.ToInt32(tb_Key_Size.Text));
+                    break;
+
+                case 1: tb_Key.Text = rndkey_obj.Rand_Key_Generation(); break;
+                case 2:
+                    tb_Key_1.Foreground = Brushes.Black;
+                    tb_Key_1.Text = rndkey_obj.Rand_Key_Generation(Convert.ToInt32(tb_Key_Size.Text));
+                    break;
+
+                case 3:
+                    tb_Key_1.Foreground = Brushes.Black;
+                    tb_Key_1.Text = rndkey_obj.Rand_Key_Generation(Convert.ToInt32(tb_Key_Size.Text));
+                    break;
+
+                case 4: tb_Key.Text = rndkey_obj.Rand_Key_Generation(tb_SourceData.Text.Length); break;
                 case 5: RSA_Cipher(); break;
             }
         }
@@ -318,6 +498,8 @@ namespace CryptographicApplication
 
         public void Refresh() //обновить всё
         {
+            transition = false;
+
             //операция
             rb_Encryption.IsChecked = true;
 
@@ -337,7 +519,14 @@ namespace CryptographicApplication
             //ключ
             tb_Key.Text = "";
             tb_Key.FontSize = 12;
-            tb_Key_2.Text = "";
+
+            //генарация ключа с вводом размера
+            tb_Key_Size.Text = "";
+            tb_Key_1.Text = "";
+            func_obj.Сheck_the_Сursor(tb_Key_Size, 0);
+            func_obj.Сheck_the_Сursor(tb_Key_1, 1);
+            Grid_Main_Key_Menu.Visibility = Visibility.Visible;
+            Grid_Generation_Key_Menu_1.Visibility = Visibility.Collapsed;
         }
 
         private void Window_KeyDown(object sender, KeyEventArgs e) //горячие клавиши
@@ -360,6 +549,13 @@ namespace CryptographicApplication
 
         private void Cb_Algorithms_SelectionChanged(object sender, SelectionChangedEventArgs e) //изменения комбобокса
         {
+            transition = false;
+            Grid_Main_Key_Menu.Visibility = Visibility.Visible;
+            tb_Key_Size.Text = "";
+            tb_Key_1.Text = "";
+            func_obj.Сheck_the_Сursor(tb_Key_Size, 0);
+            func_obj.Сheck_the_Сursor(tb_Key_1, 1);
+            Grid_Generation_Key_Menu_1.Visibility = Visibility.Collapsed;
             cb_Algorithms_Border.Background = this.Background;
             func_obj.Changed_CB(cb_Algorithms, btn_Key_Generation, menu_btn_Key_Generation); //разблокирует или блокирует кнопку "Сгенерировать ключ"
         }

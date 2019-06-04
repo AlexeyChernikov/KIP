@@ -3,7 +3,8 @@ using System.Text;
 using System.Windows.Controls;
 using System.IO;
 using Microsoft.Win32;
-
+using System.Windows.Media;
+using System.Windows.Input;
 
 namespace CryptographicApplication
 {
@@ -142,6 +143,41 @@ namespace CryptographicApplication
             {
                 BtnUsed.IsEnabled = true;
                 MIUsed.IsEnabled = true;
+            }
+        }
+
+        public void Сheck_for_Text(TextBox a)
+        {
+            if (a.Foreground != Brushes.Black)
+            {
+                a.Text = "";
+                a.Foreground = Brushes.Black;
+            }
+        }
+
+        public void Сheck_the_Сursor(TextBox a, int b)
+        {
+            if (a.Text == "")
+            {
+                a.Foreground = Brushes.Gray;
+                switch (b)
+                {
+                    case 0: a.Text = "Введите размер ключа"; break;
+                    case 1: a.Text = "Ваш ключ"; break;
+                }
+            }
+        }
+
+        public void Only_Number(TextCompositionEventArgs e)
+        {
+            e.Handled = !(Char.IsDigit(e.Text, 0));
+        }
+
+        public void Without_a_Space(TextBox a, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+            {
+                e.Handled = true;
             }
         }
     }
