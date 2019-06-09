@@ -1,2 +1,2 @@
 * linguist-vendored
-*.csharp linguist-vendored=false
+*.c-sharp linguist-vendored=false
